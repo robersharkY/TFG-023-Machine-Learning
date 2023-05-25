@@ -3,12 +3,13 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.metrics import accuracy_score, log_loss
 
+# Clase ClasificadorML: Clase que realiza entrenamientos y clasificaciones de manera estándar array.
 class ClasificadorML(Clasificador):
 
     def __init__(self):
         super().__init__()
         
-    def entrenar_modelo(self,columna_extracto,columna_tematica):
+    def entrenar_modelo(self, columna_extracto, columna_tematica):
         extractos = self.dataset_[columna_extracto].astype(str)
         labels = self.dataset_[columna_tematica].astype(str)
 
@@ -22,14 +23,12 @@ class ClasificadorML(Clasificador):
 
         return f"Precisión: {precision:.2%}"
     
-    def clasificar_sentencias(self,dataset,columna_extracto):
+    def clasificar_sentencias(self, dataset, columna_extracto):
         extractos = dataset[columna_extracto].astype(str)
 
         extractos_bag = self.bag_words_.transform(extractos)
         probabilidades_tematicas = self.modelo_.predict_proba(extractos_bag)
-        predicciones = self.crear_array_tematicas(self.modelo_.classes_,probabilidades_tematicas)
-
-        return predicciones
+        return self.crear_array_tematicas(self.modelo_.classes_, probabilidades_tematicas)
             
 
 

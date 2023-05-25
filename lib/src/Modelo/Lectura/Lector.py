@@ -1,3 +1,5 @@
+# Clase Lector: Clase padre de la cual pueden salir distintos tipos de lectores (CSV, JSON, étc.).
+
 class Lector:
     
     def __init__(self):
@@ -6,10 +8,10 @@ class Lector:
     def get_contenido(self):
         return self.contenido_
     
-    def set_contenido(self,contenido):
+    def set_contenido(self, contenido):
         self.contenido_ = contenido
     
-    def is_empty_contenido(self):
+    def esta_vacio(self):
         if self.contenido_ != "":
             return False
         else:

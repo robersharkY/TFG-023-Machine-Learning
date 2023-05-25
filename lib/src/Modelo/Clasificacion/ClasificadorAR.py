@@ -3,6 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.metrics import accuracy_score, log_loss
 
+# Clase ClasificadorAR: Clase que realiza entrenamientos y clasificaciones para datos que necesiten ser convertidos en array.
 class ClasificadorAR(Clasificador):
 
     def __init__(self):
@@ -21,11 +22,9 @@ class ClasificadorAR(Clasificador):
         precision = accuracy_score(labels_test, predicciones)
         return f"Precisión: {precision:.2%}"
     
-    def clasificar_sentencias(self,dataset,columna_extracto):
+    def clasificar_sentencias(self, dataset, columna_extracto):
         extractos = dataset[columna_extracto].astype(str)
 
         extractos_bag = self.bag_words_.transform(extractos)
         probabilidades_tematicas = self.modelo_.predict_proba(extractos_bag.toarray())
-        predicciones = self.crear_array_tematicas(self.modelo_.classes_,probabilidades_tematicas)
-
-        return predicciones
+        return self.crear_array_tematicas(self.modelo_.classes_,probabilidades_tematicas)

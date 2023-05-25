@@ -95,7 +95,6 @@ class Controlador:
 
     def anadir_variables(self):
         self.modelo_.set_variables(self.vista_.get_variables(),self.vista_)
-        
     
     def seleccionar_bag_words(self, frase):
         self.modelo_.seleccionar_bag_words(frase)
@@ -114,6 +113,7 @@ class Controlador:
         root.mainloop()
 
     def entrenamiento_datasets(self):
+        # Si algún modelo de ambos esta vacío
         if self.modelo_.get_datos_entrenamiento() is None or self.modelo_.get_datos_pruebas() is None:
             self.vista_.mostrar_ventana_mensaje("Seleccione antes un archivo de entrenamiento y pruebas")
         else:
@@ -122,6 +122,7 @@ class Controlador:
 
 
     def clasificar(self):
+        # Si algún modelo de ambos esta vacío
         if self.modelo_.get_datos_entrenamiento() is None or self.modelo_.get_datos_pruebas() is None:
             self.vista_.mostrar_ventana_mensaje("Seleccione antes un archivo de entrenamiento y pruebas")
         elif self.modelo_.estan_limpios_datasets() == False:
