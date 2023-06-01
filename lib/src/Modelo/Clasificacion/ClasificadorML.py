@@ -13,7 +13,7 @@ class ClasificadorML(Clasificador):
         extractos = self.dataset_[columna_extracto].astype(str)
         labels = self.dataset_[columna_tematica].astype(str)
 
-        extractos_train, extractos_test, labels_train, labels_test = train_test_split(extractos, labels, test_size=0.15)
+        extractos_train, extractos_test, labels_train, labels_test = train_test_split(extractos, labels, test_size=0.20)
         extractos_train_bag = self.bag_words_.fit_transform(extractos_train)
         extractos_test_bag = self.bag_words_.transform(extractos_test)
         self.modelo_.fit(extractos_train_bag, labels_train)

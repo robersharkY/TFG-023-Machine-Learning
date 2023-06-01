@@ -1,10 +1,16 @@
+## @package Vista
+# @brief Clase Vista, interfaz que une todo lo comprendido de la vista con el controlador.
+# @author Roberto Carlos García Cruz.
+# @version 1.0
+# @date "%A %d-%m-%Y" 1-6-2023
+
 from tkinter.messagebox import showinfo
 from Vista.App import App
 
-# Clase Vista: Contiene todos los métodos que forman la vista
 
 class Vista:
 
+    ## @brief Constructor de vista.
     def __init__(self):
         self.app_ = App()
     

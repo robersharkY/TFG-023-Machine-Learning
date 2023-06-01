@@ -1,11 +1,18 @@
+## @package Vista
+# @brief Clase MainFrame, contenedor del frame principal del programa.
+# @author Roberto Carlos García Cruz.
+# @version 1.0
+# @date "%A %d-%m-%Y" 1-6-2023
+
 from tkinter import ttk
 from tkinter import *
 from PIL import ImageTk, Image
+import os
 
-# Clase MainFrame: Contenido del frame principal
 
 class MainFrame(ttk.Frame):
-
+    
+    ## @brief
     def __init__(self,container):
         super().__init__(container)
 
@@ -27,7 +34,9 @@ class MainFrame(ttk.Frame):
         self.option_add("*TCombobox*Listbox*Background", '#CCCCFF')
 
         # Adición de imagen en MainFrame
-        self.imagen_ull = Image.open("../resources/ull-nuevo-logo.jpg")
+        ruta = os.path.dirname(os.path.abspath(__file__))
+        imagen = os.path.join(ruta, "..\\resources", "ull-nuevo-logo.jpg")
+        self.imagen_ull = Image.open(imagen)
         self.imagen_ull = self.imagen_ull.resize((200,100))
         self.img = ImageTk.PhotoImage(self.imagen_ull)
         self.label_imagen = ttk.Label(self, image = self.img, background = "#FFFFFF")

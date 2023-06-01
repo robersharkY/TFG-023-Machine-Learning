@@ -1,10 +1,15 @@
+## @package Datos
+# @brief Clase Dataset, actúa como dataset para el almacenamiento de datos y para facilitar su mantenimiento.
+# @author Roberto Carlos García Cruz.
+# @version 1.0
+# @date "%A %d-%m-%Y" 1-6-2023
+
 import pandas
 from Modelo.Lectura.Lector_CSV import LectorCSV
 
-# Clase Dataset: Clase que facilita los métodos propios de un dataset.
-
 class Dataset:
 
+    ## @brief Constructor de Dataset.
     def __init__(self):
         self.datos_ = None
         self.direccion_ = ""

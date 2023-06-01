@@ -1,9 +1,13 @@
+## @package Vista
+# @brief Clase App, clase que une todos los frames, ventanas y barras.
+# @author Roberto Carlos García Cruz.
+# @version 1.0
+# @date "%A %d-%m-%Y" 1-6-2023
+
 import tkinter as tk
-from tkinter import ttk
 from tkinter import *
 from Vista.MainFrame import MainFrame
-
-# Clase App: Clase donde se reunen todos los frames y características
+import os
 
 class App(tk.Tk):
 
@@ -16,7 +20,9 @@ class App(tk.Tk):
         self.resizable(False, False)
         self.crear_barra_menu()
         self.frame = MainFrame(self)
-        icono_pequeno = tk.PhotoImage(False, file = "../resources/icono_PML.png")
+        ruta = os.path.dirname(os.path.abspath(__file__))
+        imagen = os.path.join(ruta, "..\\resources", "icono_PML.png")
+        icono_pequeno = tk.PhotoImage(False, file = imagen)
         self.iconphoto(True, icono_pequeno)
 
         # Elementos ventana input
