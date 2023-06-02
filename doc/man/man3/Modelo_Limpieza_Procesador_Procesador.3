@@ -1,0 +1,119 @@
+.TH "Modelo.Limpieza.Procesador.Procesador" 3 "Fri Jun 2 2023" "Version 1.0" "TFG-023" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Modelo.Limpieza.Procesador.Procesador
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self)"
+.br
+.RI "Constructor de \fBProcesador\fP\&. "
+.ti -1c
+.RI "def \fBget_palabras_vacias\fP (self)"
+.br
+.RI "Devuelve las palabras vacías de la librería\&. "
+.ti -1c
+.RI "def \fBeliminar_palabras_vacias\fP (self, sentencia)"
+.br
+.RI "Tokeniza la cadena, a parte, elimina los signos de puntuación y las palabras vacías de una cadena/sentencia\&. "
+.ti -1c
+.RI "def \fBeliminar_duplicados\fP (self, tokens)"
+.br
+.RI "Elimina palabras (tokens) iguales\&. "
+.ti -1c
+.RI "def \fBlematizar\fP (self, tokens)"
+.br
+.RI "Lematiza (convierte a su palabra raíz) cada uno de los tokens\&. "
+.ti -1c
+.RI "def \fB__str__\fP (self)"
+.br
+.RI "Método toString de la clase\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBnlp_\fP"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "def Modelo\&.Limpieza\&.Procesador\&.Procesador\&.__str__ ( self)"
+
+.PP
+Método toString de la clase\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[String] 
+.RE
+.PP
+
+.SS "def Modelo\&.Limpieza\&.Procesador\&.Procesador\&.eliminar_duplicados ( self,  tokens)"
+
+.PP
+Elimina palabras (tokens) iguales\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItokens\fP [Array] Array de tokens\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+[Array] Array de tokens sin elementos repetidos\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Limpieza\&.Procesador\&.Procesador\&.eliminar_palabras_vacias ( self,  sentencia)"
+
+.PP
+Tokeniza la cadena, a parte, elimina los signos de puntuación y las palabras vacías de una cadena/sentencia\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsentencia\fP [String] Cadena a limpiar\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+[Array] DPalabras vacías de la librería de Spacy\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Limpieza\&.Procesador\&.Procesador\&.get_palabras_vacias ( self)"
+
+.PP
+Devuelve las palabras vacías de la librería\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[Array] Palabras vacías de la librería de Spacy\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Limpieza\&.Procesador\&.Procesador\&.lematizar ( self,  tokens)"
+
+.PP
+Lematiza (convierte a su palabra raíz) cada uno de los tokens\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItokens\fP [Array] Array de tokens\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+[Array] Array de tokens lematizados 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TFG-023 from the source code\&.

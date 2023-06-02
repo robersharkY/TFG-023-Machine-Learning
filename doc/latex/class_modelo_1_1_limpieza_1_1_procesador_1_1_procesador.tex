@@ -1,0 +1,112 @@
+\hypertarget{class_modelo_1_1_limpieza_1_1_procesador_1_1_procesador}{}\doxysection{Modelo.\+Limpieza.\+Procesador.\+Procesador Class Reference}
+\label{class_modelo_1_1_limpieza_1_1_procesador_1_1_procesador}\index{Modelo.Limpieza.Procesador.Procesador@{Modelo.Limpieza.Procesador.Procesador}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_modelo_1_1_limpieza_1_1_procesador_1_1_procesador_a691b4e031fb5c516aaa792f65e6f0b98}\label{class_modelo_1_1_limpieza_1_1_procesador_1_1_procesador_a691b4e031fb5c516aaa792f65e6f0b98}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em Constructor de \mbox{\hyperlink{class_modelo_1_1_limpieza_1_1_procesador_1_1_procesador}{Procesador}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_limpieza_1_1_procesador_1_1_procesador_a742e16a1a26a1c43c863b9da975e04e3}{get\+\_\+palabras\+\_\+vacias}} (self)
+\begin{DoxyCompactList}\small\item\em Devuelve las palabras vacías de la librería. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_limpieza_1_1_procesador_1_1_procesador_a0616749e69bf97aa35f3e30006273af5}{eliminar\+\_\+palabras\+\_\+vacias}} (self, sentencia)
+\begin{DoxyCompactList}\small\item\em Tokeniza la cadena, a parte, elimina los signos de puntuación y las palabras vacías de una cadena/sentencia. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_limpieza_1_1_procesador_1_1_procesador_ac96a8cf38f269cfb2dbea607f6847dbc}{eliminar\+\_\+duplicados}} (self, tokens)
+\begin{DoxyCompactList}\small\item\em Elimina palabras (tokens) iguales. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_limpieza_1_1_procesador_1_1_procesador_af6979ae57c224ea6a6e0d90b13bb8ef1}{lematizar}} (self, tokens)
+\begin{DoxyCompactList}\small\item\em Lematiza (convierte a su palabra raíz) cada uno de los tokens. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_limpieza_1_1_procesador_1_1_procesador_a8dac95a3c87767ec6ac1466fbe6b1729}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Método to\+String de la clase. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_modelo_1_1_limpieza_1_1_procesador_1_1_procesador_ad9577e61b4d9ee0a5d261e4875d5285a}\label{class_modelo_1_1_limpieza_1_1_procesador_1_1_procesador_ad9577e61b4d9ee0a5d261e4875d5285a}} 
+{\bfseries nlp\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_modelo_1_1_limpieza_1_1_procesador_1_1_procesador_a8dac95a3c87767ec6ac1466fbe6b1729}\label{class_modelo_1_1_limpieza_1_1_procesador_1_1_procesador_a8dac95a3c87767ec6ac1466fbe6b1729}} 
+\index{Modelo.Limpieza.Procesador.Procesador@{Modelo.Limpieza.Procesador.Procesador}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!Modelo.Limpieza.Procesador.Procesador@{Modelo.Limpieza.Procesador.Procesador}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def Modelo.\+Limpieza.\+Procesador.\+Procesador.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Método to\+String de la clase. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}String\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_modelo_1_1_limpieza_1_1_procesador_1_1_procesador_ac96a8cf38f269cfb2dbea607f6847dbc}\label{class_modelo_1_1_limpieza_1_1_procesador_1_1_procesador_ac96a8cf38f269cfb2dbea607f6847dbc}} 
+\index{Modelo.Limpieza.Procesador.Procesador@{Modelo.Limpieza.Procesador.Procesador}!eliminar\_duplicados@{eliminar\_duplicados}}
+\index{eliminar\_duplicados@{eliminar\_duplicados}!Modelo.Limpieza.Procesador.Procesador@{Modelo.Limpieza.Procesador.Procesador}}
+\doxysubsubsection{\texorpdfstring{eliminar\_duplicados()}{eliminar\_duplicados()}}
+{\footnotesize\ttfamily def Modelo.\+Limpieza.\+Procesador.\+Procesador.\+eliminar\+\_\+duplicados (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{tokens }\end{DoxyParamCaption})}
+
+
+
+Elimina palabras (tokens) iguales. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tokens} & \mbox{[}Array\mbox{]} Array de tokens. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}Array\mbox{]} Array de tokens sin elementos repetidos. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_modelo_1_1_limpieza_1_1_procesador_1_1_procesador_a0616749e69bf97aa35f3e30006273af5}\label{class_modelo_1_1_limpieza_1_1_procesador_1_1_procesador_a0616749e69bf97aa35f3e30006273af5}} 
+\index{Modelo.Limpieza.Procesador.Procesador@{Modelo.Limpieza.Procesador.Procesador}!eliminar\_palabras\_vacias@{eliminar\_palabras\_vacias}}
+\index{eliminar\_palabras\_vacias@{eliminar\_palabras\_vacias}!Modelo.Limpieza.Procesador.Procesador@{Modelo.Limpieza.Procesador.Procesador}}
+\doxysubsubsection{\texorpdfstring{eliminar\_palabras\_vacias()}{eliminar\_palabras\_vacias()}}
+{\footnotesize\ttfamily def Modelo.\+Limpieza.\+Procesador.\+Procesador.\+eliminar\+\_\+palabras\+\_\+vacias (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sentencia }\end{DoxyParamCaption})}
+
+
+
+Tokeniza la cadena, a parte, elimina los signos de puntuación y las palabras vacías de una cadena/sentencia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sentencia} & \mbox{[}String\mbox{]} Cadena a limpiar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}Array\mbox{]} DPalabras vacías de la librería de Spacy. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_modelo_1_1_limpieza_1_1_procesador_1_1_procesador_a742e16a1a26a1c43c863b9da975e04e3}\label{class_modelo_1_1_limpieza_1_1_procesador_1_1_procesador_a742e16a1a26a1c43c863b9da975e04e3}} 
+\index{Modelo.Limpieza.Procesador.Procesador@{Modelo.Limpieza.Procesador.Procesador}!get\_palabras\_vacias@{get\_palabras\_vacias}}
+\index{get\_palabras\_vacias@{get\_palabras\_vacias}!Modelo.Limpieza.Procesador.Procesador@{Modelo.Limpieza.Procesador.Procesador}}
+\doxysubsubsection{\texorpdfstring{get\_palabras\_vacias()}{get\_palabras\_vacias()}}
+{\footnotesize\ttfamily def Modelo.\+Limpieza.\+Procesador.\+Procesador.\+get\+\_\+palabras\+\_\+vacias (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Devuelve las palabras vacías de la librería. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}Array\mbox{]} Palabras vacías de la librería de Spacy. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_modelo_1_1_limpieza_1_1_procesador_1_1_procesador_af6979ae57c224ea6a6e0d90b13bb8ef1}\label{class_modelo_1_1_limpieza_1_1_procesador_1_1_procesador_af6979ae57c224ea6a6e0d90b13bb8ef1}} 
+\index{Modelo.Limpieza.Procesador.Procesador@{Modelo.Limpieza.Procesador.Procesador}!lematizar@{lematizar}}
+\index{lematizar@{lematizar}!Modelo.Limpieza.Procesador.Procesador@{Modelo.Limpieza.Procesador.Procesador}}
+\doxysubsubsection{\texorpdfstring{lematizar()}{lematizar()}}
+{\footnotesize\ttfamily def Modelo.\+Limpieza.\+Procesador.\+Procesador.\+lematizar (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{tokens }\end{DoxyParamCaption})}
+
+
+
+Lematiza (convierte a su palabra raíz) cada uno de los tokens. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tokens} & \mbox{[}Array\mbox{]} Array de tokens. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}Array\mbox{]} Array de tokens lematizados 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/roberto/\+Desktop/\+TFG/lib/src/\+Modelo/\+Limpieza/Procesador.\+py\end{DoxyCompactItemize}

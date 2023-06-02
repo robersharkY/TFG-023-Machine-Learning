@@ -1,0 +1,105 @@
+.TH "Modelo.Lectura.Lector.Lector" 3 "Fri Jun 2 2023" "Version 1.0" "TFG-023" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Modelo.Lectura.Lector.Lector
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBModelo\&.Lectura\&.Lector_CSV\&.LectorCSV\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self)"
+.br
+.RI "Constructor de \fBLector\fP\&. "
+.ti -1c
+.RI "def \fBget_contenido\fP (self)"
+.br
+.RI "Devuelve el contenido leído\&. "
+.ti -1c
+.RI "def \fBset_contenido\fP (self, contenido)"
+.br
+.RI "Actualiza el valor del contenido leído\&. "
+.ti -1c
+.RI "def \fBesta_vacio\fP (self)"
+.br
+.RI "Detecta si el contenido es vacío\&. "
+.ti -1c
+.RI "def \fBimprimir\fP (self)"
+.br
+.RI "Imprime el contenido de la variable 'self\&.contenido_'\&. "
+.ti -1c
+.RI "def \fB__str__\fP (self)"
+.br
+.RI "Método toString de la clase\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBcontenido_\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def Modelo\&.Lectura\&.Lector\&.Lector\&.__init__ ( self)"
+
+.PP
+Constructor de \fBLector\fP\&. 
+.PP
+Reimplemented in \fBModelo\&.Lectura\&.Lector_CSV\&.LectorCSV\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "def Modelo\&.Lectura\&.Lector\&.Lector\&.__str__ ( self)"
+
+.PP
+Método toString de la clase\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[String] 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBModelo\&.Lectura\&.Lector_CSV\&.LectorCSV\fP\&.
+.SS "def Modelo\&.Lectura\&.Lector\&.Lector\&.esta_vacio ( self)"
+
+.PP
+Detecta si el contenido es vacío\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[Boolean] Devuelve True si la variable 'self\&.cotenido_' esta vacía, False sino lo está\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Lectura\&.Lector\&.Lector\&.get_contenido ( self)"
+
+.PP
+Devuelve el contenido leído\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[String] Contenido leído por la variable 'self\&.contenido_'\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Lectura\&.Lector\&.Lector\&.set_contenido ( self,  contenido)"
+
+.PP
+Actualiza el valor del contenido leído\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontenido\fP [String] Contenido a actualizar en la variable 'self\&.contenido_'\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TFG-023 from the source code\&.

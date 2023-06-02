@@ -1,0 +1,206 @@
+.TH "Modelo.Datos.Dataset.Dataset" 3 "Fri Jun 2 2023" "Version 1.0" "TFG-023" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Modelo.Datos.Dataset.Dataset
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self)"
+.br
+.RI "Constructor de \fBDataset\fP\&. "
+.ti -1c
+.RI "def \fBget_direccion\fP (self)"
+.br
+.RI "Devuelve la dirección del archivo leído\&. "
+.ti -1c
+.RI "def \fBset_direccion\fP (self, direccion)"
+.br
+.RI "Actualiza el valor de la dirección del archivo a leer\&. "
+.ti -1c
+.RI "def \fBget_columna\fP (self, nombre_columna)"
+.br
+.RI "Devuelve la columna indicada del dataset de datos\&. "
+.ti -1c
+.RI "def \fBget_fila\fP (self, n_fila)"
+.br
+.RI "Devuelve la fila indicada del dataset de datos\&. "
+.ti -1c
+.RI "def \fBget_valor\fP (self, n_fila, nombre_columna)"
+.br
+.RI "Devuelve los datos de la fila y columna indicada del dataset de datos\&. "
+.ti -1c
+.RI "def \fBget_datos\fP (self)"
+.br
+.RI "Devuelve el dataset creado por la librería panda\&. "
+.ti -1c
+.RI "def \fBset_datos\fP (self, datos)"
+.br
+.RI "Actualiza el dataset creado por la librería panda\&. "
+.ti -1c
+.RI "def \fBleer_datos\fP (self, direccion)"
+.br
+.RI "Actualiza el dataset creado por la librería panda\&. "
+.ti -1c
+.RI "def \fBeliminar_columna\fP (self, nombre_columna)"
+.br
+.RI "Elimina la columna del dataset que se pase por parámetro\&. "
+.ti -1c
+.RI "def \fBmostrar_datos\fP (self)"
+.br
+.RI "Imprime el dataset de la variable 'self\&.datos_'\&. "
+.ti -1c
+.RI "def \fB__str__\fP (self)"
+.br
+.RI "Método toString de la clase\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBdatos_\fP"
+.br
+.ti -1c
+.RI "\fBdireccion_\fP"
+.br
+.ti -1c
+.RI "\fBlector_\fP"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "def Modelo\&.Datos\&.Dataset\&.Dataset\&.__str__ ( self)"
+
+.PP
+Método toString de la clase\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[String] 
+.RE
+.PP
+
+.SS "def Modelo\&.Datos\&.Dataset\&.Dataset\&.eliminar_columna ( self,  nombre_columna)"
+
+.PP
+Elimina la columna del dataset que se pase por parámetro\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInombre_columna\fP [String] Nombre de la columna a eliminar en el dataset\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Datos\&.Dataset\&.Dataset\&.get_columna ( self,  nombre_columna)"
+
+.PP
+Devuelve la columna indicada del dataset de datos\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInombre_columna\fP [String] Nombre de la columna a leer del dataset de datos\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+[Array] \fBDatos\fP obtenidos de la columna del dataset mencionado\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Datos\&.Dataset\&.Dataset\&.get_datos ( self)"
+
+.PP
+Devuelve el dataset creado por la librería panda\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[Panda \fBDataset\fP] \fBDataset\fP creado por la librería panda\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Datos\&.Dataset\&.Dataset\&.get_direccion ( self)"
+
+.PP
+Devuelve la dirección del archivo leído\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[String] Dirección del archivo donde se han obtenido los datos\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Datos\&.Dataset\&.Dataset\&.get_fila ( self,  n_fila)"
+
+.PP
+Devuelve la fila indicada del dataset de datos\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIn_fila\fP [Integer] Número de la fila a leer del dataset de datos\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+[Array] \fBDatos\fP obtenidos de la fila del dataset mencionado\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Datos\&.Dataset\&.Dataset\&.get_valor ( self,  n_fila,  nombre_columna)"
+
+.PP
+Devuelve los datos de la fila y columna indicada del dataset de datos\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIn_fila\fP [Integer] Número de la fila a leer del dataset de datos\&. 
+.br
+\fInombre_columna\fP [String] Nombre de la columna a leer del dataset de datos\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+[Array] \fBDatos\fP obtenidos de la fila y columna del dataset mencionado\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Datos\&.Dataset\&.Dataset\&.leer_datos ( self,  direccion)"
+
+.PP
+Actualiza el dataset creado por la librería panda\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdatos\fP [Panda \fBDataset\fP] dataset a actualizar en la variable 'self\&.datos_'\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Datos\&.Dataset\&.Dataset\&.set_datos ( self,  datos)"
+
+.PP
+Actualiza el dataset creado por la librería panda\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdatos\fP [Panda \fBDataset\fP] dataset a actualizar en la variable 'self\&.datos_'\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Datos\&.Dataset\&.Dataset\&.set_direccion ( self,  direccion)"
+
+.PP
+Actualiza el valor de la dirección del archivo a leer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdireccion\fP [String] dirección a actualizar en la variable 'self\&.direccion_'\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TFG-023 from the source code\&.
