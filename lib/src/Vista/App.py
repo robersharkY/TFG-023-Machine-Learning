@@ -21,7 +21,7 @@ class App(tk.Tk):
         self.crear_barra_menu()
         self.frame = MainFrame(self)
         ruta = os.path.dirname(os.path.abspath(__file__))
-        imagen = os.path.join(ruta, "..\\resources", "icono_PML.png")
+        imagen = os.path.join(ruta, "..\\..\\resources", "icono_PML.png")
         icono_pequeno = tk.PhotoImage(False, file = imagen)
         self.iconphoto(True, icono_pequeno)
 

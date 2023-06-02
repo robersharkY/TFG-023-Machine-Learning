@@ -12,37 +12,37 @@ class Vista:
 
     ## @brief Constructor de vista.
     def __init__(self):
-        self.app_ = App()
+        self.__app = App()
     
     def iniciar(self):
-        self.app_.iniciar_frame()
+        self.__app.iniciar_frame()
 
     def get_combobox_algoritmo(self):
-        return self.app_.get_combobox_algoritmo()
+        return self.__app.get_combobox_algoritmo()
 
     def get_combobox_bag(self):
-        return self.app_.get_combobox_bag()
+        return self.__app.get_combobox_bag()
     
     def get_boton_variables(self):
-        return self.app_.get_boton_variables()
+        return self.__app.get_boton_variables()
 
     def get_menu_archivo(self):
-        return self.app_.get_menu_archivo()
+        return self.__app.get_menu_archivo()
 
     def get_menu_opciones(self):
-        return self.app_.get_menu_opciones()
+        return self.__app.get_menu_opciones()
 
     def get_menu_configuracion(self):
-        return self.app_.get_menu_configuracion()
+        return self.__app.get_menu_configuracion()
         
     def get_menu_ayuda(self):
-        return self.app_.get_menu_ayuda()
+        return self.__app.get_menu_ayuda()
 
     def get_variables(self):
-        return self.app_.get_array_variables()
+        return self.__app.get_array_variables()
     
     def mostrar_ventana_input(self, array_variables):
-        self.app_.abrir_ventana_dialogo(self.app_.get_frame(), array_variables)
+        self.__app.abrir_ventana_dialogo(self.__app.get_frame(), array_variables)
 
     def mostrar_ventana_mensaje(self, mensaje):
         showinfo(title = "Ventana de información", message = mensaje)

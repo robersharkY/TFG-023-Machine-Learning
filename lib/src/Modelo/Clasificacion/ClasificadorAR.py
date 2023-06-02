@@ -1,3 +1,8 @@
+## @package Clasificacion
+# @brief Clase ClasificadorAR, interfaz que une modelo y vista, la cual maneja toda la aplicación.
+# @author Roberto Carlos García Cruz.
+# @version 1.0
+# @date "%A %d-%m-%Y" 1-6-2023
 from Modelo.Clasificacion.Clasificador import Clasificador
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer

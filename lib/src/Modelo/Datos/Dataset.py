@@ -11,50 +11,69 @@ class Dataset:
 
     ## @brief Constructor de Dataset.
     def __init__(self):
-        self.datos_ = None
-        self.direccion_ = ""
-        self.lector_ = LectorCSV()
+        self.__datos = None
+        self.__direccion = ""
+        self.__lector = LectorCSV()
 
+    ## @brief Devuelve la dirección del archivo leído.
+    # @return [String] Dirección del archivo donde se han obtenido los datos.
     def get_direccion(self):
-        return self.direccion_
+        return self.__direccion
 
+    ## @brief Actualiza el valor de la dirección del archivo a leer.
+    # @param direccion [String] dirección a actualizar en la variable "self.direccion_".
     def set_direccion(self, direccion):
-        self.direccion_ = direccion
+        self.__direccion = direccion
 
+    ## @brief Devuelve la columna indicada del dataset de datos.
+    # @param nombre_columna [String] Nombre de la columna a leer del dataset de datos.
+    # @return [Array] Datos obtenidos de la columna del dataset mencionado.
     def get_columna(self, nombre_columna):
-        return self.datos_[nombre_columna].tolist()
+        return self.__datos[nombre_columna].tolist()
 
+    ## @brief Devuelve la fila indicada del dataset de datos.
+    # @param n_fila [Integer] Número de la fila a leer del dataset de datos.
+    # @return [Array] Datos obtenidos de la fila del dataset mencionado.
     def get_fila(self,n_fila):
-        return self.datos_[n_fila].tolist()
-    
+        return self.__datos[n_fila].tolist()
+
+    ## @brief Devuelve los datos de la fila  y columna indicada del dataset de datos.
+    # @param n_fila [Integer] Número de la fila a leer del dataset de datos.
+    # @param nombre_columna [String] Nombre de la columna a leer del dataset de datos.
+    # @return [Array] Datos obtenidos de la fila y columna del dataset mencionado.
     def get_valor(self, n_fila, nombre_columna):
-        return self.datos_[n_fila, nombre_columna]
+        return self.__datos[n_fila, nombre_columna]
     
-    def get_reader(self):
-        return self.model_.get_reader()
-
+    ## @brief Devuelve el dataset creado por la librería panda.
+    # @return [Panda Dataset] Dataset creado por la librería panda.
     def get_datos(self):
-        return self.datos_
+        return self.__datos
 
+    ## @brief Actualiza el dataset creado por la librería panda.
+    # @param datos [Panda Dataset] dataset a actualizar en la variable "self.datos_".
     def set_datos(self,datos):
-        self.datos_ = datos
-    
-    def set_reader(self, reader):
-        self.model_.set_reader(reader)
+        self.__datos = datos
 
+    ## @brief Actualiza el dataset creado por la librería panda.
+    # @param datos [Panda Dataset] dataset a actualizar en la variable "self.datos_".
     def leer_datos(self, direccion):
-        self.datos_ = pandas.read_csv(direccion)
+        self.__datos = pandas.read_csv(direccion)
         self.set_direccion(direccion)
-
+    
+    ## @brief Elimina la columna del dataset que se pase por parámetro.
+    # @param nombre_columna [String] Nombre de la columna a eliminar en el dataset.
     def eliminar_columna(self, nombre_columna):
         if nombre_columna in self.datos_:
-            del self.datos_[nombre_columna]
+            del self.__datos[nombre_columna]
 
+    ## @brief Imprime el dataset de la variable "self.datos_"
     def mostrar_datos(self):
-        print (self.datos_)
+        print (self.__datos)
 
+    ## @brief Método toString de la clase.
+    # @return [String]
     def __str__(self):
-        return "Los datos leidos son de: "+self.direccion_
+        return "Los datos leidos son de: "+self.__direccion
     
 
          

@@ -8,31 +8,31 @@ class Lector:
 
     ## @brief Constructor de Lector.
     def __init__(self):
-        self.contenido_ = ""
+        self.__contenido = ""
 
     ## @brief Devuelve el contenido leído.
     # @return [String] Contenido leído por la variable "self.contenido_".
     def get_contenido(self):
-        return self.contenido_
+        return self.__contenido
     
     ## @brief Actualiza el valor del contenido leído.
     # @param contenido [String] Contenido a actualizar en la variable "self.contenido_".
     def set_contenido(self, contenido):
-        self.contenido_ = contenido
+        self.__contenido = contenido
     
     ## @brief Detecta si el contenido es vacío.
     # @return [Boolean] Devuelve True si la variable "self.cotenido_" esta vacía, False sino lo está. 
     def esta_vacio(self):
-        if self.contenido_ != "":
+        if self.__contenido != "":
             return False
         else:
             return True
     
     ## @brief Imprime el contenido de la variable "self.contenido_"
     def imprimir(self):
-        print (self.contenido_)
+        print (self.__contenido)
 
-    ## @brief Método toString de la clase."
+    ## @brief Método toString de la clase.
     # @return [String]
     def __str__(self):
         return "Tipo: Ninguno "

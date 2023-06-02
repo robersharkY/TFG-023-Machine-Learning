@@ -1,3 +1,9 @@
+## @package Clasificacion
+# @brief Clase Clasificador, interfaz que une modelo y vista, la cual maneja toda la aplicación.
+# @author Roberto Carlos García Cruz.
+# @version 1.0
+# @date "%A %d-%m-%Y" 1-6-2023
+
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC, LinearSVC, NuSVC
 from sklearn.tree import DecisionTreeClassifier

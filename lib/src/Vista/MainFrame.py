@@ -12,7 +12,8 @@ import os
 
 class MainFrame(ttk.Frame):
     
-    ## @brief
+    ## @brief Constructor de Mainframe, en el se construye toda la interfaz de usuario del frame principal
+    # @param container 
     def __init__(self,container):
         super().__init__(container)
 
@@ -35,7 +36,7 @@ class MainFrame(ttk.Frame):
 
         # Adición de imagen en MainFrame
         ruta = os.path.dirname(os.path.abspath(__file__))
-        imagen = os.path.join(ruta, "..\\resources", "ull-nuevo-logo.jpg")
+        imagen = os.path.join(ruta, "..\\..\\resources", "ull-nuevo-logo.jpg")
         self.imagen_ull = Image.open(imagen)
         self.imagen_ull = self.imagen_ull.resize((200,100))
         self.img = ImageTk.PhotoImage(self.imagen_ull)
