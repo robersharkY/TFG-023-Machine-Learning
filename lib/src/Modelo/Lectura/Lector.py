@@ -8,6 +8,7 @@ class Lector:
 
     ## @brief Constructor de Lector.
     def __init__(self):
+        ## Variable privada, contenido leído por el lector.
         self.__contenido = ""
 
     ## @brief Devuelve el contenido leído.

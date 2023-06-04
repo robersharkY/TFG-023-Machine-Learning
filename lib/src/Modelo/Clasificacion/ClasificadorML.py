@@ -1,39 +1,34 @@
 ## @package Clasificacion
-# @brief Clase ClasificadorML, interfaz que une modelo y vista, la cual maneja toda la aplicación.
+# @brief Clase ClasificadorML, Clase hija de Clasificador que contiene ciertos métodos para mantener los datos y así lograr hacer funcionar los métodos de Clasificador.
 # @author Roberto Carlos García Cruz.
 # @version 1.0
 # @date "%A %d-%m-%Y" 1-6-2023
-from Modelo.Clasificacion.Clasificador import Clasificador
-from sklearn.model_selection import train_test_split
-from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
-from sklearn.metrics import accuracy_score, log_loss
 
-# Clase ClasificadorML: Clase que realiza entrenamientos y clasificaciones de manera estándar array.
+from Modelo.Clasificacion.Clasificador import Clasificador
+
 class ClasificadorML(Clasificador):
 
+    ## @brief Constructor de ClasificadorML.
     def __init__(self):
         super().__init__()
-        
-    def entrenar_modelo(self, columna_extracto, columna_tematica):
-        extractos = self.dataset_[columna_extracto].astype(str)
-        labels = self.dataset_[columna_tematica].astype(str)
 
-        extractos_train, extractos_test, labels_train, labels_test = train_test_split(extractos, labels, test_size=0.20)
-        extractos_train_bag = self.bag_words_.fit_transform(extractos_train)
-        extractos_test_bag = self.bag_words_.transform(extractos_test)
-        self.modelo_.fit(extractos_train_bag, labels_train)
-        predicciones = self.modelo_.predict(extractos_test_bag)
+    ## @brief Realiza el entrenamiento (necesario para ciertos algoritmos).
+    # @param extractos_train_bag [Array] Extractos de entrenamiento.
+    # @param extractos_train_bag [Array] Labels de entrenamiento.
+    def entrenamiento(self, extractos_train_bag, labels_train):
+        self._modelo.fit(extractos_train_bag, labels_train)
 
-        precision = accuracy_score(labels_test, predicciones)
+    ## @brief Crea las predicciones del entrenamiento (necesario para ciertos algoritmos).
+    # @param extractos_test_bag [Array] Extractos de test.
+    # @return [Array] Array de predicciones del dataset de entrenamiento.
+    def crear_predicciones(self, extractos_test_bag):
+        return self._modelo.predict(extractos_test_bag)
 
-        return f"Precisión: {precision:.2%}"
-    
-    def clasificar_sentencias(self, dataset, columna_extracto):
-        extractos = dataset[columna_extracto].astype(str)
-
-        extractos_bag = self.bag_words_.transform(extractos)
-        probabilidades_tematicas = self.modelo_.predict_proba(extractos_bag)
-        return self.crear_array_tematicas(self.modelo_.classes_, probabilidades_tematicas)
+    ## @brief Crea las prediciones según sus probabilidades (necesario para ciertos algoritmos).
+    # @param extractos_bag [Array] Extractos de dataset de prueba.
+    # @return [Matrix] Matriz de probabilidades, cada array son las probabilidades de todas las temáticas de cada iniciativa.
+    def crear_predicciones_probabilidades(self, extractos_bag):
+        return self._modelo.predict_proba(extractos_bag)
             
 
 

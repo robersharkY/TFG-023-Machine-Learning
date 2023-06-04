@@ -1,3 +1,9 @@
+## @package Modelo
+# @brief Clase Modelo, interfaz que une todo lo comprendido de clases de datos y manejo de los mismos para ser usado en el controlador.
+# @author Roberto Carlos García Cruz.
+# @version 1.0
+# @date "%A %d-%m-%Y" 1-6-2023
+
 from Modelo.Limpieza.Procesador import Procesador
 from Modelo.Datos.Dataset import Dataset
 from Modelo.Clasificacion.Clasificador import Clasificador
@@ -16,27 +22,109 @@ from Vista.Vista import Vista
 import re
 
 class Modelo:
-    def __init__(self):
-        self.dataset_entrenamiento_ = Dataset()
-        self.dataset_prueba_ = Dataset()
-        self.procesador_ = Procesador()
-        self.clasificador_ = ClasificadorML()
-        self.columna_extracto = "EXTRACTO"
-        self.columna_tematica = "TEMATICA"
 
-    def leer_dataset_entrenamiento(self,direccion_entrenamiento):
-        self.dataset_entrenamiento_ = Dataset()
-        self.dataset_entrenamiento_.leer_datos(direccion_entrenamiento)
+    ## @brief Constructor de Modelo.
+    def __init__(self):
+        ## Variable privada, dataset para realizar los entrenamientos.
+        self.__dataset_entrenamiento = Dataset()
+
+        ## Variable privada, dataset para realizar las clasificaciones.
+        self.__dataset_prueba = Dataset()
+
+        ## Variable privada, objeto para procesar el lenguaje natural.
+        self.__procesador = Procesador()
+
+        ## Variable privada, objeto para realizar todas las funcionalidades de Machine Learning
+        self.__clasificador = ClasificadorML()
+
+        ## Variable privada, cadena que indica de que columna se obtendrán las iniciativas.
+        self.__columna_extracto = "EXTRACTO"
+
+        ## Variable privada, cadena que indica de que columna se obtendrán y colocarán los resultados y temáticas.
+        self.__columna_tematica = "TEMATICA"
     
-    def leer_dataset_prueba(self,direccion_prueba):
-        self.dataset_prueba_ = Dataset()
-        self.dataset_prueba_.leer_datos(direccion_prueba)
+    ## @brief Lee los datos de un dataset para almacenarlos en el conjunto de entrenamiento.
+    # @param direccion_entrenamiento [String] Dirección del dataset de entrenamiento.
+    def leer_dataset_entrenamiento(self, direccion_entrenamiento):
+        self.__dataset_entrenamiento = Dataset()
+        self.__dataset_entrenamiento.leer_datos(direccion_entrenamiento)
     
+    ## @brief Lee los datos de un dataset para almacenarlos en el conjunto de pruebas.
+    # @param direccion_prueba [String] Dirección del dataset de pruebas.
+    def leer_dataset_prueba(self, direccion_prueba):
+        self.__dataset_prueba = Dataset()
+        self.__dataset_prueba.leer_datos(direccion_prueba)
+    
+    ## @brief Selecciona el tipo bolsa de palabras deseada y updatea la variable "self.__clasificador".
+    # @param tipo [String] Nombre del tipo de bolsa de palabras, los nombres son cogidos del texto de los botones.
+    def seleccionar_bag_words(self, tipo):
+        if tipo == "CV":
+            self.__clasificador.set_bag_words(CountVectorizer(binary = True))
+        else: # Para TF-IDF
+            self.__clasificador.set_bag_words(TfidfVectorizer(binary = True))
+
+    ## @brief Selecciona el algoritmo deseado y updatea la variable "self.__clasificador".
+    # @param tipo [String] Nombre del tipo de algoritmo, los nombres son cogidos del texto de los botones.
+    def seleccionar_algoritmo(self, tipo):
+        if tipo == "SVC-Lineal SVC":
+            self.__clasificador = ClasificadorML()
+            self.__clasificador.set_modelo(SVC(kernel='linear',probability=True))
+        elif tipo == "SVC-SVR":
+            self.__clasificador = ClasificadorML()
+            self.__clasificador.set_modelo(SVC(kernel='rbf',probability=True))
+        elif tipo == "SVC-Nu SVC":
+            self.__clasificador = ClasificadorML()
+            self.__clasificador.set_modelo(NuSVC(kernel='linear',probability=True))
+        elif tipo == "TR-Decision Tree":
+            self.__clasificador = ClasificadorML()
+            self.__clasificador.set_modelo(DecisionTreeClassifier())
+        elif tipo == "TR-Extra Tree":
+            self.__clasificador = ClasificadorML()
+            self.__clasificador.set_modelo(ExtraTreeClassifier())
+        elif tipo == "NB-Multinomial":
+            self.__clasificador = ClasificadorML()
+            self.__clasificador.set_modelo(MultinomialNB())
+        elif tipo == "NB-Gaussian":
+            self.__clasificador = ClasificadorAR()
+            self.__clasificador.set_modelo(GaussianNB())
+        elif tipo == "NB-Bernoulli":
+            self.__clasificador = ClasificadorML()
+            self.__clasificador.set_modelo(BernoulliNB())
+        elif tipo == "ENS-Random Forest":
+            self.__clasificador = ClasificadorML()
+            self.__clasificador.set_modelo(RandomForestClassifier())
+        elif tipo == "ENS-Gradient Boost":
+            self.__clasificador = ClasificadorML()
+            self.__clasificador.set_modelo(GradientBoostingClassifier())
+        elif tipo == "ENS-Ada Boost":
+            self.__clasificador = ClasificadorML()
+            self.__clasificador.set_modelo(AdaBoostClassifier())
+        elif tipo == "KNN-K-Neighbors":
+            self.__clasificador = ClasificadorML()
+            self.__clasificador.set_modelo(KNeighborsClassifier(n_neighbors = 4))
+        elif tipo == "NEU-MLP":
+            self.__clasificador = ClasificadorML()
+            self.__clasificador.set_modelo(MLPClassifier())
+        elif tipo == "DIS-Quadratic Discriminant":
+            self.__clasificador = ClasificadorAR()
+            self.__clasificador.set_modelo(QuadraticDiscriminantAnalysis())
+        elif tipo == "DIS-Linear Discriminant":
+            self.__clasificador = ClasificadorAR()
+            self.__clasificador.set_modelo(LinearDiscriminantAnalysis())
+        elif tipo == "LM-SGD":
+            self.__clasificador = ClasificadorML()
+            self.__clasificador.set_modelo(SGDClassifier(loss = 'log_loss'))
+        else: # Para Logistic Regression
+            self.__clasificador = ClasificadorML()
+            self.__clasificador.set_modelo(LogisticRegression())
+
+
+
     def get_datos_entrenamiento(self):
-        return self.dataset_entrenamiento_.get_datos()
+        return self.__dataset_entrenamiento.get_datos()
     
     def get_datos_pruebas(self):
-        return self.dataset_prueba_.get_datos()
+        return self.__dataset_prueba.get_datos()
     
     def get_array_variables(self):
         return [self.clasificador_.get_n_tematicas(), self.clasificador_.get_alfa(), self.columna_extracto, self.columna_tematica]
@@ -69,112 +157,52 @@ class Modelo:
             self.columna_tematica = array_variables[3]
         else:
             vista.mostrar_ventana_mensaje("Debe introducir un nombre de columna")
-
-
-    def seleccionar_bag_words(self,tipo):
-        if tipo == "CV":
-            self.clasificador_.set_bag_words(CountVectorizer(binary = True))
-        else:
-            self.clasificador_.set_bag_words(TfidfVectorizer(binary = True))
     
-    def seleccionar_algoritmo(self,tipo):
-        if tipo == "SVC-Lineal SVC":
-            self.clasificador_ = ClasificadorML()
-            self.clasificador_.set_modelo(SVC(kernel='linear',probability=True))
-        elif tipo == "SVC-SVR":
-            self.clasificador_ = ClasificadorML()
-            self.clasificador_.set_modelo(SVC(kernel='rbf',probability=True))
-        elif tipo == "SVC-Nu SVC":
-            self.clasificador_ = ClasificadorML()
-            self.clasificador_.set_modelo(NuSVC(kernel='linear',probability=True))
-        elif tipo == "TR-Decision Tree":
-            self.clasificador_ = ClasificadorML()
-            self.clasificador_.set_modelo(DecisionTreeClassifier())
-        elif tipo == "TR-Extra Tree":
-            self.clasificador_ = ClasificadorML()
-            self.clasificador_.set_modelo(ExtraTreeClassifier())
-        elif tipo == "NB-Multinomial":
-            self.clasificador_ = ClasificadorML()
-            self.clasificador_.set_modelo(MultinomialNB())
-        elif tipo == "NB-Gaussian":
-            self.clasificador_ = ClasificadorAR()
-            self.clasificador_.set_modelo(GaussianNB())
-        elif tipo == "NB-Bernoulli":
-            self.clasificador_ = ClasificadorML()
-            self.clasificador_.set_modelo(BernoulliNB())
-        elif tipo == "ENS-Random Forest":
-            self.clasificador_ = ClasificadorML()
-            self.clasificador_.set_modelo(RandomForestClassifier())
-        elif tipo == "ENS-Gradient Boost":
-            self.clasificador_ = ClasificadorML()
-            self.clasificador_.set_modelo(GradientBoostingClassifier())
-        elif tipo == "ENS-Ada Boost":
-            self.clasificador_ = ClasificadorML()
-            self.clasificador_.set_modelo(AdaBoostClassifier())
-        elif tipo == "KNN-K-Neighbors":
-            self.clasificador_ = ClasificadorML()
-            self.clasificador_.set_modelo(KNeighborsClassifier(n_neighbors = 4))
-        elif tipo == "NEU-MLP":
-            self.clasificador_ = ClasificadorML()
-            self.clasificador_.set_modelo(MLPClassifier())
-        elif tipo == "DIS-Quadratic Discriminant":
-            self.clasificador_ = ClasificadorAR()
-            self.clasificador_.set_modelo(QuadraticDiscriminantAnalysis())
-        elif tipo == "DIS-Linear Discriminant":
-            self.clasificador_ = ClasificadorAR()
-            self.clasificador_.set_modelo(LinearDiscriminantAnalysis())
-        elif tipo == "LM-SGD":
-            self.clasificador_ = ClasificadorML()
-            self.clasificador_.set_modelo(SGDClassifier(loss='log_loss'))
-        else:
-            self.clasificador_ = ClasificadorML()
-            self.clasificador_.set_modelo(LogisticRegression())
-
-    def limpiar_datasets(self):
-        self.limpiar_sentencias(self.dataset_entrenamiento_)
-        self.limpiar_sentencias(self.dataset_prueba_)
+    ## @brief Verifica la existencia y crea la columna donde se colocarán los resultados.
+    def verificar_columna_resultados(self):
+        dataset = self.__dataset_prueba.get_datos()
+        if self.__columna_tematica not in dataset: # Si no existe dicha columna.
+            dataset[self.__columna_tematica] = None # Se crea una columna vacía.
+        self.__dataset_prueba.set_datos(dataset)
     
+    ## @brief Verifica si hay alguna iniciativa de los datasets que no haya sido procesada.
     def estan_limpios_datasets(self):
-        df_entrenamiento = self.dataset_entrenamiento_.get_datos()
-        df_prueba = self.dataset_prueba_.get_datos()
-        self.dataset_entrenamiento_
-        for index, row in df_prueba.iterrows():
-            if not isinstance(row[self.columna_extracto], list):
+        for index, row in self.dataset_entrenamiento_.get_datos().iterrows():
+            if not isinstance(row[self.columna_extracto], list): # Si alguna iniciativa no es de tipo "list".
                 return False
-        for index, row in df_entrenamiento.iterrows():
-            if not isinstance(row[self.columna_extracto], list):
+        for index, row in self.dataset_prueba_.get_datos().iterrows():
+            if not isinstance(row[self.columna_extracto], list): # Si alguna iniciativa no es de tipo "list".
                 return False
         return True
     
-    def limpiar_sentencias(self,dataset):
-        df = dataset.get_datos()
-        for index, row in df.iterrows():
-            if not isinstance(row[self.columna_extracto], list):
-                tokens = self.procesador_.eliminar_palabras_vacias(row[self.columna_extracto])
-                tokens = self.procesador_.eliminar_duplicados(tokens)
-                tokens = self.procesador_.lematizar(tokens)
-                df.at[index,self.columna_extracto] = tokens
-        dataset.set_datos(df)
+    ## @brief Realiza la limpieza del lenguaje natural de cada una de las iniciativas, obteniendo palabras clave.
+    # @param dataset [Dataset] Dataset a limpiar iniciativas.
+    def limpiar_sentencias(self, dataset):
+        for index, row in dataset.get_datos().iterrows():
+            if not isinstance(row[self.__columna_extracto], list):
+                tokens = self.__procesador.eliminar_palabras_vacias(row[self.__columna_extracto]) # Tokeniza, elimina puntuaciones y palabras vacías.
+                tokens = self.__procesador.eliminar_duplicados(tokens) # Elimina palabras repetidas.
+                tokens = self.__procesador.lematizar(tokens) # Lematiza cada token.
+                dataset.get_datos().at[index, self.__columna_extracto] = tokens
+    
+    ## @brief Realiza el procesamiento del lenguaje de las iniciativas de ambos archivos.
+    def limpiar_datasets(self):
+        self.limpiar_sentencias(self.__dataset_entrenamiento)
+        self.limpiar_sentencias(self.__dataset_prueba)
 
+    ## @brief Realiza el entrenamiento del conjunto de entrenamiento.
+    # @return [String] Devuelve una cadena que indica la precisión del entrenamiento.
     def entrenamiento(self):
-        self.clasificador_.set_dataset(self.dataset_entrenamiento_.get_datos())
-        tipo = self.clasificador_.get_modelo().__str__()
-        return self.clasificador_.entrenar_modelo(self.columna_extracto,self.columna_tematica)
+        return self.__clasificador.entrenar_modelo(self.__dataset_entrenamiento.get_datos(), self.__columna_extracto, self.__columna_tematica)
 
+    ## @brief Realiza la clasificación de las iniciativas del conjunto de pruebas.
     def clasificar(self):
-        self.verificar_dataframe()
-        tipo = self.clasificador_.get_modelo().__str__()
-        predicciones = self.clasificador_.clasificar_sentencias(self.dataset_prueba_.get_datos(),self.columna_extracto)
+        self.verificar_columna_resultados() # Se verifica si esta creada la columna para poner las temáticas.
+        predicciones = self.__clasificador.clasificar_sentencias(self.__dataset_prueba.get_datos(), self.__columna_extracto)
 
-        for index, row in self.dataset_prueba_.get_datos().iterrows():
-           self.dataset_prueba_.get_datos().at[index,self.columna_tematica] = ', '.join(str(item) for item in predicciones[index])
-        
-        
-    def verificar_dataframe(self):
-        df = self.dataset_prueba_.get_datos()
-        if self.columna_tematica not in df:
-            df[self.columna_tematica] = None
-        self.dataset_prueba_.set_datos(df)
+        for index, row in self.__dataset_prueba_.get_datos().iterrows():
+            #En la columna temática creada, añade los arrays de temáticas eliminando los corchetes.
+           self.__dataset_prueba.get_datos().at[index, self.__columna_tematica] = ', '.join(str(item) for item in predicciones[index])
 
         
         

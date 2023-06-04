@@ -11,8 +11,13 @@ class Dataset:
 
     ## @brief Constructor de Dataset.
     def __init__(self):
+        ## Variable privada, dataset panda para almacenar los datos.
         self.__datos = None
+
+        ## Variable privada, cadena de la dirección donde se encuentra el archivo.
         self.__direccion = ""
+
+        ## Variable privada, tipo de lector para leer los archivos
         self.__lector = LectorCSV()
 
     ## @brief Devuelve la dirección del archivo leído.

@@ -13,6 +13,7 @@ class Procesador:
 
     ## @brief Constructor de Procesador.
     def __init__(self):
+        ## Variable privada, librería cargada en variable para realizar las operaciones.
         self.__nlp = es_core_news_sm.load()
     
     ## @brief Devuelve las palabras vacías de la librería.
