@@ -73,7 +73,7 @@ class Controlador:
             
         menu_configuracion.add_command(    
             label = "Configurar variables",
-            command = self.definir_variables)
+            command = self.realizar_configuracion)
 
         menu_ayuda.add_command(    
             label = "Información",
@@ -105,14 +105,12 @@ class Controlador:
             self.__vista.mostrar_ventana_mensaje("Seleccione solo 1 archivo") # Si selecciona más de un archivo.
         else:
             self.__modelo.leer_dataset_entrenamiento(direccion_archivo[0]) # Si selecciona un archivo.
-    
-    def definir_variables(self):
-        self.__vista.mostrar_ventana_input(self.__modelo.get_variables_configuracion())
-        self.__boton_boton_configuracion = self.__vista.get_boton_configuracion()
-        self.__boton_boton_configuracion.configure(command = lambda: self.__modelo.set_variables(self.__vista.get_variables(), self.__vista))
 
-    def anadir_variables(self):
-        self.__modelo.set_variables(self.__vista.get_variables(),self.vista_)
+    ## @brief Se encarga de abrir la ventana de configuración y actualizar las variables.
+    def realizar_configuracion(self):
+        self.__vista.mostrar_ventana_configuracion(self.__modelo.get_variables_configuracion())
+        self.__boton_boton_configuracion = self.__vista.get_boton_configuracion() # Se implementa botón de "Aplicar cambios"
+        self.__boton_boton_configuracion.configure(command = lambda: self.__modelo.set_variables_configuracion(self.__vista.get_variables_configuracion(), self.__vista))
     
     ## @brief Muestra una ventana con formato de dataset, con la información dada en los parámetros.
     # @param dataset [Panda dataset] Dataset a mostrar.
@@ -131,7 +129,7 @@ class Controlador:
     ## @brief LLama al entrenamiento del modelo y controla los errores
     def entrenamiento_datasets(self):
         # Si algún conjunto de ambos esta vacío.
-        if self.__modelo.get_datos_entrenamiento() is None or self.__modelo.get_datos_pruebas() is None:
+        if self.__modelo.get_dataset_entrenamiento() is None or self.__modelo.get_dataset_pruebas() is None:
             self.__vista.mostrar_ventana_mensaje("Seleccione antes un archivo de entrenamiento y pruebas")
         else: # Si ningún conjunto esta vacío.
             self.__modelo.limpiar_datasets()
@@ -140,13 +138,13 @@ class Controlador:
     ## @brief LLama a la clasificación del modelo y controla los errores.
     def clasificar(self):
         # Si algún modelo de ambos esta vacío.
-        if self.__modelo.get_datos_entrenamiento() is None or self.__modelo.get_datos_pruebas() is None:
+        if self.__modelo.get_dataset_entrenamiento() is None or self.__modelo.get_dataset_pruebas() is None:
             self.__vista.mostrar_ventana_mensaje("Seleccione antes un archivo de entrenamiento y pruebas")
         elif self.__modelo.estan_limpios_datasets() == False: # Si alguna iniciativa no ha sido procesada.
             self.__vista.mostrar_ventana_mensaje("Realice antes el entrenamiento necesario")
         else: # Si ninguna esta vacía y todas las iniciativas han sido procesadas.
             self.__modelo.clasificar()
-            self.mostrar_tabla(self.__modelo.get_datos_pruebas(), 1000, 500)
+            self.mostrar_tabla(self.__modelo.get_dataset_pruebas(), 1000, 500)
     
     
             

@@ -116,25 +116,25 @@ class App(tk.Tk):
         self.__ventana_input.resizable(False, False)
 
         # Canva de fondo para Frame
-        canva_fondo = tk.Canvas(self.ventana_input, bg = "#FFFFFF", width = 400, height = 300, highlightthickness = 1)
+        canva_fondo = tk.Canvas(self.__ventana_input, bg = "#FFFFFF", width = 400, height = 300, highlightthickness = 1)
         canva_fondo.focus_set()
         canva_fondo.pack()
 
         # Adición de labels, inputs y botones
-        label_n_tematicas = tk.Label(self.ventana_input, text = "Nº temáticas máximas a mostrar:", background = "#FFFFFF", font = ("Helvetica",9))
-        label_n_probs = tk.Label(self.ventana_input, text = "Umbral diferencia de probs.:", background = "#FFFFFF", font = ("Helvetica",9))
-        label_extracto = tk.Label(self.ventana_input, text = "Nombre de columna a extraer:", background = "#FFFFFF", font = ("Helvetica",9))
-        label_tematica= tk.Label(self.ventana_input, text = "Nombre de columna de temática:", background = "#FFFFFF", font  = ("Helvetica",9))
+        label_n_tematicas = tk.Label(self.__ventana_input, text = "Nº temáticas máximas a mostrar:", background = "#FFFFFF", font = ("Helvetica",9))
+        label_n_probs = tk.Label(self.__ventana_input, text = "Umbral diferencia de probs.:", background = "#FFFFFF", font = ("Helvetica",9))
+        label_extracto = tk.Label(self.__ventana_input, text = "Nombre de columna a extraer:", background = "#FFFFFF", font = ("Helvetica",9))
+        label_tematica= tk.Label(self.__ventana_input, text = "Nombre de columna de temática:", background = "#FFFFFF", font  = ("Helvetica",9))
 
         label_n_tematicas.pack()
         label_n_probs.pack()
         label_extracto.pack()
         label_tematica.pack()
 
-        self.__entrada_texto_n_tematicas = tk.Entry(self.ventana_input, background = "#E5CCFF", font = ("Helvetica",9))
-        self.__entrada_texto_probs = tk.Entry(self.ventana_input, background = "#E5CCFF", font = ("Helvetica",9))
-        self.__entrada_texto_extracto = tk.Entry(self.ventana_input, background = "#E5CCFF", font = ("Helvetica",9))
-        self.__entrada_texto_tematica = tk.Entry(self.ventana_input, background = "#E5CCFF", font = ("Helvetica",9))
+        self.__entrada_texto_n_tematicas = tk.Entry(self.__ventana_input, background = "#E5CCFF", font = ("Helvetica",9))
+        self.__entrada_texto_probs = tk.Entry(self.__ventana_input, background = "#E5CCFF", font = ("Helvetica",9))
+        self.__entrada_texto_extracto = tk.Entry(self.__ventana_input, background = "#E5CCFF", font = ("Helvetica",9))
+        self.__entrada_texto_tematica = tk.Entry(self.__ventana_input, background = "#E5CCFF", font = ("Helvetica",9))
 
         self.__entrada_texto_n_tematicas.insert(0, variables_configuracion[0])
         self.__entrada_texto_probs.insert(0, variables_configuracion[1])
@@ -146,7 +146,7 @@ class App(tk.Tk):
         self.__entrada_texto_extracto.pack()
         self.__entrada_texto_tematica.pack()
 
-        self.__boton_configuracion = Button(self.ventana_input, text = "Aplicar cambios", font = ("Helvetica", 9), background = "#E5CCFF")
+        self.__boton_configuracion = Button(self.__ventana_input, text = "Aplicar cambios", font = ("Helvetica", 9), background = "#E5CCFF")
         self.__boton_configuracion.pack()
 
         # Colocación de elementos

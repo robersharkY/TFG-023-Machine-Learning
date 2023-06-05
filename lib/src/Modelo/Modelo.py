@@ -119,45 +119,83 @@ class Modelo:
             self.__clasificador.set_modelo(LogisticRegression())
 
 
-
-    def get_datos_entrenamiento(self):
+    ## @brief Devuelve el dataset de entrenamiento.
+    # @return [Panda Dataset] Dataset para el entrenamiento de los algoritmos.
+    def get_dataset_entrenamiento(self):
         return self.__dataset_entrenamiento.get_datos()
     
-    def get_datos_pruebas(self):
+    ## @brief Devuelve el dataset de pruebas.
+    # @return [Panda Dataset] Dataset para el la clasificación de iniciativas.
+    def get_dataset_pruebas(self):
         return self.__dataset_prueba.get_datos()
     
-    def get_array_variables(self):
-        return [self.clasificador_.get_n_tematicas(), self.clasificador_.get_alfa(), self.columna_extracto, self.columna_tematica]
+    ## @brief Devuelve las variables de la configuración del programa.
+    # @return [Array] Variables de configuración del programa.
+    def get_variables_configuracion(self):
+        return [self.__clasificador.get_n_tematicas(), self.__clasificador.get_alfa(), 
+                self.__columna_extracto, self.__columna_tematica]
 
-    def set_variables(self,array_variables,vista):
-        if array_variables[0].isnumeric() and array_variables[0] != "":
-            numero = int(array_variables[0])
-            if numero < 1 and numero > 10:
-                vista.mostrar_ventana_mensaje("El número de temáticas debe ser entre 1 y 10")
-            else:
-                self.clasificador_.set_n_tematicas(numero)
-        else:
-            vista.mostrar_ventana_mensaje("Debe introducir un dato numérico")
+    ## @brief Verifica que se cumplan con todos los sets de la configuración de variables.
+    # @param variables_config [Array] Array con las variables de configuración.
+    # @param vista [Vista] Vista del programa que nos ayudará a lanzar ventanas.
+    def set_variables_configuracion(self, variables_config, vista):
+        conteo = []
+        conteo.append(self.set_int_n_tematicas(variables_config[0], vista))
+        conteo.append(self.set_float_alfa(variables_config[1], vista))  
+        conteo.append(self.set_cadena(self.__columna_extracto, variables_config[2], "Debe introducir un nombre de columna de extracto.", vista))
+        conteo.append(self.set_cadena(self.__columna_tematica, variables_config[3], "Debe introducir un nombre de columna de temática.", vista))
+        if all(conteo): # Si todos los sets son == True
+            vista.mostrar_ventana_mensaje("Se han actualizado todos los datos correctamente.")
 
-        if re.match(r'^-?\d+(?:\.\d+)$', array_variables[1]) and array_variables[1] != "":
-            numero = float(array_variables[1])
-            if numero < 0 and numero > 1:
-                vista.mostrar_ventana_mensaje("El alfa debe ser entre 0 y 1")
-            else:
-                self.clasificador_.set_alfa(numero)
-        else:
-            vista.mostrar_ventana_mensaje("Debe introducir un dato numérico")
-            
-        if array_variables[2] != "":
-            self.columna_extracto = array_variables[2]
-        else:
-            vista.mostrar_ventana_mensaje("Debe introducir un nombre de columna")
-
-        if array_variables[3] != "":
-            self.columna_tematica = array_variables[3]
-        else:
-            vista.mostrar_ventana_mensaje("Debe introducir un nombre de columna")
+    ## @brief Verifica que el nº de temáticas cumpla con ciertos requisitos.
+    # @param variable [Int] Entero a examinar que cumple con los requisitos.
+    # @param vista [Vista] Vista del programa que nos ayudará a lanzar ventanas.
+    # @return [Boolean] Devuelve True si ha sido capaz de actualizar el dato y False si no ha sido capaz de actualizarlo.
+    def set_int_n_tematicas(self, variable, vista):
+        if variable.isnumeric() and variable != "": # Si la cadena no es vacía y es entero.
+            numero = int(variable)
+            if numero < 1 or numero > 10: # Si el número es menor a 1 o si es mayor a 10.
+                print(numero)
+                vista.mostrar_ventana_mensaje("El número de temáticas debe ser entre 1 y 10.")
+                return False
+            else: # Si el número está entre 1 y 10.
+                self.__clasificador.set_n_tematicas(numero)
+                return True
+        else: # Si la cadena es vacía y no es entero.
+            vista.mostrar_ventana_mensaje("Debe introducir un dato entero nº de temáticas.")
+            return False
     
+    ## @brief Verifica que el alfa de probabilidades cumpla con ciertos requisitos.
+    # @param variable [Float] Flotante a examinar que cumple con los requisitos.
+    # @param vista [Vista] Vista del programa que nos ayudará a lanzar ventanas.
+    # @return [Boolean] Devuelve True si ha sido capaz de actualizar el dato y False si no ha sido capaz de actualizarlo.
+    def set_float_alfa(self, variable, vista):
+        if re.match(r'^-?\d+(?:\.\d+)$', variable) and variable != "": # Si la cadena no es vacía y tiene punto.
+            numero = float(variable)
+            if numero <= 0 or numero >= 1: # Si el número es menor o igual a 0 o si es mayor o igual a 1.
+                vista.mostrar_ventana_mensaje("El alfa debe ser entre 0 y 1, sin ser estos 0 y 1.")
+                return False
+            else: # Si el número está entre 0 y 1.
+                self.__clasificador.set_alfa(numero)
+                return True
+        else: # Si la cadena es vacía y no tiene punto.
+            vista.mostrar_ventana_mensaje("Debe introducir un dato float en umbral.")
+            return False
+    
+    ## @brief Verifica que no sea una cadena vacía.
+    # @param columna [String] variable que contiene el nombre de la columna. 
+    # @param variable [String] Cadena a examinar que cumple con los requisitos.
+    # @param mensaje [String] Cadena con mensaje de error por si no cumple los requisitos.
+    # @param vista [Vista] Vista del programa que nos ayudará a lanzar ventanas.
+    # @return [Boolean] Devuelve True si ha sido capaz de actualizar el dato y False si no ha sido capaz de actualizarlo.
+    def set_cadena(self, columna, variable, mensaje, vista):
+        if variable != "": # Si la cadena no es vacía.
+            columna = variable
+            return True
+        else: # Si la cadena es vacía.
+            vista.mostrar_ventana_mensaje(mensaje)
+            return False
+
     ## @brief Verifica la existencia y crea la columna donde se colocarán los resultados.
     def verificar_columna_resultados(self):
         dataset = self.__dataset_prueba.get_datos()

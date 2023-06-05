@@ -61,7 +61,7 @@ class Vista:
     
     ## @brief Crea la ventana auxiliar del apartado de configuración.
     # @param variables_configuracion [Array] Variables de la configuración actual del apartado de configuración. 
-    def mostrar_ventana_input(self, variables_configuracion):
+    def mostrar_ventana_configuracion(self, variables_configuracion):
         self.__app.crear_ventana_configuracion(self.__app.get_frame(), variables_configuracion)
     
     ## @brief Crea ventanas de avisos de cadenas que se pasen por parámetro.
