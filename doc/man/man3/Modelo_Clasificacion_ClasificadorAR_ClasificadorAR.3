@@ -1,4 +1,4 @@
-.TH "Modelo.Clasificacion.ClasificadorAR.ClasificadorAR" 3 "Fri Jun 2 2023" "Version 1.0" "TFG-023" \" -*- nroff -*-
+.TH "Modelo.Clasificacion.ClasificadorAR.ClasificadorAR" 3 "Mon Jun 5 2023" "Version 1.0" "TFG-023" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,20 +14,75 @@ Inherits \fBModelo\&.Clasificacion\&.Clasificador\&.Clasificador\fP\&.
 .ti -1c
 .RI "def \fB__init__\fP (self)"
 .br
+.RI "Constructor de \fBClasificadorAR\fP\&. "
 .ti -1c
-.RI "def \fBentrenar_modelo\fP (self, columna_extracto, columna_tematica)"
+.RI "def \fBentrenamiento\fP (self, extractos_train_bag, labels_train)"
 .br
+.RI "Realiza el entrenamiento con datos transformados en array (necesario para ciertos algoritmos)\&. "
 .ti -1c
-.RI "def \fBclasificar_sentencias\fP (self, dataset, columna_extracto)"
+.RI "def \fBcrear_predicciones\fP (self, extractos_test_bag)"
 .br
+.RI "Crea las predicciones del entrenamiento transformados en array (necesario para ciertos algoritmos)\&. "
+.ti -1c
+.RI "def \fBcrear_predicciones_probabilidades\fP (self, extractos_bag)"
+.br
+.RI "Crea las prediciones según sus probabilidades con datos transformados en array (necesario para ciertos algoritmos)\&. "
 .in -1c
-.SS "Additional Inherited Members"
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "def Modelo\&.Clasificacion\&.ClasificadorAR\&.ClasificadorAR\&.__init__ ( self)"
 
 .PP
+Constructor de \fBClasificadorAR\fP\&. 
+.PP
 Reimplemented from \fBModelo\&.Clasificacion\&.Clasificador\&.Clasificador\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "def Modelo\&.Clasificacion\&.ClasificadorAR\&.ClasificadorAR\&.crear_predicciones ( self,  extractos_test_bag)"
+
+.PP
+Crea las predicciones del entrenamiento transformados en array (necesario para ciertos algoritmos)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIextractos_test_bag\fP [Array] Extractos de test\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+[Array] Array de predicciones del dataset de entrenamiento\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Clasificacion\&.ClasificadorAR\&.ClasificadorAR\&.crear_predicciones_probabilidades ( self,  extractos_bag)"
+
+.PP
+Crea las prediciones según sus probabilidades con datos transformados en array (necesario para ciertos algoritmos)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIextractos_bag\fP [Array] Extractos de dataset de prueba\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+[Matrix] Matriz de probabilidades, cada array son las probabilidades de todas las temáticas de cada iniciativa\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Clasificacion\&.ClasificadorAR\&.ClasificadorAR\&.entrenamiento ( self,  extractos_train_bag,  labels_train)"
+
+.PP
+Realiza el entrenamiento con datos transformados en array (necesario para ciertos algoritmos)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIextractos_train_bag\fP [Array] Extractos de entrenamiento\&. 
+.br
+\fIextractos_train_bag\fP [Array] Labels de entrenamiento\&. 
+.RE
+.PP
+
 
 .SH "Author"
 .PP 

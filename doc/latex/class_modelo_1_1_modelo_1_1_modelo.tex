@@ -5,70 +5,256 @@
 \item 
 \mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_a94273a600d819a9cc2bbd06cc9730aa5}\label{class_modelo_1_1_modelo_1_1_modelo_a94273a600d819a9cc2bbd06cc9730aa5}} 
 def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_af3d1ccfec17ef0a45f89471f69ddb56f}\label{class_modelo_1_1_modelo_1_1_modelo_af3d1ccfec17ef0a45f89471f69ddb56f}} 
-def {\bfseries leer\+\_\+dataset\+\_\+entrenamiento} (self, direccion\+\_\+entrenamiento)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_a3713cbe1ce6db4669b262a6b8a21701f}\label{class_modelo_1_1_modelo_1_1_modelo_a3713cbe1ce6db4669b262a6b8a21701f}} 
-def {\bfseries leer\+\_\+dataset\+\_\+prueba} (self, direccion\+\_\+prueba)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_a1818bf42ce1acbdd247e23f66450ce6e}\label{class_modelo_1_1_modelo_1_1_modelo_a1818bf42ce1acbdd247e23f66450ce6e}} 
-def {\bfseries get\+\_\+datos\+\_\+entrenamiento} (self)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_a9ff0a94f0ccb83a55083f1fdca9746a1}\label{class_modelo_1_1_modelo_1_1_modelo_a9ff0a94f0ccb83a55083f1fdca9746a1}} 
-def {\bfseries get\+\_\+datos\+\_\+pruebas} (self)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_acc515af1bfa86676f2521a5ad21489bd}\label{class_modelo_1_1_modelo_1_1_modelo_acc515af1bfa86676f2521a5ad21489bd}} 
-def {\bfseries get\+\_\+array\+\_\+variables} (self)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_a15d11464a018d3760938f97b217f7c55}\label{class_modelo_1_1_modelo_1_1_modelo_a15d11464a018d3760938f97b217f7c55}} 
-def {\bfseries set\+\_\+variables} (self, array\+\_\+variables, vista)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_a7455da20429e24b4171230c21e2a5955}\label{class_modelo_1_1_modelo_1_1_modelo_a7455da20429e24b4171230c21e2a5955}} 
-def {\bfseries seleccionar\+\_\+bag\+\_\+words} (self, tipo)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_a87be54413583776c545c708956f910ab}\label{class_modelo_1_1_modelo_1_1_modelo_a87be54413583776c545c708956f910ab}} 
-def {\bfseries seleccionar\+\_\+algoritmo} (self, tipo)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_a3fe81416c66b91d5eaf5f07ff0d09ea0}\label{class_modelo_1_1_modelo_1_1_modelo_a3fe81416c66b91d5eaf5f07ff0d09ea0}} 
-def {\bfseries limpiar\+\_\+datasets} (self)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor de \mbox{\hyperlink{class_modelo_1_1_modelo_1_1_modelo}{Modelo}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_modelo_1_1_modelo_af3d1ccfec17ef0a45f89471f69ddb56f}{leer\+\_\+dataset\+\_\+entrenamiento}} (self, direccion\+\_\+entrenamiento)
+\begin{DoxyCompactList}\small\item\em Lee los datos de un dataset para almacenarlos en el conjunto de entrenamiento. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_modelo_1_1_modelo_a3713cbe1ce6db4669b262a6b8a21701f}{leer\+\_\+dataset\+\_\+prueba}} (self, direccion\+\_\+prueba)
+\begin{DoxyCompactList}\small\item\em Lee los datos de un dataset para almacenarlos en el conjunto de pruebas. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_modelo_1_1_modelo_a7455da20429e24b4171230c21e2a5955}{seleccionar\+\_\+bag\+\_\+words}} (self, tipo)
+\begin{DoxyCompactList}\small\item\em Selecciona el tipo bolsa de palabras deseada y updatea la variable \char`\"{}self.\+\_\+\+\_\+clasificador\char`\"{}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_modelo_1_1_modelo_a87be54413583776c545c708956f910ab}{seleccionar\+\_\+algoritmo}} (self, tipo)
+\begin{DoxyCompactList}\small\item\em Selecciona el algoritmo deseado y updatea la variable \char`\"{}self.\+\_\+\+\_\+clasificador\char`\"{}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_modelo_1_1_modelo_ae9388a67e49cfe8889f26cf339a216d6}{get\+\_\+dataset\+\_\+entrenamiento}} (self)
+\begin{DoxyCompactList}\small\item\em Devuelve el dataset de entrenamiento. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_modelo_1_1_modelo_a5eb1297e9ad80cc2a565710ac1d77ddd}{get\+\_\+dataset\+\_\+pruebas}} (self)
+\begin{DoxyCompactList}\small\item\em Devuelve el dataset de pruebas. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_modelo_1_1_modelo_acede72fa991f773fe4319ce2458d932d}{get\+\_\+variables\+\_\+configuracion}} (self)
+\begin{DoxyCompactList}\small\item\em Devuelve las variables de la configuración del programa. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_modelo_1_1_modelo_ac8c366ff2c01b567bf22d365d3db3132}{set\+\_\+variables\+\_\+configuracion}} (self, variables\+\_\+config, vista)
+\begin{DoxyCompactList}\small\item\em Verifica que se cumplan con todos los sets de la configuración de variables. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_modelo_1_1_modelo_a838a2f0471c606e42354a5ae2328422d}{set\+\_\+int\+\_\+n\+\_\+tematicas}} (self, variable, vista)
+\begin{DoxyCompactList}\small\item\em Verifica que el nº de temáticas cumpla con ciertos requisitos. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_modelo_1_1_modelo_ad0dda193fe6403915a7b4a957985505f}{set\+\_\+float\+\_\+alfa}} (self, variable, vista)
+\begin{DoxyCompactList}\small\item\em Verifica que el alfa de probabilidades cumpla con ciertos requisitos. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_modelo_1_1_modelo_aab120b8c2e714d8e85db1f993900af86}{set\+\_\+cadena}} (self, columna, variable, mensaje, vista)
+\begin{DoxyCompactList}\small\item\em Verifica que no sea una cadena vacía. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_adf345f5aff598df0db021f4c8fedaa44}\label{class_modelo_1_1_modelo_1_1_modelo_adf345f5aff598df0db021f4c8fedaa44}} 
+def {\bfseries verificar\+\_\+columna\+\_\+resultados} (self)
+\begin{DoxyCompactList}\small\item\em Verifica la existencia y crea la columna donde se colocarán los resultados. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_a1f84ad32b29ccbc24f5c66cff75b32b2}\label{class_modelo_1_1_modelo_1_1_modelo_a1f84ad32b29ccbc24f5c66cff75b32b2}} 
 def {\bfseries estan\+\_\+limpios\+\_\+datasets} (self)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_afd3450573b3904fd39a3b99a0f9ff9fb}\label{class_modelo_1_1_modelo_1_1_modelo_afd3450573b3904fd39a3b99a0f9ff9fb}} 
-def {\bfseries limpiar\+\_\+sentencias} (self, dataset)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_a274951aa23ba23527398c9d8d3debfd7}\label{class_modelo_1_1_modelo_1_1_modelo_a274951aa23ba23527398c9d8d3debfd7}} 
-def {\bfseries entrenamiento} (self)
-\item 
+\begin{DoxyCompactList}\small\item\em Verifica si hay alguna iniciativa de los datasets que no haya sido procesada. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_modelo_1_1_modelo_afd3450573b3904fd39a3b99a0f9ff9fb}{limpiar\+\_\+sentencias}} (self, dataset)
+\begin{DoxyCompactList}\small\item\em Realiza la limpieza del lenguaje natural de cada una de las iniciativas, obteniendo palabras clave. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_a3fe81416c66b91d5eaf5f07ff0d09ea0}\label{class_modelo_1_1_modelo_1_1_modelo_a3fe81416c66b91d5eaf5f07ff0d09ea0}} 
+def {\bfseries limpiar\+\_\+datasets} (self)
+\begin{DoxyCompactList}\small\item\em Realiza el procesamiento del lenguaje de las iniciativas de ambos archivos. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_modelo_1_1_modelo_a274951aa23ba23527398c9d8d3debfd7}{entrenamiento}} (self)
+\begin{DoxyCompactList}\small\item\em Realiza el entrenamiento del conjunto de entrenamiento. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_aa31d04821dd88678dd3e9c65d97de5a0}\label{class_modelo_1_1_modelo_1_1_modelo_aa31d04821dd88678dd3e9c65d97de5a0}} 
 def {\bfseries clasificar} (self)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_ab2a0c488819b4b8343980efca43b91ec}\label{class_modelo_1_1_modelo_1_1_modelo_ab2a0c488819b4b8343980efca43b91ec}} 
-def {\bfseries verificar\+\_\+dataframe} (self)
-\end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_a934d4abf44ba647fc2a3cb3cd5e299da}\label{class_modelo_1_1_modelo_1_1_modelo_a934d4abf44ba647fc2a3cb3cd5e299da}} 
-{\bfseries dataset\+\_\+entrenamiento\+\_\+}
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_a1fab73e9810e1c1104e59eac2bcadbda}\label{class_modelo_1_1_modelo_1_1_modelo_a1fab73e9810e1c1104e59eac2bcadbda}} 
-{\bfseries dataset\+\_\+prueba\+\_\+}
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_ad75b31c3427fe23bd8a2c98402ecb804}\label{class_modelo_1_1_modelo_1_1_modelo_ad75b31c3427fe23bd8a2c98402ecb804}} 
-{\bfseries procesador\+\_\+}
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_ac3438c376ee1d0f1560cbc0127f631fd}\label{class_modelo_1_1_modelo_1_1_modelo_ac3438c376ee1d0f1560cbc0127f631fd}} 
-{\bfseries clasificador\+\_\+}
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_a0466e3436ae36d0d363d0acadc3180f8}\label{class_modelo_1_1_modelo_1_1_modelo_a0466e3436ae36d0d363d0acadc3180f8}} 
-{\bfseries columna\+\_\+extracto}
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_a2c2bd5d5c5538819e7137c57101b6c23}\label{class_modelo_1_1_modelo_1_1_modelo_a2c2bd5d5c5538819e7137c57101b6c23}} 
-{\bfseries columna\+\_\+tematica}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Realiza la clasificación de las iniciativas del conjunto de pruebas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_a274951aa23ba23527398c9d8d3debfd7}\label{class_modelo_1_1_modelo_1_1_modelo_a274951aa23ba23527398c9d8d3debfd7}} 
+\index{Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}!entrenamiento@{entrenamiento}}
+\index{entrenamiento@{entrenamiento}!Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}}
+\doxysubsubsection{\texorpdfstring{entrenamiento()}{entrenamiento()}}
+{\footnotesize\ttfamily def Modelo.\+Modelo.\+Modelo.\+entrenamiento (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Realiza el entrenamiento del conjunto de entrenamiento. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}String\mbox{]} Devuelve una cadena que indica la precisión del entrenamiento. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_ae9388a67e49cfe8889f26cf339a216d6}\label{class_modelo_1_1_modelo_1_1_modelo_ae9388a67e49cfe8889f26cf339a216d6}} 
+\index{Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}!get\_dataset\_entrenamiento@{get\_dataset\_entrenamiento}}
+\index{get\_dataset\_entrenamiento@{get\_dataset\_entrenamiento}!Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}}
+\doxysubsubsection{\texorpdfstring{get\_dataset\_entrenamiento()}{get\_dataset\_entrenamiento()}}
+{\footnotesize\ttfamily def Modelo.\+Modelo.\+Modelo.\+get\+\_\+dataset\+\_\+entrenamiento (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Devuelve el dataset de entrenamiento. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}Panda Dataset\mbox{]} Dataset para el entrenamiento de los algoritmos. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_a5eb1297e9ad80cc2a565710ac1d77ddd}\label{class_modelo_1_1_modelo_1_1_modelo_a5eb1297e9ad80cc2a565710ac1d77ddd}} 
+\index{Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}!get\_dataset\_pruebas@{get\_dataset\_pruebas}}
+\index{get\_dataset\_pruebas@{get\_dataset\_pruebas}!Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}}
+\doxysubsubsection{\texorpdfstring{get\_dataset\_pruebas()}{get\_dataset\_pruebas()}}
+{\footnotesize\ttfamily def Modelo.\+Modelo.\+Modelo.\+get\+\_\+dataset\+\_\+pruebas (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Devuelve el dataset de pruebas. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}Panda Dataset\mbox{]} Dataset para el la clasificación de iniciativas. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_acede72fa991f773fe4319ce2458d932d}\label{class_modelo_1_1_modelo_1_1_modelo_acede72fa991f773fe4319ce2458d932d}} 
+\index{Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}!get\_variables\_configuracion@{get\_variables\_configuracion}}
+\index{get\_variables\_configuracion@{get\_variables\_configuracion}!Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}}
+\doxysubsubsection{\texorpdfstring{get\_variables\_configuracion()}{get\_variables\_configuracion()}}
+{\footnotesize\ttfamily def Modelo.\+Modelo.\+Modelo.\+get\+\_\+variables\+\_\+configuracion (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Devuelve las variables de la configuración del programa. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}Array\mbox{]} Variables de configuración del programa. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_af3d1ccfec17ef0a45f89471f69ddb56f}\label{class_modelo_1_1_modelo_1_1_modelo_af3d1ccfec17ef0a45f89471f69ddb56f}} 
+\index{Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}!leer\_dataset\_entrenamiento@{leer\_dataset\_entrenamiento}}
+\index{leer\_dataset\_entrenamiento@{leer\_dataset\_entrenamiento}!Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}}
+\doxysubsubsection{\texorpdfstring{leer\_dataset\_entrenamiento()}{leer\_dataset\_entrenamiento()}}
+{\footnotesize\ttfamily def Modelo.\+Modelo.\+Modelo.\+leer\+\_\+dataset\+\_\+entrenamiento (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{direccion\+\_\+entrenamiento }\end{DoxyParamCaption})}
+
+
+
+Lee los datos de un dataset para almacenarlos en el conjunto de entrenamiento. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direccion\+\_\+entrenamiento} & \mbox{[}String\mbox{]} Dirección del dataset de entrenamiento. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_a3713cbe1ce6db4669b262a6b8a21701f}\label{class_modelo_1_1_modelo_1_1_modelo_a3713cbe1ce6db4669b262a6b8a21701f}} 
+\index{Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}!leer\_dataset\_prueba@{leer\_dataset\_prueba}}
+\index{leer\_dataset\_prueba@{leer\_dataset\_prueba}!Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}}
+\doxysubsubsection{\texorpdfstring{leer\_dataset\_prueba()}{leer\_dataset\_prueba()}}
+{\footnotesize\ttfamily def Modelo.\+Modelo.\+Modelo.\+leer\+\_\+dataset\+\_\+prueba (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{direccion\+\_\+prueba }\end{DoxyParamCaption})}
+
+
+
+Lee los datos de un dataset para almacenarlos en el conjunto de pruebas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direccion\+\_\+prueba} & \mbox{[}String\mbox{]} Dirección del dataset de pruebas. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_afd3450573b3904fd39a3b99a0f9ff9fb}\label{class_modelo_1_1_modelo_1_1_modelo_afd3450573b3904fd39a3b99a0f9ff9fb}} 
+\index{Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}!limpiar\_sentencias@{limpiar\_sentencias}}
+\index{limpiar\_sentencias@{limpiar\_sentencias}!Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}}
+\doxysubsubsection{\texorpdfstring{limpiar\_sentencias()}{limpiar\_sentencias()}}
+{\footnotesize\ttfamily def Modelo.\+Modelo.\+Modelo.\+limpiar\+\_\+sentencias (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dataset }\end{DoxyParamCaption})}
+
+
+
+Realiza la limpieza del lenguaje natural de cada una de las iniciativas, obteniendo palabras clave. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dataset} & \mbox{[}Dataset\mbox{]} Dataset a limpiar iniciativas. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_a87be54413583776c545c708956f910ab}\label{class_modelo_1_1_modelo_1_1_modelo_a87be54413583776c545c708956f910ab}} 
+\index{Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}!seleccionar\_algoritmo@{seleccionar\_algoritmo}}
+\index{seleccionar\_algoritmo@{seleccionar\_algoritmo}!Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}}
+\doxysubsubsection{\texorpdfstring{seleccionar\_algoritmo()}{seleccionar\_algoritmo()}}
+{\footnotesize\ttfamily def Modelo.\+Modelo.\+Modelo.\+seleccionar\+\_\+algoritmo (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{tipo }\end{DoxyParamCaption})}
+
+
+
+Selecciona el algoritmo deseado y updatea la variable \char`\"{}self.\+\_\+\+\_\+clasificador\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tipo} & \mbox{[}String\mbox{]} Nombre del tipo de algoritmo, los nombres son cogidos del texto de los botones. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_a7455da20429e24b4171230c21e2a5955}\label{class_modelo_1_1_modelo_1_1_modelo_a7455da20429e24b4171230c21e2a5955}} 
+\index{Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}!seleccionar\_bag\_words@{seleccionar\_bag\_words}}
+\index{seleccionar\_bag\_words@{seleccionar\_bag\_words}!Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}}
+\doxysubsubsection{\texorpdfstring{seleccionar\_bag\_words()}{seleccionar\_bag\_words()}}
+{\footnotesize\ttfamily def Modelo.\+Modelo.\+Modelo.\+seleccionar\+\_\+bag\+\_\+words (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{tipo }\end{DoxyParamCaption})}
+
+
+
+Selecciona el tipo bolsa de palabras deseada y updatea la variable \char`\"{}self.\+\_\+\+\_\+clasificador\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tipo} & \mbox{[}String\mbox{]} Nombre del tipo de bolsa de palabras, los nombres son cogidos del texto de los botones. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_aab120b8c2e714d8e85db1f993900af86}\label{class_modelo_1_1_modelo_1_1_modelo_aab120b8c2e714d8e85db1f993900af86}} 
+\index{Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}!set\_cadena@{set\_cadena}}
+\index{set\_cadena@{set\_cadena}!Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}}
+\doxysubsubsection{\texorpdfstring{set\_cadena()}{set\_cadena()}}
+{\footnotesize\ttfamily def Modelo.\+Modelo.\+Modelo.\+set\+\_\+cadena (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{columna,  }\item[{}]{variable,  }\item[{}]{mensaje,  }\item[{}]{vista }\end{DoxyParamCaption})}
+
+
+
+Verifica que no sea una cadena vacía. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em columna} & \mbox{[}String\mbox{]} variable que contiene el nombre de la columna. \\
+\hline
+{\em variable} & \mbox{[}String\mbox{]} Cadena a examinar que cumple con los requisitos. \\
+\hline
+{\em mensaje} & \mbox{[}String\mbox{]} Cadena con mensaje de error por si no cumple los requisitos. \\
+\hline
+{\em vista} & \mbox{[}\mbox{\hyperlink{namespace_vista}{Vista}}\mbox{]} \mbox{\hyperlink{namespace_vista}{Vista}} del programa que nos ayudará a lanzar ventanas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}Boolean\mbox{]} Devuelve True si ha sido capaz de actualizar el dato y False si no ha sido capaz de actualizarlo. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_ad0dda193fe6403915a7b4a957985505f}\label{class_modelo_1_1_modelo_1_1_modelo_ad0dda193fe6403915a7b4a957985505f}} 
+\index{Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}!set\_float\_alfa@{set\_float\_alfa}}
+\index{set\_float\_alfa@{set\_float\_alfa}!Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}}
+\doxysubsubsection{\texorpdfstring{set\_float\_alfa()}{set\_float\_alfa()}}
+{\footnotesize\ttfamily def Modelo.\+Modelo.\+Modelo.\+set\+\_\+float\+\_\+alfa (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{variable,  }\item[{}]{vista }\end{DoxyParamCaption})}
+
+
+
+Verifica que el alfa de probabilidades cumpla con ciertos requisitos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em variable} & \mbox{[}Float\mbox{]} Flotante a examinar que cumple con los requisitos. \\
+\hline
+{\em vista} & \mbox{[}\mbox{\hyperlink{namespace_vista}{Vista}}\mbox{]} \mbox{\hyperlink{namespace_vista}{Vista}} del programa que nos ayudará a lanzar ventanas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}Boolean\mbox{]} Devuelve True si ha sido capaz de actualizar el dato y False si no ha sido capaz de actualizarlo. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_a838a2f0471c606e42354a5ae2328422d}\label{class_modelo_1_1_modelo_1_1_modelo_a838a2f0471c606e42354a5ae2328422d}} 
+\index{Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}!set\_int\_n\_tematicas@{set\_int\_n\_tematicas}}
+\index{set\_int\_n\_tematicas@{set\_int\_n\_tematicas}!Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}}
+\doxysubsubsection{\texorpdfstring{set\_int\_n\_tematicas()}{set\_int\_n\_tematicas()}}
+{\footnotesize\ttfamily def Modelo.\+Modelo.\+Modelo.\+set\+\_\+int\+\_\+n\+\_\+tematicas (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{variable,  }\item[{}]{vista }\end{DoxyParamCaption})}
+
+
+
+Verifica que el nº de temáticas cumpla con ciertos requisitos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em variable} & \mbox{[}Int\mbox{]} Entero a examinar que cumple con los requisitos. \\
+\hline
+{\em vista} & \mbox{[}\mbox{\hyperlink{namespace_vista}{Vista}}\mbox{]} \mbox{\hyperlink{namespace_vista}{Vista}} del programa que nos ayudará a lanzar ventanas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}Boolean\mbox{]} Devuelve True si ha sido capaz de actualizar el dato y False si no ha sido capaz de actualizarlo. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_modelo_1_1_modelo_1_1_modelo_ac8c366ff2c01b567bf22d365d3db3132}\label{class_modelo_1_1_modelo_1_1_modelo_ac8c366ff2c01b567bf22d365d3db3132}} 
+\index{Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}!set\_variables\_configuracion@{set\_variables\_configuracion}}
+\index{set\_variables\_configuracion@{set\_variables\_configuracion}!Modelo.Modelo.Modelo@{Modelo.Modelo.Modelo}}
+\doxysubsubsection{\texorpdfstring{set\_variables\_configuracion()}{set\_variables\_configuracion()}}
+{\footnotesize\ttfamily def Modelo.\+Modelo.\+Modelo.\+set\+\_\+variables\+\_\+configuracion (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{variables\+\_\+config,  }\item[{}]{vista }\end{DoxyParamCaption})}
+
+
+
+Verifica que se cumplan con todos los sets de la configuración de variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em variables\+\_\+config} & \mbox{[}Array\mbox{]} Array con las variables de configuración. \\
+\hline
+{\em vista} & \mbox{[}\mbox{\hyperlink{namespace_vista}{Vista}}\mbox{]} \mbox{\hyperlink{namespace_vista}{Vista}} del programa que nos ayudará a lanzar ventanas. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

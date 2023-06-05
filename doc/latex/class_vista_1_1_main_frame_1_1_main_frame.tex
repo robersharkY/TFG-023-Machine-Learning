@@ -2,8 +2,7 @@
 \label{class_vista_1_1_main_frame_1_1_main_frame}\index{Vista.MainFrame.MainFrame@{Vista.MainFrame.MainFrame}}
 
 
-Inheritance diagram for Vista.\+Main\+Frame.\+Main\+Frame\+:
-\nopagebreak
+Inheritance diagram for Vista.\+Main\+Frame.\+Main\+Frame\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for Vista.\+Main\+Frame.\+Main\+Frame\+:
 \end{figure}
 
 
-Collaboration diagram for Vista.\+Main\+Frame.\+Main\+Frame\+:
-\nopagebreak
+Collaboration diagram for Vista.\+Main\+Frame.\+Main\+Frame\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -24,25 +22,11 @@ Collaboration diagram for Vista.\+Main\+Frame.\+Main\+Frame\+:
 \begin{DoxyCompactItemize}
 \item 
 def \mbox{\hyperlink{class_vista_1_1_main_frame_1_1_main_frame_a5fc6b13f0aa78616b890f0d437d69379}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, container)
-\begin{DoxyCompactList}\small\item\em Constructor de Mainframe, en el se construye toda la interfaz de usuario del frame principal. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_vista_1_1_main_frame_1_1_main_frame_a340c7ec0ac4ba15c0c2bded0fe2a4a78}\label{class_vista_1_1_main_frame_1_1_main_frame_a340c7ec0ac4ba15c0c2bded0fe2a4a78}} 
-{\bfseries imagen\+\_\+ull}
-\item 
-\mbox{\Hypertarget{class_vista_1_1_main_frame_1_1_main_frame_a4cff044f633cff8865893773ec091383}\label{class_vista_1_1_main_frame_1_1_main_frame_a4cff044f633cff8865893773ec091383}} 
-{\bfseries img}
-\item 
-\mbox{\Hypertarget{class_vista_1_1_main_frame_1_1_main_frame_a44c4d86d9ac752940f5cade729aa830d}\label{class_vista_1_1_main_frame_1_1_main_frame_a44c4d86d9ac752940f5cade729aa830d}} 
-{\bfseries label\+\_\+imagen}
-\item 
-\mbox{\Hypertarget{class_vista_1_1_main_frame_1_1_main_frame_a75e38c9a6a267580f0721d9ccad8a185}\label{class_vista_1_1_main_frame_1_1_main_frame_a75e38c9a6a267580f0721d9ccad8a185}} 
-{\bfseries combo\+\_\+bag}
-\item 
-\mbox{\Hypertarget{class_vista_1_1_main_frame_1_1_main_frame_a0786d57284ab9f812be8e6f255fe007a}\label{class_vista_1_1_main_frame_1_1_main_frame_a0786d57284ab9f812be8e6f255fe007a}} 
-{\bfseries combo\+\_\+algoritmo}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Constructor de Mainframe, en el se construye toda la interfaz de usuario del frame principal. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_vista_1_1_main_frame_1_1_main_frame_a33067f4b85ed241108d985be719dccf5}{get\+\_\+combobox\+\_\+algoritmo}} (self)
+\begin{DoxyCompactList}\small\item\em Devuelve el combo de los algoritmos. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_vista_1_1_main_frame_1_1_main_frame_ab55aacf5c9f4b98058fe88fbe6cc5ff7}{get\+\_\+combobox\+\_\+bag}} (self)
+\begin{DoxyCompactList}\small\item\em Devuelve el combo de las bolsas de palabras. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -58,9 +42,38 @@ Constructor de Mainframe, en el se construye toda la interfaz de usuario del fra
 
 
 \begin{DoxyParams}{Parameters}
-{\em container} & \\
+{\em container} & \mbox{[}Container\mbox{]} Container del frame. \\
 \hline
 \end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_vista_1_1_main_frame_1_1_main_frame_a33067f4b85ed241108d985be719dccf5}\label{class_vista_1_1_main_frame_1_1_main_frame_a33067f4b85ed241108d985be719dccf5}} 
+\index{Vista.MainFrame.MainFrame@{Vista.MainFrame.MainFrame}!get\_combobox\_algoritmo@{get\_combobox\_algoritmo}}
+\index{get\_combobox\_algoritmo@{get\_combobox\_algoritmo}!Vista.MainFrame.MainFrame@{Vista.MainFrame.MainFrame}}
+\doxysubsubsection{\texorpdfstring{get\_combobox\_algoritmo()}{get\_combobox\_algoritmo()}}
+{\footnotesize\ttfamily def Vista.\+Main\+Frame.\+Main\+Frame.\+get\+\_\+combobox\+\_\+algoritmo (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Devuelve el combo de los algoritmos. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}Combo\+Box\mbox{]} Combo de los algoritmos a elegir. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vista_1_1_main_frame_1_1_main_frame_ab55aacf5c9f4b98058fe88fbe6cc5ff7}\label{class_vista_1_1_main_frame_1_1_main_frame_ab55aacf5c9f4b98058fe88fbe6cc5ff7}} 
+\index{Vista.MainFrame.MainFrame@{Vista.MainFrame.MainFrame}!get\_combobox\_bag@{get\_combobox\_bag}}
+\index{get\_combobox\_bag@{get\_combobox\_bag}!Vista.MainFrame.MainFrame@{Vista.MainFrame.MainFrame}}
+\doxysubsubsection{\texorpdfstring{get\_combobox\_bag()}{get\_combobox\_bag()}}
+{\footnotesize\ttfamily def Vista.\+Main\+Frame.\+Main\+Frame.\+get\+\_\+combobox\+\_\+bag (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Devuelve el combo de las bolsas de palabras. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}Combo\+Box\mbox{]} Combo de las bolsas de palabras a elegir. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

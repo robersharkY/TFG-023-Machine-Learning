@@ -1,4 +1,4 @@
-.TH "Vista.Vista.Vista" 3 "Fri Jun 2 2023" "Version 1.0" "TFG-023" \" -*- nroff -*-
+.TH "Vista.Vista.Vista" 3 "Mon Jun 5 2023" "Version 1.0" "TFG-023" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,46 +14,162 @@ Vista.Vista.Vista
 .br
 .RI "Constructor de vista\&. "
 .ti -1c
-.RI "def \fBiniciar\fP (self)"
+.RI "def \fBiniciar_frame\fP (self)"
 .br
+.RI "Muestra el frame de la aplicación\&. "
 .ti -1c
 .RI "def \fBget_combobox_algoritmo\fP (self)"
 .br
+.RI "Devuelve el combo de los algoritmos del Mainframe\&. "
 .ti -1c
 .RI "def \fBget_combobox_bag\fP (self)"
 .br
+.RI "Devuelve el combo de las bolsas de palabras del Mainframe\&. "
 .ti -1c
-.RI "def \fBget_boton_variables\fP (self)"
+.RI "def \fBget_boton_configuracion\fP (self)"
 .br
+.RI "Devuelve el botón de 'Aplicar cambios' de la ventana de configuración\&. "
 .ti -1c
 .RI "def \fBget_menu_archivo\fP (self)"
 .br
+.RI "Devuelve el menú específico del apartado 'Archivo' de la app\&. "
 .ti -1c
 .RI "def \fBget_menu_opciones\fP (self)"
 .br
+.RI "Devuelve el menú específico del apartado 'Opciones' de la app\&. "
 .ti -1c
 .RI "def \fBget_menu_configuracion\fP (self)"
 .br
+.RI "Devuelve el menú específico del apartado 'Configuración' de la app\&. "
 .ti -1c
 .RI "def \fBget_menu_ayuda\fP (self)"
 .br
+.RI "Devuelve el menú específico del apartado 'Ayuda' de la app\&. "
 .ti -1c
-.RI "def \fBget_variables\fP (self)"
+.RI "def \fBget_variables_configuracion\fP (self)"
 .br
+.RI "Devuelve las variables de configuración actual de la ventana de configuración\&. "
 .ti -1c
-.RI "def \fBmostrar_ventana_input\fP (self, array_variables)"
+.RI "def \fBmostrar_ventana_configuracion\fP (self, variables_configuracion)"
 .br
+.RI "Crea la ventana auxiliar del apartado de configuración\&. "
 .ti -1c
 .RI "def \fBmostrar_ventana_mensaje\fP (self, mensaje)"
 .br
+.RI "Crea ventanas de avisos de cadenas que se pasen por parámetro\&. "
 .in -1c
-.SS "Public Attributes"
+.SH "Member Function Documentation"
+.PP 
+.SS "def Vista\&.Vista\&.Vista\&.get_boton_configuracion ( self)"
 
-.in +1c
-.ti -1c
-.RI "\fBapp_\fP"
-.br
-.in -1c
+.PP
+Devuelve el botón de 'Aplicar cambios' de la ventana de configuración\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[Button] Botón de aplicar cambios de la ventana de configuración\&. 
+.RE
+.PP
+
+.SS "def Vista\&.Vista\&.Vista\&.get_combobox_algoritmo ( self)"
+
+.PP
+Devuelve el combo de los algoritmos del Mainframe\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[ComboBox] Combo de los algoritmos a elegir\&. 
+.RE
+.PP
+
+.SS "def Vista\&.Vista\&.Vista\&.get_combobox_bag ( self)"
+
+.PP
+Devuelve el combo de las bolsas de palabras del Mainframe\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[ComboBox] Combo de las bolsas de palabras a elegir\&. 
+.RE
+.PP
+
+.SS "def Vista\&.Vista\&.Vista\&.get_menu_archivo ( self)"
+
+.PP
+Devuelve el menú específico del apartado 'Archivo' de la app\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[Menu] Menú del apartado 'Archivo'\&. 
+.RE
+.PP
+
+.SS "def Vista\&.Vista\&.Vista\&.get_menu_ayuda ( self)"
+
+.PP
+Devuelve el menú específico del apartado 'Ayuda' de la app\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[Menu] Menú del apartado 'Ayuda'\&. 
+.RE
+.PP
+
+.SS "def Vista\&.Vista\&.Vista\&.get_menu_configuracion ( self)"
+
+.PP
+Devuelve el menú específico del apartado 'Configuración' de la app\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[Menu] Menú del apartado 'Configuración'\&. 
+.RE
+.PP
+
+.SS "def Vista\&.Vista\&.Vista\&.get_menu_opciones ( self)"
+
+.PP
+Devuelve el menú específico del apartado 'Opciones' de la app\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[Menu] Menú del apartado 'Opciones'\&. 
+.RE
+.PP
+
+.SS "def Vista\&.Vista\&.Vista\&.get_variables_configuracion ( self)"
+
+.PP
+Devuelve las variables de configuración actual de la ventana de configuración\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[Array] Variables de la configuración\&. 
+.RE
+.PP
+
+.SS "def Vista\&.Vista\&.Vista\&.mostrar_ventana_configuracion ( self,  variables_configuracion)"
+
+.PP
+Crea la ventana auxiliar del apartado de configuración\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvariables_configuracion\fP [Array] Variables de la configuración actual del apartado de configuración\&. 
+.RE
+.PP
+
+.SS "def Vista\&.Vista\&.Vista\&.mostrar_ventana_mensaje ( self,  mensaje)"
+
+.PP
+Crea ventanas de avisos de cadenas que se pasen por parámetro\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImensaje\fP [String] Cadena a mostrar en la ventana de aviso\&. 
+.RE
+.PP
+
 
 .SH "Author"
 .PP 

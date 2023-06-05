@@ -1,4 +1,4 @@
-.TH "Modelo.Clasificacion.Clasificador.Clasificador" 3 "Fri Jun 2 2023" "Version 1.0" "TFG-023" \" -*- nroff -*-
+.TH "Modelo.Clasificacion.Clasificador.Clasificador" 3 "Mon Jun 5 2023" "Version 1.0" "TFG-023" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,56 +14,208 @@ Inherited by \fBModelo\&.Clasificacion\&.ClasificadorAR\&.ClasificadorAR\fP, and
 .ti -1c
 .RI "def \fB__init__\fP (self)"
 .br
+.RI "Constructor de \fBClasificador\fP\&. "
 .ti -1c
 .RI "def \fBget_n_tematicas\fP (self)"
 .br
+.RI "Devuelve el nº de temáticas máximo a mostrar\&. "
 .ti -1c
 .RI "def \fBset_n_tematicas\fP (self, n_tematicas)"
 .br
+.RI "Actualiza el nº de temáticas máximo a mostrar\&. "
 .ti -1c
 .RI "def \fBget_alfa\fP (self)"
 .br
+.RI "Devuelve el umbral de probabilidad para hallar temáticas cercanas\&. "
 .ti -1c
 .RI "def \fBset_alfa\fP (self, alfa)"
 .br
+.RI "Actualiza el umbral de probabilidad para hallar temáticas cercanas\&. "
 .ti -1c
 .RI "def \fBget_bag_words\fP (self)"
 .br
+.RI "Devuelve la bolsa de palabras\&. "
 .ti -1c
 .RI "def \fBset_bag_words\fP (self, bag_words)"
 .br
+.RI "Actualiza la bolsa de palabras\&. "
 .ti -1c
 .RI "def \fBget_modelo\fP (self)"
 .br
+.RI "Devuelve el algoritmo actual\&. "
 .ti -1c
 .RI "def \fBset_modelo\fP (self, modelo)"
 .br
+.RI "Actualiza el algoritmo actual\&. "
 .ti -1c
-.RI "def \fBset_dataset\fP (self, dataset)"
+.RI "def \fBentrenar_modelo\fP (self, dataset, columna_extracto, columna_tematica)"
 .br
+.RI "Realiza el entrenamiento para preparar y medir la precisión del algoritmo\&. "
+.ti -1c
+.RI "def \fBclasificar_sentencias\fP (self, dataset, columna_extracto)"
+.br
+.RI "Realiza las clasificaciones del conjunto de pruebas\&. "
 .ti -1c
 .RI "def \fBcrear_array_tematicas\fP (self, clases, probabilidades)"
 .br
+.RI "Crea un array con las temáticas más cercanas a cada iniciativa según el alfa y el nº de temáticas\&. "
 .in -1c
-.SS "Public Attributes"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def Modelo\&.Clasificacion\&.Clasificador\&.Clasificador\&.__init__ ( self)"
 
-.in +1c
-.ti -1c
-.RI "\fBdataset_\fP"
+.PP
+Constructor de \fBClasificador\fP\&. 
+.PP
+Reimplemented in \fBModelo\&.Clasificacion\&.ClasificadorAR\&.ClasificadorAR\fP, and \fBModelo\&.Clasificacion\&.ClasificadorML\&.ClasificadorML\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "def Modelo\&.Clasificacion\&.Clasificador\&.Clasificador\&.clasificar_sentencias ( self,  dataset,  columna_extracto)"
+
+.PP
+Realiza las clasificaciones del conjunto de pruebas\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdataset\fP [Panda Dataset] Dataset del conjunto de pruebas\&. 
 .br
-.ti -1c
-.RI "\fBbag_words_\fP"
+\fIcolumna_extracto\fP [String] Columna de donde se obtienen los extractos\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+[Array] Array de arrays de las temáticas de cada iniciativa a clasificar\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Clasificacion\&.Clasificador\&.Clasificador\&.crear_array_tematicas ( self,  clases,  probabilidades)"
+
+.PP
+Crea un array con las temáticas más cercanas a cada iniciativa según el alfa y el nº de temáticas\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIclases\fP [Array] Array de las temáticas ordenado por sus probabilidades\&. 
 .br
-.ti -1c
-.RI "\fBmodelo_\fP"
+\fIprobabilidades\fP [Array] Array de las probabilidades de cada temática\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+[Array] Array de arrays de las temáticas de cada iniciativa a clasificar\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Clasificacion\&.Clasificador\&.Clasificador\&.entrenar_modelo ( self,  dataset,  columna_extracto,  columna_tematica)"
+
+.PP
+Realiza el entrenamiento para preparar y medir la precisión del algoritmo\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdataset\fP [Panda Dataset] Dataset del conjunto de entrenamiento 
 .br
-.ti -1c
-.RI "\fBalfa_\fP"
+\fIcolumna_extracto\fP [String] Columna de donde se obtienen los extractos\&. 
 .br
-.ti -1c
-.RI "\fBn_tematicas\fP"
+\fIcolumna_tematica\fP [String] Columna de donde se obtienen las temáticas\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+[String] Cadena que indica la precisión del algoritmo\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Clasificacion\&.Clasificador\&.Clasificador\&.get_alfa ( self)"
+
+.PP
+Devuelve el umbral de probabilidad para hallar temáticas cercanas\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[Float] Umbral de probabilidad para hallar temáticas cercanas\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Clasificacion\&.Clasificador\&.Clasificador\&.get_bag_words ( self)"
+
+.PP
+Devuelve la bolsa de palabras\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[Bag of words] Bolsa de palabras\&. 
 .br
-.in -1c
+ 
+.RE
+.PP
+
+.SS "def Modelo\&.Clasificacion\&.Clasificador\&.Clasificador\&.get_modelo ( self)"
+
+.PP
+Devuelve el algoritmo actual\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[Algoritmo ML] Algoritmo actual del clasificador\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Clasificacion\&.Clasificador\&.Clasificador\&.get_n_tematicas ( self)"
+
+.PP
+Devuelve el nº de temáticas máximo a mostrar\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[Int] Número de temáticas máximo a mostrar\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Clasificacion\&.Clasificador\&.Clasificador\&.set_alfa ( self,  alfa)"
+
+.PP
+Actualiza el umbral de probabilidad para hallar temáticas cercanas\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIalfa\fP [Int] Umbral de probabilidad para hallar temáticas cercanas, modifica la variable 'self\&.__alfa'\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Clasificacion\&.Clasificador\&.Clasificador\&.set_bag_words ( self,  bag_words)"
+
+.PP
+Actualiza la bolsa de palabras\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbag_words\fP [Bag of words] Bolsa de palabras, modifica la variable 'self\&.__bag_words'\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Clasificacion\&.Clasificador\&.Clasificador\&.set_modelo ( self,  modelo)"
+
+.PP
+Actualiza el algoritmo actual\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodelo\fP [Algoritmo ML] Algoritmo a actualizar, modifica la variable 'self\&._modelo'\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Clasificacion\&.Clasificador\&.Clasificador\&.set_n_tematicas ( self,  n_tematicas)"
+
+.PP
+Actualiza el nº de temáticas máximo a mostrar\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIn_tematicas\fP [Int] Número de temáticas máximo a mostrar, modifica la variable 'self\&.__n_tematicas'\&. 
+.RE
+.PP
+
 
 .SH "Author"
 .PP 

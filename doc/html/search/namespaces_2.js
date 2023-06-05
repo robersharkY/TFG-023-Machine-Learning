@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['vista_0',['Vista',['../namespace_vista.html',1,'']]]
+  ['lectura_0',['Lectura',['../namespace_lectura.html',1,'']]],
+  ['limpieza_1',['Limpieza',['../namespace_limpieza.html',1,'']]]
 ];

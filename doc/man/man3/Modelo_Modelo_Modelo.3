@@ -1,4 +1,4 @@
-.TH "Modelo.Modelo.Modelo" 3 "Fri Jun 2 2023" "Version 1.0" "TFG-023" \" -*- nroff -*-
+.TH "Modelo.Modelo.Modelo" 3 "Mon Jun 5 2023" "Version 1.0" "TFG-023" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,71 +12,248 @@ Modelo.Modelo.Modelo
 .ti -1c
 .RI "def \fB__init__\fP (self)"
 .br
+.RI "Constructor de \fBModelo\fP\&. "
 .ti -1c
 .RI "def \fBleer_dataset_entrenamiento\fP (self, direccion_entrenamiento)"
 .br
+.RI "Lee los datos de un dataset para almacenarlos en el conjunto de entrenamiento\&. "
 .ti -1c
 .RI "def \fBleer_dataset_prueba\fP (self, direccion_prueba)"
 .br
-.ti -1c
-.RI "def \fBget_datos_entrenamiento\fP (self)"
-.br
-.ti -1c
-.RI "def \fBget_datos_pruebas\fP (self)"
-.br
-.ti -1c
-.RI "def \fBget_array_variables\fP (self)"
-.br
-.ti -1c
-.RI "def \fBset_variables\fP (self, array_variables, vista)"
-.br
+.RI "Lee los datos de un dataset para almacenarlos en el conjunto de pruebas\&. "
 .ti -1c
 .RI "def \fBseleccionar_bag_words\fP (self, tipo)"
 .br
+.RI "Selecciona el tipo bolsa de palabras deseada y updatea la variable 'self\&.__clasificador'\&. "
 .ti -1c
 .RI "def \fBseleccionar_algoritmo\fP (self, tipo)"
 .br
+.RI "Selecciona el algoritmo deseado y updatea la variable 'self\&.__clasificador'\&. "
 .ti -1c
-.RI "def \fBlimpiar_datasets\fP (self)"
+.RI "def \fBget_dataset_entrenamiento\fP (self)"
 .br
+.RI "Devuelve el dataset de entrenamiento\&. "
+.ti -1c
+.RI "def \fBget_dataset_pruebas\fP (self)"
+.br
+.RI "Devuelve el dataset de pruebas\&. "
+.ti -1c
+.RI "def \fBget_variables_configuracion\fP (self)"
+.br
+.RI "Devuelve las variables de la configuración del programa\&. "
+.ti -1c
+.RI "def \fBset_variables_configuracion\fP (self, variables_config, vista)"
+.br
+.RI "Verifica que se cumplan con todos los sets de la configuración de variables\&. "
+.ti -1c
+.RI "def \fBset_int_n_tematicas\fP (self, variable, vista)"
+.br
+.RI "Verifica que el nº de temáticas cumpla con ciertos requisitos\&. "
+.ti -1c
+.RI "def \fBset_float_alfa\fP (self, variable, vista)"
+.br
+.RI "Verifica que el alfa de probabilidades cumpla con ciertos requisitos\&. "
+.ti -1c
+.RI "def \fBset_cadena\fP (self, columna, variable, mensaje, vista)"
+.br
+.RI "Verifica que no sea una cadena vacía\&. "
+.ti -1c
+.RI "def \fBverificar_columna_resultados\fP (self)"
+.br
+.RI "Verifica la existencia y crea la columna donde se colocarán los resultados\&. "
 .ti -1c
 .RI "def \fBestan_limpios_datasets\fP (self)"
 .br
+.RI "Verifica si hay alguna iniciativa de los datasets que no haya sido procesada\&. "
 .ti -1c
 .RI "def \fBlimpiar_sentencias\fP (self, dataset)"
 .br
+.RI "Realiza la limpieza del lenguaje natural de cada una de las iniciativas, obteniendo palabras clave\&. "
+.ti -1c
+.RI "def \fBlimpiar_datasets\fP (self)"
+.br
+.RI "Realiza el procesamiento del lenguaje de las iniciativas de ambos archivos\&. "
 .ti -1c
 .RI "def \fBentrenamiento\fP (self)"
 .br
+.RI "Realiza el entrenamiento del conjunto de entrenamiento\&. "
 .ti -1c
 .RI "def \fBclasificar\fP (self)"
 .br
-.ti -1c
-.RI "def \fBverificar_dataframe\fP (self)"
-.br
+.RI "Realiza la clasificación de las iniciativas del conjunto de pruebas\&. "
 .in -1c
-.SS "Public Attributes"
+.SH "Member Function Documentation"
+.PP 
+.SS "def Modelo\&.Modelo\&.Modelo\&.entrenamiento ( self)"
 
-.in +1c
-.ti -1c
-.RI "\fBdataset_entrenamiento_\fP"
+.PP
+Realiza el entrenamiento del conjunto de entrenamiento\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[String] Devuelve una cadena que indica la precisión del entrenamiento\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Modelo\&.Modelo\&.get_dataset_entrenamiento ( self)"
+
+.PP
+Devuelve el dataset de entrenamiento\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[Panda Dataset] Dataset para el entrenamiento de los algoritmos\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Modelo\&.Modelo\&.get_dataset_pruebas ( self)"
+
+.PP
+Devuelve el dataset de pruebas\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[Panda Dataset] Dataset para el la clasificación de iniciativas\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Modelo\&.Modelo\&.get_variables_configuracion ( self)"
+
+.PP
+Devuelve las variables de la configuración del programa\&. 
+.PP
+\fBReturns\fP
+.RS 4
+[Array] Variables de configuración del programa\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Modelo\&.Modelo\&.leer_dataset_entrenamiento ( self,  direccion_entrenamiento)"
+
+.PP
+Lee los datos de un dataset para almacenarlos en el conjunto de entrenamiento\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdireccion_entrenamiento\fP [String] Dirección del dataset de entrenamiento\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Modelo\&.Modelo\&.leer_dataset_prueba ( self,  direccion_prueba)"
+
+.PP
+Lee los datos de un dataset para almacenarlos en el conjunto de pruebas\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdireccion_prueba\fP [String] Dirección del dataset de pruebas\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Modelo\&.Modelo\&.limpiar_sentencias ( self,  dataset)"
+
+.PP
+Realiza la limpieza del lenguaje natural de cada una de las iniciativas, obteniendo palabras clave\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdataset\fP [Dataset] Dataset a limpiar iniciativas\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Modelo\&.Modelo\&.seleccionar_algoritmo ( self,  tipo)"
+
+.PP
+Selecciona el algoritmo deseado y updatea la variable 'self\&.__clasificador'\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItipo\fP [String] Nombre del tipo de algoritmo, los nombres son cogidos del texto de los botones\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Modelo\&.Modelo\&.seleccionar_bag_words ( self,  tipo)"
+
+.PP
+Selecciona el tipo bolsa de palabras deseada y updatea la variable 'self\&.__clasificador'\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItipo\fP [String] Nombre del tipo de bolsa de palabras, los nombres son cogidos del texto de los botones\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Modelo\&.Modelo\&.set_cadena ( self,  columna,  variable,  mensaje,  vista)"
+
+.PP
+Verifica que no sea una cadena vacía\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcolumna\fP [String] variable que contiene el nombre de la columna\&. 
 .br
-.ti -1c
-.RI "\fBdataset_prueba_\fP"
+\fIvariable\fP [String] Cadena a examinar que cumple con los requisitos\&. 
 .br
-.ti -1c
-.RI "\fBprocesador_\fP"
+\fImensaje\fP [String] Cadena con mensaje de error por si no cumple los requisitos\&. 
 .br
-.ti -1c
-.RI "\fBclasificador_\fP"
+\fIvista\fP [\fBVista\fP] \fBVista\fP del programa que nos ayudará a lanzar ventanas\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+[Boolean] Devuelve True si ha sido capaz de actualizar el dato y False si no ha sido capaz de actualizarlo\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Modelo\&.Modelo\&.set_float_alfa ( self,  variable,  vista)"
+
+.PP
+Verifica que el alfa de probabilidades cumpla con ciertos requisitos\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvariable\fP [Float] Flotante a examinar que cumple con los requisitos\&. 
 .br
-.ti -1c
-.RI "\fBcolumna_extracto\fP"
+\fIvista\fP [\fBVista\fP] \fBVista\fP del programa que nos ayudará a lanzar ventanas\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+[Boolean] Devuelve True si ha sido capaz de actualizar el dato y False si no ha sido capaz de actualizarlo\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Modelo\&.Modelo\&.set_int_n_tematicas ( self,  variable,  vista)"
+
+.PP
+Verifica que el nº de temáticas cumpla con ciertos requisitos\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvariable\fP [Int] Entero a examinar que cumple con los requisitos\&. 
 .br
-.ti -1c
-.RI "\fBcolumna_tematica\fP"
+\fIvista\fP [\fBVista\fP] \fBVista\fP del programa que nos ayudará a lanzar ventanas\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+[Boolean] Devuelve True si ha sido capaz de actualizar el dato y False si no ha sido capaz de actualizarlo\&. 
+.RE
+.PP
+
+.SS "def Modelo\&.Modelo\&.Modelo\&.set_variables_configuracion ( self,  variables_config,  vista)"
+
+.PP
+Verifica que se cumplan con todos los sets de la configuración de variables\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvariables_config\fP [Array] Array con las variables de configuración\&. 
 .br
-.in -1c
+\fIvista\fP [\fBVista\fP] \fBVista\fP del programa que nos ayudará a lanzar ventanas\&. 
+.RE
+.PP
+
 
 .SH "Author"
 .PP 

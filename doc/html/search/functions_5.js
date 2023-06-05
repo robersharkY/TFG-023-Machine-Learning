@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['mostrar_5fdatos_0',['mostrar_datos',['../class_modelo_1_1_datos_1_1_dataset_1_1_dataset.html#af6eeea0a149ded0ef25ed9adf3ef7579',1,'Modelo::Datos::Dataset::Dataset']]]
+  ['imprimir_0',['imprimir',['../class_modelo_1_1_lectura_1_1_lector_1_1_lector.html#ac77fab6914df0ab50fd9b46dd707c8c5',1,'Modelo::Lectura::Lector::Lector']]],
+  ['iniciar_1',['iniciar',['../class_controlador_1_1_controlador_1_1_controlador.html#a4bd8fcfac37afd96f29c5be6caa1cb00',1,'Controlador::Controlador::Controlador']]],
+  ['iniciar_5fframe_2',['iniciar_frame',['../class_vista_1_1_vista_1_1_vista.html#a705935099095dcffdb7e282e37b7bf4a',1,'Vista::Vista::Vista']]]
 ];

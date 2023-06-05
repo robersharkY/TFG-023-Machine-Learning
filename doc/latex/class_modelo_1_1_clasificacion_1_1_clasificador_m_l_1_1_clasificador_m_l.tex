@@ -2,8 +2,7 @@
 \label{class_modelo_1_1_clasificacion_1_1_clasificador_m_l_1_1_clasificador_m_l}\index{Modelo.Clasificacion.ClasificadorML.ClasificadorML@{Modelo.Clasificacion.ClasificadorML.ClasificadorML}}
 
 
-Inheritance diagram for Modelo.\+Clasificacion.\+Clasificador\+ML.\+Clasificador\+ML\+:
-\nopagebreak
+Inheritance diagram for Modelo.\+Clasificacion.\+Clasificador\+ML.\+Clasificador\+ML\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for Modelo.\+Clasificacion.\+Clasificador\+ML.\+Clasificador
 \end{figure}
 
 
-Collaboration diagram for Modelo.\+Clasificacion.\+Clasificador\+ML.\+Clasificador\+ML\+:
-\nopagebreak
+Collaboration diagram for Modelo.\+Clasificacion.\+Clasificador\+ML.\+Clasificador\+ML\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -24,14 +22,13 @@ Collaboration diagram for Modelo.\+Clasificacion.\+Clasificador\+ML.\+Clasificad
 \begin{DoxyCompactItemize}
 \item 
 def \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_m_l_1_1_clasificador_m_l_aef9fb43a35bc1d59d20e4a011799a13d}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_m_l_1_1_clasificador_m_l_a0fa6c67dc53d3076e358da00582878e7}\label{class_modelo_1_1_clasificacion_1_1_clasificador_m_l_1_1_clasificador_m_l_a0fa6c67dc53d3076e358da00582878e7}} 
-def {\bfseries entrenar\+\_\+modelo} (self, columna\+\_\+extracto, columna\+\_\+tematica)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_m_l_1_1_clasificador_m_l_a77cd19235fd9ed59f9f9d83608be94ac}\label{class_modelo_1_1_clasificacion_1_1_clasificador_m_l_1_1_clasificador_m_l_a77cd19235fd9ed59f9f9d83608be94ac}} 
-def {\bfseries clasificar\+\_\+sentencias} (self, dataset, columna\+\_\+extracto)
-\end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
+\begin{DoxyCompactList}\small\item\em Constructor de \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_m_l_1_1_clasificador_m_l}{Clasificador\+ML}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_m_l_1_1_clasificador_m_l_ad87a5065d8527cdaf374ce1eae7af8f4}{entrenamiento}} (self, extractos\+\_\+train\+\_\+bag, labels\+\_\+train)
+\begin{DoxyCompactList}\small\item\em Realiza el entrenamiento (necesario para ciertos algoritmos). \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_m_l_1_1_clasificador_m_l_ad1af2cee2e2db290f7631a8dff02b545}{crear\+\_\+predicciones}} (self, extractos\+\_\+test\+\_\+bag)
+\begin{DoxyCompactList}\small\item\em Crea las predicciones del entrenamiento (necesario para ciertos algoritmos). \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_m_l_1_1_clasificador_m_l_a179c213ef403d3256bd1fb354dec2fcf}{crear\+\_\+predicciones\+\_\+probabilidades}} (self, extractos\+\_\+bag)
+\begin{DoxyCompactList}\small\item\em Crea las prediciones según sus probabilidades (necesario para ciertos algoritmos). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -43,8 +40,68 @@ def {\bfseries clasificar\+\_\+sentencias} (self, dataset, columna\+\_\+extracto
 
 
 
-Reimplemented from \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador}{Modelo.\+Clasificacion.\+Clasificador.\+Clasificador}}.
+Constructor de \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_m_l_1_1_clasificador_m_l}{Clasificador\+ML}}. 
 
+
+
+Reimplemented from \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a7ef6316336e60c968de79de5055c602f}{Modelo.\+Clasificacion.\+Clasificador.\+Clasificador}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_m_l_1_1_clasificador_m_l_ad1af2cee2e2db290f7631a8dff02b545}\label{class_modelo_1_1_clasificacion_1_1_clasificador_m_l_1_1_clasificador_m_l_ad1af2cee2e2db290f7631a8dff02b545}} 
+\index{Modelo.Clasificacion.ClasificadorML.ClasificadorML@{Modelo.Clasificacion.ClasificadorML.ClasificadorML}!crear\_predicciones@{crear\_predicciones}}
+\index{crear\_predicciones@{crear\_predicciones}!Modelo.Clasificacion.ClasificadorML.ClasificadorML@{Modelo.Clasificacion.ClasificadorML.ClasificadorML}}
+\doxysubsubsection{\texorpdfstring{crear\_predicciones()}{crear\_predicciones()}}
+{\footnotesize\ttfamily def Modelo.\+Clasificacion.\+Clasificador\+ML.\+Clasificador\+ML.\+crear\+\_\+predicciones (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{extractos\+\_\+test\+\_\+bag }\end{DoxyParamCaption})}
+
+
+
+Crea las predicciones del entrenamiento (necesario para ciertos algoritmos). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em extractos\+\_\+test\+\_\+bag} & \mbox{[}Array\mbox{]} Extractos de test. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}Array\mbox{]} Array de predicciones del dataset de entrenamiento. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_m_l_1_1_clasificador_m_l_a179c213ef403d3256bd1fb354dec2fcf}\label{class_modelo_1_1_clasificacion_1_1_clasificador_m_l_1_1_clasificador_m_l_a179c213ef403d3256bd1fb354dec2fcf}} 
+\index{Modelo.Clasificacion.ClasificadorML.ClasificadorML@{Modelo.Clasificacion.ClasificadorML.ClasificadorML}!crear\_predicciones\_probabilidades@{crear\_predicciones\_probabilidades}}
+\index{crear\_predicciones\_probabilidades@{crear\_predicciones\_probabilidades}!Modelo.Clasificacion.ClasificadorML.ClasificadorML@{Modelo.Clasificacion.ClasificadorML.ClasificadorML}}
+\doxysubsubsection{\texorpdfstring{crear\_predicciones\_probabilidades()}{crear\_predicciones\_probabilidades()}}
+{\footnotesize\ttfamily def Modelo.\+Clasificacion.\+Clasificador\+ML.\+Clasificador\+ML.\+crear\+\_\+predicciones\+\_\+probabilidades (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{extractos\+\_\+bag }\end{DoxyParamCaption})}
+
+
+
+Crea las prediciones según sus probabilidades (necesario para ciertos algoritmos). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em extractos\+\_\+bag} & \mbox{[}Array\mbox{]} Extractos de dataset de prueba. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}Matrix\mbox{]} Matriz de probabilidades, cada array son las probabilidades de todas las temáticas de cada iniciativa. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_m_l_1_1_clasificador_m_l_ad87a5065d8527cdaf374ce1eae7af8f4}\label{class_modelo_1_1_clasificacion_1_1_clasificador_m_l_1_1_clasificador_m_l_ad87a5065d8527cdaf374ce1eae7af8f4}} 
+\index{Modelo.Clasificacion.ClasificadorML.ClasificadorML@{Modelo.Clasificacion.ClasificadorML.ClasificadorML}!entrenamiento@{entrenamiento}}
+\index{entrenamiento@{entrenamiento}!Modelo.Clasificacion.ClasificadorML.ClasificadorML@{Modelo.Clasificacion.ClasificadorML.ClasificadorML}}
+\doxysubsubsection{\texorpdfstring{entrenamiento()}{entrenamiento()}}
+{\footnotesize\ttfamily def Modelo.\+Clasificacion.\+Clasificador\+ML.\+Clasificador\+ML.\+entrenamiento (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{extractos\+\_\+train\+\_\+bag,  }\item[{}]{labels\+\_\+train }\end{DoxyParamCaption})}
+
+
+
+Realiza el entrenamiento (necesario para ciertos algoritmos). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em extractos\+\_\+train\+\_\+bag} & \mbox{[}Array\mbox{]} Extractos de entrenamiento. \\
+\hline
+{\em extractos\+\_\+train\+\_\+bag} & \mbox{[}Array\mbox{]} Labels de entrenamiento. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

@@ -1,4 +1,4 @@
-.TH "Controlador.Controlador.Controlador" 3 "Fri Jun 2 2023" "Version 1.0" "TFG-023" \" -*- nroff -*-
+.TH "Controlador.Controlador.Controlador" 3 "Mon Jun 5 2023" "Version 1.0" "TFG-023" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,50 +12,57 @@ Controlador.Controlador.Controlador
 .ti -1c
 .RI "def \fB__init__\fP (self)"
 .br
+.RI "Constructor de \fBControlador\fP\&. "
 .ti -1c
 .RI "def \fBiniciar\fP (self)"
 .br
+.RI "Inicia la aplicación\&. "
+.ti -1c
+.RI "def \fBanadir_funcionalidades\fP (self)"
+.br
+.RI "Añade las funcionalidades a cada uno de los botones\&. "
 .ti -1c
 .RI "def \fBseleccionar_archivo_test\fP (self)"
 .br
+.RI "Permite seleccionar el archivo del conjunto de test\&. "
 .ti -1c
 .RI "def \fBseleccionar_archivo_entrenamiento\fP (self)"
 .br
+.RI "Permite seleccionar el archivo del conjunto de entrenamiento\&. "
 .ti -1c
-.RI "def \fBdefinir_variables\fP (self)"
+.RI "def \fBrealizar_configuracion\fP (self)"
 .br
-.ti -1c
-.RI "def \fBanadir_variables\fP (self)"
-.br
-.ti -1c
-.RI "def \fBseleccionar_bag_words\fP (self, frase)"
-.br
-.ti -1c
-.RI "def \fBseleccionar_algoritmo\fP (self, frase)"
-.br
+.RI "Se encarga de abrir la ventana de configuración y actualizar las variables\&. "
 .ti -1c
 .RI "def \fBmostrar_tabla\fP (self, dataset, anchura, max_anchura_celda)"
 .br
+.RI "Muestra una ventana con formato de dataset, con la información dada en los parámetros\&. "
 .ti -1c
 .RI "def \fBentrenamiento_datasets\fP (self)"
 .br
+.RI "LLama al entrenamiento del modelo y controla los errores\&. "
 .ti -1c
 .RI "def \fBclasificar\fP (self)"
 .br
+.RI "LLama a la clasificación del modelo y controla los errores\&. "
 .in -1c
-.SS "Public Attributes"
+.SH "Member Function Documentation"
+.PP 
+.SS "def Controlador\&.Controlador\&.Controlador\&.mostrar_tabla ( self,  dataset,  anchura,  max_anchura_celda)"
 
-.in +1c
-.ti -1c
-.RI "\fBvista_\fP"
+.PP
+Muestra una ventana con formato de dataset, con la información dada en los parámetros\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdataset\fP [Panda dataset] Dataset a mostrar\&. 
 .br
-.ti -1c
-.RI "\fBmodelo_\fP"
+\fIanchura\fP [Int] Anchura de la ventana\&. 
 .br
-.ti -1c
-.RI "\fBboton_variables\fP"
-.br
-.in -1c
+\fImax_anchura_celda\fP [Int] Anchura máxima de las celdas\&. 
+.RE
+.PP
+
 
 .SH "Author"
 .PP 

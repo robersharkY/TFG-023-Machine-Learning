@@ -2,8 +2,7 @@
 \label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador}\index{Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}}
 
 
-Inheritance diagram for Modelo.\+Clasificacion.\+Clasificador.\+Clasificador\+:
-\nopagebreak
+Inheritance diagram for Modelo.\+Clasificacion.\+Clasificador.\+Clasificador\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -13,57 +12,225 @@ Inheritance diagram for Modelo.\+Clasificacion.\+Clasificador.\+Clasificador\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+def \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a7ef6316336e60c968de79de5055c602f}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Constructor de \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador}{Clasificador}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a6d9eadfab6cf9c53649ba2c8cb9872b8}{get\+\_\+n\+\_\+tematicas}} (self)
+\begin{DoxyCompactList}\small\item\em Devuelve el nº de temáticas máximo a mostrar. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_af55bb720c95d8646b22e816ae777f165}{set\+\_\+n\+\_\+tematicas}} (self, n\+\_\+tematicas)
+\begin{DoxyCompactList}\small\item\em Actualiza el nº de temáticas máximo a mostrar. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a4835a175fa0d871f632b3070a9f57430}{get\+\_\+alfa}} (self)
+\begin{DoxyCompactList}\small\item\em Devuelve el umbral de probabilidad para hallar temáticas cercanas. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_af4ffc9ddb19e2b7d432609481219b43b}{set\+\_\+alfa}} (self, alfa)
+\begin{DoxyCompactList}\small\item\em Actualiza el umbral de probabilidad para hallar temáticas cercanas. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_acdfe9c84327c327948a45f98f7fdcd97}{get\+\_\+bag\+\_\+words}} (self)
+\begin{DoxyCompactList}\small\item\em Devuelve la bolsa de palabras. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a306b980010bb2f999924157a6fee2471}{set\+\_\+bag\+\_\+words}} (self, bag\+\_\+words)
+\begin{DoxyCompactList}\small\item\em Actualiza la bolsa de palabras. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a7b68f2d35e9aec52f16c79b0c47198bb}{get\+\_\+modelo}} (self)
+\begin{DoxyCompactList}\small\item\em Devuelve el algoritmo actual. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_aadb4fca1858e62e5cc0cf32f36c799a0}{set\+\_\+modelo}} (self, modelo)
+\begin{DoxyCompactList}\small\item\em Actualiza el algoritmo actual. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a4953798b9f48aa15d997a17c566ac418}{entrenar\+\_\+modelo}} (self, dataset, columna\+\_\+extracto, columna\+\_\+tematica)
+\begin{DoxyCompactList}\small\item\em Realiza el entrenamiento para preparar y medir la precisión del algoritmo. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_ac2d29f91d67ae619b37d2a83017bccb8}{clasificar\+\_\+sentencias}} (self, dataset, columna\+\_\+extracto)
+\begin{DoxyCompactList}\small\item\em Realiza las clasificaciones del conjunto de pruebas. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a54874420116c344173c9fc33fd9315e9}{crear\+\_\+array\+\_\+tematicas}} (self, clases, probabilidades)
+\begin{DoxyCompactList}\small\item\em Crea un array con las temáticas más cercanas a cada iniciativa según el alfa y el nº de temáticas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a7ef6316336e60c968de79de5055c602f}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a7ef6316336e60c968de79de5055c602f}} 
-def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a6d9eadfab6cf9c53649ba2c8cb9872b8}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a6d9eadfab6cf9c53649ba2c8cb9872b8}} 
-def {\bfseries get\+\_\+n\+\_\+tematicas} (self)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_af55bb720c95d8646b22e816ae777f165}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_af55bb720c95d8646b22e816ae777f165}} 
-def {\bfseries set\+\_\+n\+\_\+tematicas} (self, n\+\_\+tematicas)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a4835a175fa0d871f632b3070a9f57430}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a4835a175fa0d871f632b3070a9f57430}} 
-def {\bfseries get\+\_\+alfa} (self)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_af4ffc9ddb19e2b7d432609481219b43b}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_af4ffc9ddb19e2b7d432609481219b43b}} 
-def {\bfseries set\+\_\+alfa} (self, alfa)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_acdfe9c84327c327948a45f98f7fdcd97}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_acdfe9c84327c327948a45f98f7fdcd97}} 
-def {\bfseries get\+\_\+bag\+\_\+words} (self)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a306b980010bb2f999924157a6fee2471}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a306b980010bb2f999924157a6fee2471}} 
-def {\bfseries set\+\_\+bag\+\_\+words} (self, bag\+\_\+words)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a7b68f2d35e9aec52f16c79b0c47198bb}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a7b68f2d35e9aec52f16c79b0c47198bb}} 
-def {\bfseries get\+\_\+modelo} (self)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_aadb4fca1858e62e5cc0cf32f36c799a0}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_aadb4fca1858e62e5cc0cf32f36c799a0}} 
-def {\bfseries set\+\_\+modelo} (self, modelo)
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a7e3ff87d2cc0b39ef827504db7d7c3f6}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a7e3ff87d2cc0b39ef827504db7d7c3f6}} 
-def {\bfseries set\+\_\+dataset} (self, dataset)
-\item 
+\index{Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Modelo.\+Clasificacion.\+Clasificador.\+Clasificador.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Constructor de \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador}{Clasificador}}. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_a_r_1_1_clasificador_a_r_aa639522a8d2813d2b6f560259d82ead3}{Modelo.\+Clasificacion.\+Clasificador\+AR.\+Clasificador\+AR}}, and \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_m_l_1_1_clasificador_m_l_aef9fb43a35bc1d59d20e4a011799a13d}{Modelo.\+Clasificacion.\+Clasificador\+ML.\+Clasificador\+ML}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_ac2d29f91d67ae619b37d2a83017bccb8}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_ac2d29f91d67ae619b37d2a83017bccb8}} 
+\index{Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}!clasificar\_sentencias@{clasificar\_sentencias}}
+\index{clasificar\_sentencias@{clasificar\_sentencias}!Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}}
+\doxysubsubsection{\texorpdfstring{clasificar\_sentencias()}{clasificar\_sentencias()}}
+{\footnotesize\ttfamily def Modelo.\+Clasificacion.\+Clasificador.\+Clasificador.\+clasificar\+\_\+sentencias (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dataset,  }\item[{}]{columna\+\_\+extracto }\end{DoxyParamCaption})}
+
+
+
+Realiza las clasificaciones del conjunto de pruebas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dataset} & \mbox{[}Panda Dataset\mbox{]} Dataset del conjunto de pruebas. \\
+\hline
+{\em columna\+\_\+extracto} & \mbox{[}String\mbox{]} Columna de donde se obtienen los extractos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}Array\mbox{]} Array de arrays de las temáticas de cada iniciativa a clasificar. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a54874420116c344173c9fc33fd9315e9}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a54874420116c344173c9fc33fd9315e9}} 
-def {\bfseries crear\+\_\+array\+\_\+tematicas} (self, clases, probabilidades)
-\end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a0b3fb82b4f465becf1227f1b0010fe52}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a0b3fb82b4f465becf1227f1b0010fe52}} 
-{\bfseries dataset\+\_\+}
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_ae91e77365799cdb1fe6c17c48888668e}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_ae91e77365799cdb1fe6c17c48888668e}} 
-{\bfseries bag\+\_\+words\+\_\+}
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a9334f9bdf2986ed73e4f57b96158f42a}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a9334f9bdf2986ed73e4f57b96158f42a}} 
-{\bfseries modelo\+\_\+}
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_ac6be1bbb7e52c7de649235cb5fa6a9dc}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_ac6be1bbb7e52c7de649235cb5fa6a9dc}} 
-{\bfseries alfa\+\_\+}
-\item 
-\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a432b0d23d90f68f2fbf63d52271f41c9}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a432b0d23d90f68f2fbf63d52271f41c9}} 
-{\bfseries n\+\_\+tematicas}
-\end{DoxyCompactItemize}
+\index{Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}!crear\_array\_tematicas@{crear\_array\_tematicas}}
+\index{crear\_array\_tematicas@{crear\_array\_tematicas}!Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}}
+\doxysubsubsection{\texorpdfstring{crear\_array\_tematicas()}{crear\_array\_tematicas()}}
+{\footnotesize\ttfamily def Modelo.\+Clasificacion.\+Clasificador.\+Clasificador.\+crear\+\_\+array\+\_\+tematicas (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{clases,  }\item[{}]{probabilidades }\end{DoxyParamCaption})}
+
+
+
+Crea un array con las temáticas más cercanas a cada iniciativa según el alfa y el nº de temáticas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clases} & \mbox{[}Array\mbox{]} Array de las temáticas ordenado por sus probabilidades. \\
+\hline
+{\em probabilidades} & \mbox{[}Array\mbox{]} Array de las probabilidades de cada temática. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}Array\mbox{]} Array de arrays de las temáticas de cada iniciativa a clasificar. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a4953798b9f48aa15d997a17c566ac418}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a4953798b9f48aa15d997a17c566ac418}} 
+\index{Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}!entrenar\_modelo@{entrenar\_modelo}}
+\index{entrenar\_modelo@{entrenar\_modelo}!Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}}
+\doxysubsubsection{\texorpdfstring{entrenar\_modelo()}{entrenar\_modelo()}}
+{\footnotesize\ttfamily def Modelo.\+Clasificacion.\+Clasificador.\+Clasificador.\+entrenar\+\_\+modelo (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dataset,  }\item[{}]{columna\+\_\+extracto,  }\item[{}]{columna\+\_\+tematica }\end{DoxyParamCaption})}
+
+
+
+Realiza el entrenamiento para preparar y medir la precisión del algoritmo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dataset} & \mbox{[}Panda Dataset\mbox{]} Dataset del conjunto de entrenamiento \\
+\hline
+{\em columna\+\_\+extracto} & \mbox{[}String\mbox{]} Columna de donde se obtienen los extractos. \\
+\hline
+{\em columna\+\_\+tematica} & \mbox{[}String\mbox{]} Columna de donde se obtienen las temáticas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}String\mbox{]} Cadena que indica la precisión del algoritmo. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a4835a175fa0d871f632b3070a9f57430}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a4835a175fa0d871f632b3070a9f57430}} 
+\index{Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}!get\_alfa@{get\_alfa}}
+\index{get\_alfa@{get\_alfa}!Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}}
+\doxysubsubsection{\texorpdfstring{get\_alfa()}{get\_alfa()}}
+{\footnotesize\ttfamily def Modelo.\+Clasificacion.\+Clasificador.\+Clasificador.\+get\+\_\+alfa (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Devuelve el umbral de probabilidad para hallar temáticas cercanas. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}Float\mbox{]} Umbral de probabilidad para hallar temáticas cercanas. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_acdfe9c84327c327948a45f98f7fdcd97}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_acdfe9c84327c327948a45f98f7fdcd97}} 
+\index{Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}!get\_bag\_words@{get\_bag\_words}}
+\index{get\_bag\_words@{get\_bag\_words}!Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}}
+\doxysubsubsection{\texorpdfstring{get\_bag\_words()}{get\_bag\_words()}}
+{\footnotesize\ttfamily def Modelo.\+Clasificacion.\+Clasificador.\+Clasificador.\+get\+\_\+bag\+\_\+words (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Devuelve la bolsa de palabras. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}Bag of words\mbox{]} Bolsa de palabras. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a7b68f2d35e9aec52f16c79b0c47198bb}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a7b68f2d35e9aec52f16c79b0c47198bb}} 
+\index{Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}!get\_modelo@{get\_modelo}}
+\index{get\_modelo@{get\_modelo}!Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}}
+\doxysubsubsection{\texorpdfstring{get\_modelo()}{get\_modelo()}}
+{\footnotesize\ttfamily def Modelo.\+Clasificacion.\+Clasificador.\+Clasificador.\+get\+\_\+modelo (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Devuelve el algoritmo actual. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}Algoritmo ML\mbox{]} Algoritmo actual del clasificador. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a6d9eadfab6cf9c53649ba2c8cb9872b8}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a6d9eadfab6cf9c53649ba2c8cb9872b8}} 
+\index{Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}!get\_n\_tematicas@{get\_n\_tematicas}}
+\index{get\_n\_tematicas@{get\_n\_tematicas}!Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}}
+\doxysubsubsection{\texorpdfstring{get\_n\_tematicas()}{get\_n\_tematicas()}}
+{\footnotesize\ttfamily def Modelo.\+Clasificacion.\+Clasificador.\+Clasificador.\+get\+\_\+n\+\_\+tematicas (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Devuelve el nº de temáticas máximo a mostrar. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}Int\mbox{]} Número de temáticas máximo a mostrar. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_af4ffc9ddb19e2b7d432609481219b43b}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_af4ffc9ddb19e2b7d432609481219b43b}} 
+\index{Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}!set\_alfa@{set\_alfa}}
+\index{set\_alfa@{set\_alfa}!Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}}
+\doxysubsubsection{\texorpdfstring{set\_alfa()}{set\_alfa()}}
+{\footnotesize\ttfamily def Modelo.\+Clasificacion.\+Clasificador.\+Clasificador.\+set\+\_\+alfa (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{alfa }\end{DoxyParamCaption})}
+
+
+
+Actualiza el umbral de probabilidad para hallar temáticas cercanas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alfa} & \mbox{[}Int\mbox{]} Umbral de probabilidad para hallar temáticas cercanas, modifica la variable \char`\"{}self.\+\_\+\+\_\+alfa\char`\"{}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a306b980010bb2f999924157a6fee2471}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a306b980010bb2f999924157a6fee2471}} 
+\index{Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}!set\_bag\_words@{set\_bag\_words}}
+\index{set\_bag\_words@{set\_bag\_words}!Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}}
+\doxysubsubsection{\texorpdfstring{set\_bag\_words()}{set\_bag\_words()}}
+{\footnotesize\ttfamily def Modelo.\+Clasificacion.\+Clasificador.\+Clasificador.\+set\+\_\+bag\+\_\+words (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{bag\+\_\+words }\end{DoxyParamCaption})}
+
+
+
+Actualiza la bolsa de palabras. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bag\+\_\+words} & \mbox{[}Bag of words\mbox{]} Bolsa de palabras, modifica la variable \char`\"{}self.\+\_\+\+\_\+bag\+\_\+words\char`\"{}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_aadb4fca1858e62e5cc0cf32f36c799a0}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_aadb4fca1858e62e5cc0cf32f36c799a0}} 
+\index{Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}!set\_modelo@{set\_modelo}}
+\index{set\_modelo@{set\_modelo}!Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}}
+\doxysubsubsection{\texorpdfstring{set\_modelo()}{set\_modelo()}}
+{\footnotesize\ttfamily def Modelo.\+Clasificacion.\+Clasificador.\+Clasificador.\+set\+\_\+modelo (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{modelo }\end{DoxyParamCaption})}
+
+
+
+Actualiza el algoritmo actual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modelo} & \mbox{[}Algoritmo ML\mbox{]} Algoritmo a actualizar, modifica la variable \char`\"{}self.\+\_\+modelo\char`\"{}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_af55bb720c95d8646b22e816ae777f165}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_af55bb720c95d8646b22e816ae777f165}} 
+\index{Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}!set\_n\_tematicas@{set\_n\_tematicas}}
+\index{set\_n\_tematicas@{set\_n\_tematicas}!Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}}
+\doxysubsubsection{\texorpdfstring{set\_n\_tematicas()}{set\_n\_tematicas()}}
+{\footnotesize\ttfamily def Modelo.\+Clasificacion.\+Clasificador.\+Clasificador.\+set\+\_\+n\+\_\+tematicas (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{n\+\_\+tematicas }\end{DoxyParamCaption})}
+
+
+
+Actualiza el nº de temáticas máximo a mostrar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+\_\+tematicas} & \mbox{[}Int\mbox{]} Número de temáticas máximo a mostrar, modifica la variable \char`\"{}self.\+\_\+\+\_\+n\+\_\+tematicas\char`\"{}. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
