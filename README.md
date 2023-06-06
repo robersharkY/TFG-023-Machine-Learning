@@ -13,4 +13,9 @@ Con el objetivo de clasificar las iniciativas parlamentarias del propio parlamen
 - <b>Scikit-Learn</b> como librería para conseguir los algoritmos y trabajar con Machine Learning.<br>
 - <b>Spacy</b> como librería para el procesamiento del lenguaje natural.<br>
 - <b>Tkinter</b> como librería para interfaces gráficas.<br>
+## 📖 Antes de usar, Manual de uso. <br>
+Instalar los requerimientos antes de utilizar el programa mediante el comando: pip install -r requirements.txt. <br>
+El archivo "requirements.txt" está dentro de la carpeta raíz del proyecto, contiene todas las librerías necesarias para ejecutar el proyecto sin problema. <br>
+<br>
+Posteriormente, hay que ejecutar el archivo "Main.py" para ejecutar el proyecto con el comando: python <dirección de archivo Main>, la dirección del archivo es la siguiente: lib/src/Main.py.
 
