@@ -205,11 +205,11 @@ class Modelo:
     
     ## @brief Verifica si hay alguna iniciativa de los datasets que no haya sido procesada.
     def estan_limpios_datasets(self):
-        for index, row in self.dataset_entrenamiento_.get_datos().iterrows():
-            if not isinstance(row[self.columna_extracto], list): # Si alguna iniciativa no es de tipo "list".
+        for index, row in self.__dataset_entrenamiento.get_datos().iterrows():
+            if not isinstance(row[self.__columna_extracto], list): # Si alguna iniciativa no es de tipo "list".
                 return False
-        for index, row in self.dataset_prueba_.get_datos().iterrows():
-            if not isinstance(row[self.columna_extracto], list): # Si alguna iniciativa no es de tipo "list".
+        for index, row in self.__dataset_prueba.get_datos().iterrows():
+            if not isinstance(row[self.__columna_extracto], list): # Si alguna iniciativa no es de tipo "list".
                 return False
         return True
     
@@ -238,7 +238,7 @@ class Modelo:
         self.verificar_columna_resultados() # Se verifica si esta creada la columna para poner las temáticas.
         predicciones = self.__clasificador.clasificar_sentencias(self.__dataset_prueba.get_datos(), self.__columna_extracto)
 
-        for index, row in self.__dataset_prueba_.get_datos().iterrows():
+        for index, row in self.__dataset_prueba.get_datos().iterrows():
             #En la columna temática creada, añade los arrays de temáticas eliminando los corchetes.
            self.__dataset_prueba.get_datos().at[index, self.__columna_tematica] = ', '.join(str(item) for item in predicciones[index])
 

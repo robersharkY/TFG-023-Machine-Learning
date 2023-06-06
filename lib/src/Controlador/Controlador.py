@@ -65,11 +65,11 @@ class Controlador:
 
         menu_opciones.add_command(    
             label = "Mostrar conjunto de pruebas",
-            command = lambda: self.mostrar_tabla(self.__modelo.get_datos_pruebas(), 1000, 500)) 
+            command = lambda: self.mostrar_tabla(self.__modelo.get_dataset_pruebas(), 1000, 500)) 
 
         menu_opciones.add_command(    
             label = "Mostrar conjunto de entrenamiento",
-            command = lambda: self.mostrar_tabla(self.__modelo.get_datos_entrenamiento(), 1000, 800))
+            command = lambda: self.mostrar_tabla(self.__modelo.get_dataset_entrenamiento(), 1000, 800))
             
         menu_configuracion.add_command(    
             label = "Configurar variables",
