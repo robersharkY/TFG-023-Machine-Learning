@@ -40,11 +40,6 @@ EXTRACTO,TEMATICA
 "La subvención de 15.944 euros de los Presupuestos de la CAC en 2010 a la Federación Insular Colombófila de Tenerife.",ASUNTOS FINANCIEROS
 "La subvención de 11.832 euros de los Presupuestos de la CAC en 2011 a la Federación Insular Colombófila de Tenerife.",ASUNTOS FINANCIEROS
 "Del Consejo Escolar de Canarias, sobre el incremento de la financiación del sistema educativo canario para 2022.",ASUNTOS FINANCIEROS
-"",ASUNTOS FINANCIEROS
-"",ASUNTOS FINANCIEROS
-"",ASUNTOS FINANCIEROS
-"",ASUNTOS FINANCIEROS
-"",ASUNTOS FINANCIEROS
 "Programas y proyectos a financiar por el Fondo de Desarrollo de Canarias.",ASUNTOS FINANCIEROS
 "Las partidas destinadas a financiar la dependencia en 2014 y 2015.",ASUNTOS FINANCIEROS
 "Convenio de colaboración con el Banco Santander para líneas de crédito especiales para financiar proyectos.",ASUNTOS FINANCIEROS
@@ -59,6 +54,11 @@ EXTRACTO,TEMATICA
 "-Consejero de Agricultura, Ganadería, Pesca y Aguas-, sobre Fondos Extrapresupuestarios a gestionar en 2013.",ASUNTOS FINANCIEROS
 "El déficit y recortes presupuestarios, dirigida al Gobierno.",ASUNTOS FINANCIEROS
 "Ejecución presupuestaria al cierre presupuestario en el ejercicio 2016, dirigida al Sr. Consejero de Sanidad.",ASUNTOS FINANCIEROS
+"Dinero invertido por el Gobierno de Canarias en la obra del Mirador del Cristo en San Sebastián de la Gomera. ",ASUNTOS FINANCIEROS
+"Dinero invertido por el Gobierno de Canarias en la obra del Mirador del Santo en Valle Gran Rey.",ASUNTOS FINANCIEROS
+"El dinero del Fondo de Desarrollo de Canarias 2017 que no se haya ejecutado en La Palma, dirigida a la Sra. Consejera de Hacienda.",ASUNTOS FINANCIEROS
+"El dinero consignado para el área del Comisionado del Desarrollo para el Autogobierno y las Reformas Institucionales, dirigida al Gobierno.",ASUNTOS FINANCIEROS
+"Dinero pendiente de justificar de los convenios de colaboración con el Ministerio de Fomento en materia de vivienda, dirigida a la Sra. Consejera de Cultura, Deportes, Políticas Sociales y Vivienda.",ASUNTOS FINANCIEROS
 "Estudio relativo al coste que sorporta la economía canaria derivado de la ultraperiferia y doble insularidad.",ECONOMÍA
 "La estrategia de economía circular del Gobierno.",ECONOMÍA
 "Subida de impuestos, dirigida al Sr. Consejero de Economía y Hacienda.",ECONOMÍA
@@ -94,11 +94,6 @@ EXTRACTO,TEMATICA
 "Situación económica de Cartográfica de Canarias, dirigida al Gobierno.",ECONOMÍA
 "Situación de asfixia económica de los Ayuntamientos.",ECONOMÍA
 "La situación económica de los Cabildos y Ayuntamientos en 2011 respecto a la financiación que aporta la CAC.",ECONOMÍA
-"",ECONOMÍA
-"",ECONOMÍA
-"",ECONOMÍA
-"",ECONOMÍA
-"",ECONOMÍA
 "La situación económica de Canarias.",ECONOMÍA
 "Datos de la situación económica actual de La Palma en comparación con los datos de Canarias.",ECONOMÍA
 "De medidas tributarias incentivadoras de la actividad económica.",ECONOMÍA
@@ -119,6 +114,11 @@ EXTRACTO,TEMATICA
 "Los niveles de renta familiar.",ECONOMÍA
 "De la renta de la ciudadanía de Canarias.",ECONOMÍA
 "El umbral de renta disponible en los hogares canarios, dirigida al Gobierno.",ECONOMÍA
+"Las Memorias Económicas y de Actividades de la Fundación Canaria de Acción Exterior de 2008 y 2009.",ECONOMÍA
+"Prioridades económicas del Gobierno ante la Presidencia española de la Unión Europea.",ECONOMÍA
+"Consecuencias económicas para Canarias de la Constitución Europea.",ECONOMÍA
+"Las relaciones económicas con los paises de África Occidental.",ECONOMÍA
+"Potencialidades económicas y comerciales de los aeropuertos canarios.",ECONOMÍA
 "Creación de una comisión de investigación.",PRODUCCIÓN; TECNOLOGÍA E INVESTIGACIÓN
 "Actuaciones en Investigación, Desarrollo e Innovación Tecnológica, dirigida al Sr. Consejero de Empleo, Industria y Comercio.",PRODUCCIÓN; TECNOLOGÍA E INVESTIGACIÓN
 "Difusión de la investigación científica y tecnológica por medio de la producción propia de programas de televisión.",PRODUCCIÓN; TECNOLOGÍA E INVESTIGACIÓN
@@ -158,11 +158,6 @@ EXTRACTO,TEMATICA
 "Memoria de las actividades de investigación científica y desarrollo tecnológico y del Plan de Choque de I+D+I.",PRODUCCIÓN; TECNOLOGÍA E INVESTIGACIÓN
 "De Ordenación del Sistema Canario de Investigación y Desarrollo Tecnológico.",PRODUCCIÓN; TECNOLOGÍA E INVESTIGACIÓN
 "Estrategia de Ciencia y Tecnología.",PRODUCCIÓN; TECNOLOGÍA E INVESTIGACIÓN
-"",PRODUCCIÓN; TECNOLOGÍA E INVESTIGACIÓN
-"",PRODUCCIÓN; TECNOLOGÍA E INVESTIGACIÓN
-"",PRODUCCIÓN; TECNOLOGÍA E INVESTIGACIÓN
-"",PRODUCCIÓN; TECNOLOGÍA E INVESTIGACIÓN
-"",PRODUCCIÓN; TECNOLOGÍA E INVESTIGACIÓN
 "Acceso a las nuevas tecnologías en La Gomera, dirigida al Gobierno.",PRODUCCIÓN; TECNOLOGÍA E INVESTIGACIÓN
 "Convenio con la Fundación Caja Rural de Canarias para investigar la arteriosclerosis, dirigida a la Sra. Consejera de Sanidad.",PRODUCCIÓN; TECNOLOGÍA E INVESTIGACIÓN
 "Investigaciones en curso en el ámbito del Patrimonio Cultural en Canarias.",PRODUCCIÓN; TECNOLOGÍA E INVESTIGACIÓN
@@ -179,6 +174,11 @@ EXTRACTO,TEMATICA
 "El uso de las nuevas tecnologías.",PRODUCCIÓN; TECNOLOGÍA E INVESTIGACIÓN
 "La actividad comercial de las nuevas tecnologías.",PRODUCCIÓN; TECNOLOGÍA E INVESTIGACIÓN
 "Desarrollo de tecnologías específicas para el sector turístico, dirigida a la Sra. Consejera de Turismo.",PRODUCCIÓN; TECNOLOGÍA E INVESTIGACIÓN
+"La creación del Centro de Investigaciones Sanitarias, dirigida al Sr. Consejero de Sanidad.",PRODUCCIÓN; TECNOLOGÍA E INVESTIGACIÓN
+"El Instituto Canario de Investigaciones Sanitarias, dirigida a la Sra. Consejera de Sanidad.",PRODUCCIÓN; TECNOLOGÍA E INVESTIGACIÓN
+"Investigación científica, dirigida al Sr. Consejero de Educación, Universidades y Sostenibilidad.",PRODUCCIÓN; TECNOLOGÍA E INVESTIGACIÓN
+"Proyectos estructurales para la investigación en sectores claves.",PRODUCCIÓN; TECNOLOGÍA E INVESTIGACIÓN
+"El fomento de la investigación, la evaluación y la intervención en el cáncer pediátrico.",PRODUCCIÓN; TECNOLOGÍA E INVESTIGACIÓN
 "Difusión de derechos y obligaciones de pasajeros en la Unión Europea, dirigida al Gobierno.",DERECHO
 "Derechos de tanteo y retracto en viviendas protegidas, dirigida al Sr. Consejero de Infraestructuras, Transportes y Vivienda.",DERECHO
 "Defensa de los derechos humanos.",DERECHO
@@ -189,11 +189,6 @@ EXTRACTO,TEMATICA
 "Modificación de la Ley de Renovación y Modernización Turística de Canarias.",DERECHO
 "Solicitud de una ley de salud bucodental en Canarias.",DERECHO
 "Defensa de los afectados por la Ley de Costas.",DERECHO
-"",DERECHO
-"",DERECHO
-"",DERECHO
-"",DERECHO
-"",DERECHO
 "De modificación de la Ley 1/1997, de 7 de febrero, de Atención Integral a los Menores.",DERECHO
 "El Juzgado de lo Penal Nº 5 para los asuntos de violencia de género, dirigida al Sr. Consejero de Presidencia, Justicia e Igualdad.",DERECHO
 "Del Parlamento Vasco, sobre modificación del Código Penal para despenalizar el suicidio asistido.",DERECHO
@@ -239,6 +234,11 @@ EXTRACTO,TEMATICA
 "Tribunal Superior de Justicia de Canarias.",DERECHO
 "La Memoria de la Fiscalía del Tribunal Superior de Justicia de Canarias 2005, en materia de menores en reforma.",DERECHO
 "El Palacio de Justicia en Las Palmas de Gran Canaria, dirigida al Gobierno.",DERECHO
+"Las Sentencias del Tribunal Supremo relativas a la regulación del alquiler vacacional, dirigida al Sr. Consejero de Turismo, Cultura y Deportes.",DERECHO
+"La Sentencia 1766/2018 de la Sala de lo Contencioso- Administrativo del Tribunal Supremo respecto del alquiler vacacional, dirigida al Sr. Consejero de Turismo, Cultura y Deportes.",DERECHO
+"La anulación por el Tribunal Supremo de la autorización de la regasificadora de Granadilla, dirigida al Sr. Consejero de Economía, Industria, Comercio y Conocimiento.",DERECHO
+"Pronunciamiento del Tribunal Supremo en torno a la justicia universal, dirigida al Sr. Consejero Presidencia, Justicia e Igualdad.",DERECHO
+"La sentencia del Tribunal Supremo relativa a la declaración de área urbana del núcleo poblacional de La Santa, dirigida al Gobierno.",DERECHO
 "Del Suelo de Canarias.",MEDIO AMBIENTE
 "Residuos almacenados en el complejo medio-ambiental de Zonzamas, dirigida al Sr. Consejero de Medio Ambiente y Ordenación Territorial.",MEDIO AMBIENTE
 "Medidas de prevención en la degradación del medio marino con basura plástica que genera microplásticos que pueden incorporarse a la cadena alimentaria y afectar negativamente a la salud humana y a la seguridad alimentaria.",MEDIO AMBIENTE
@@ -291,14 +291,14 @@ EXTRACTO,TEMATICA
 "El Programa de Restauración y Conservación del Entorno Natural de las Islas.",MEDIO AMBIENTE
 "Informe medioambiental del refugio pesquero de El Pris, en Tacoronte.",MEDIO AMBIENTE
 "Informes de impacto medioambiental de las jaulas marinas en Canarias.",MEDIO AMBIENTE
-"",MEDIO AMBIENTE
-"",MEDIO AMBIENTE
-"",MEDIO AMBIENTE
-"",MEDIO AMBIENTE
-"",MEDIO AMBIENTE
 "El Plan de Acción Medioambiental 1995.",MEDIO AMBIENTE
 "La situación medioambiental de la isla de Lobos, dirigida a la señora Consejera de Política Territorial y Medio Ambiente.",MEDIO AMBIENTE
 "La ejecución de los proyectos denominados "Actuaciones Medioambientales en cada una de las islas del Archipiélago".",MEDIO AMBIENTE
+"Emisiones de gases contaminantes por la Refinería de Santa Cruz de Tenerife y COTESA.",MEDIO AMBIENTE
+"La contaminación atmosférica derivada de la refinería en Santa Cruz de Tenerife en noviembre de 2008.",MEDIO AMBIENTE
+"Recuperación de suelos contaminados, dirigida al Sr. Consejero de Medio Ambiente y Ordenación Territorial.",MEDIO AMBIENTE
+"Plan de Emergencia en caso de contaminación en aguas canarias, dirigida al Sr. Consejero de Presidencia e Innovación Tecnológica.",MEDIO AMBIENTE
+"Suelos contaminados en Lanzarote, dirigida al Sr. Consejero de Medio Ambiente y Ordenación Territorial.",MEDIO AMBIENTE
 "Propuestas y acciones encaminadas a abordar el problema que afronta la sanidad pública en España.",ASUNTOS SOCIALES
 "Estado de la situación del personal docente de religión en Canarias.",ASUNTOS SOCIALES
 "Del Ayuntamiento de Teror, sobre la migración en Canarias.",ASUNTOS SOCIALES
@@ -329,11 +329,6 @@ EXTRACTO,TEMATICA
 "Edades de los menores que sufren maltrato infantil en Canarias.",ASUNTOS SOCIALES
 "Denuncias presentadas por profesores ante acoso, violencia o maltrato por alumnos.",ASUNTOS SOCIALES
 "Plan para la igualdad de género en el sistema educativo.",ASUNTOS SOCIALES
-"",ASUNTOS SOCIALES
-"",ASUNTOS SOCIALES
-"",ASUNTOS SOCIALES
-"",ASUNTOS SOCIALES
-"",ASUNTOS SOCIALES
 "Propuestas a los Cabildos Insulares y a los Ayuntamientos para la constitución de Consejos de participación en materia de igualdad de género.",ASUNTOS SOCIALES
 "Retrasos producidos en la detección de la enfermedad de cáncer producidos por la pandemia.",ASUNTOS SOCIALES
 "Acciones desarrolladas en materia de salud pública con motivo de la pandemia de Covid-19, así como las implementadas como consecuencia de la aparición de la variante ómicron en la Comunicad Canaria.",ASUNTOS SOCIALES
@@ -357,8 +352,13 @@ EXTRACTO,TEMATICA
 "De periodista y experta en igualdad, sobre la violencia de género y violencia vicaria.",ASUNTOS SOCIALES
 "Del Ayuntamiento de Garafía, sobre la eliminación de la violencia de género en Canarias.",ASUNTOS SOCIALES
 "Plan de seguridad para mujeres víctimas de violencia de género.",ASUNTOS SOCIALES
+"Reinserción sociolaboral de los transexuales, dirigida al Sr. Consejero de Empleo, Industria y Comercio.",ASUNTOS SOCIALES
 "Programa de Igualdad de Oportunidades entre sexos.",ASUNTOS SOCIALES
-"Plan Canario de Igualdad de Oportunidades 2003-2005. ",ASUNTOS SOCIALES
+"Plan Canario de Igualdad de Oportunidades 2003-2005.",ASUNTOS SOCIALES
+"La pobreza en la población infantil.",ASUNTOS SOCIALES
+"Los datos de pobreza infantil, dirigida a la Sra. Consejera de Bienestar Social, Juventud y Vivienda.",ASUNTOS SOCIALES
+"Acciones para garantizar la igualdad de los gays, lesbianas, bisexuales y transexuales, dirigida al Sr. Presidente del Gobierno.",ASUNTOS SOCIALES
+"Día mundial contra la homofobia y la transfobia.",ASUNTOS SOCIALES
 "Del Sr. Consejero de Economía, Industria, Comercio y Conocimiento, sobre la próxima convocatoria de ayudas para la instalación de una nueva potencia de energía eólica.",ENERGIA
 "La posición sobre el planteamiento de la Unión Europea de considerar si son o no, la energía nuclear y el gas, energías verdes, dirigida al Sr. consejero de Transición Ecológica, Lucha contra el Cambio Climático y Planificación Territorial.",ENERGIA
 "La compensación a la producción de energía eléctrica en Canarias, dirigida al señor Consejero de Industria y Comercio.",ENERGIA
@@ -412,13 +412,13 @@ EXTRACTO,TEMATICA
 "Estrategia de almacenamiento energético en Canarias.",ENERGIA
 "Ejecución del Plan Energético de Canarias (PCAN), dirigida al Gobierno.",ENERGIA
 "Plan Energético de Canarias.",ENERGIA
-"",ENERGIA
-"",ENERGIA
-"",ENERGIA
-"",ENERGIA
-"",ENERGIA
 "Consumo energético en Fuerteventura desde 1998.",ENERGIA
 "Consumo energético en Gran Canaria y Tenerife.",ENERGIA
+"Explotación de energía geotérmica, dirigida al Sr. Consejero de Economía, Industria, Comercio y Consumo.",ENERGIA
+"Programas para la disminución del consumo de energía, dirigida a la Sra. Consejera de Industria, Comercio y Nuevas Tecnologías.",ENERGIA
+"El autoconsumo energético para la desalación de agua, dirigida al Sr. Consejero de Economía, Industria, Comercio y Conocimiento.",ENERGIA
+"-Consejero de Economía, Industria, Comercio y Conocimiento-, sobre posición ante el decreto de autoconsumo energético y los efectos de su aplicación en Canarias.",ENERGIA
+"Demanda de consumo energético en Lanzarote, dirigida al Sr. Consejero de Empleo, Industria y Comercio.",ENERGIA
 "Del Sr. consejero de Obras Públicas, Transportes y Vivienda, sobre el estado de los trámites para implantar una línea marítima de obligación de servicio público entre La Gomera, La Palma y El Hierro.",TRANSPORTE
 "Del Sr. consejero de Obras Públicas, Transportes y Vivienda, sobre la política del transporte aéreo en Canarias.",TRANSPORTE
 "Del Sr. consejero de Obras Públicas, Transportes y Vivienda, sobre el alcance del Protocolo de Colaboración con el Ministerio de Transportes, Movilidad y Agenda Urbana, para la coordinación de la medidas de ayudas transitorias al transporte público regular colectivo terrestre.",TRANSPORTE
@@ -473,12 +473,12 @@ EXTRACTO,TEMATICA
 "Plan de viabilidad sobre guaguas municipales de Las Palmas de Gran Canaria.",TRANSPORTE
 "Líneas de transporte de guaguas para las conexiones del Sur de Tenerife, dirigida a la Sra. Consejera de Obras Públicas y Transportes.",TRANSPORTE
 "Proyectos TF-1, Tenerife.",TRANSPORTE
-"",TRANSPORTE
-"",TRANSPORTE
-"",TRANSPORTE
-"",TRANSPORTE
-"",TRANSPORTE
 "Proyectos redactados relativos a la TF-5.",TRANSPORTE
+"-Consejero de Obras Públicas y Transportes-, sobre avances en conseguir el desatasco de la carretera TF-5. ",TRANSPORTE
+"Relación y fecha de adjudicación de proyectos para solucionar los problemas de movilidad en la TF-5, así como importe desde el año 2000.",TRANSPORTE
+"El tercer carril de la TF-1, dirigida al Gobierno.",TRANSPORTE
+"La carretera TF-13 La Laguna-Punta del Hidalgo.",TRANSPORTE
+"La ampliación de la autopista TF-1, tramo Santa Cruz - Túneles de Güímar, dirigida al Sr. Consejero de Obras Públicas y Transportes.",TRANSPORTE
 "Documento de disposición de pago de estudio de impacto de pesca recreativa submarina Fase I.",AGRICULTURA; SILVICULTURA Y PESCA
 "Expedientes sancionadores incoados a pescadores profesionales.",AGRICULTURA; SILVICULTURA Y PESCA
 "Informe de impacto de pesca recreativa submarina Fase II.",AGRICULTURA; SILVICULTURA Y PESCA
@@ -527,11 +527,6 @@ EXTRACTO,TEMATICA
 "Estudio relativo al impacto de la pesca submarina de recreo.",AGRICULTURA; SILVICULTURA Y PESCA
 "Volumen de capturas de primera venta por Cofradías de pescadores desde 2005.",AGRICULTURA; SILVICULTURA Y PESCA
 "Autorizaciones de pesca submarina.",AGRICULTURA; SILVICULTURA Y PESCA
-"",AGRICULTURA; SILVICULTURA Y PESCA
-"",AGRICULTURA; SILVICULTURA Y PESCA
-"",AGRICULTURA; SILVICULTURA Y PESCA
-"",AGRICULTURA; SILVICULTURA Y PESCA
-"",AGRICULTURA; SILVICULTURA Y PESCA
 "Plagas detectadas en los controles a la importación de semillas y plantas, dirigida al Sr. Consejero de Agricultura, Ganadería, Pesca y Aguas.",AGRICULTURA; SILVICULTURA Y PESCA
 "El censo de agricultores profesionales en Lanzarote, dirigida al Sr. Consejero de Agricultura, Ganadería, Pesca y Aguas.",AGRICULTURA; SILVICULTURA Y PESCA
 "Partida ejecutada del PDR destinada a primera instalación de jóvenes agricultores y ganaderos en 2017.",AGRICULTURA; SILVICULTURA Y PESCA
@@ -539,6 +534,11 @@ EXTRACTO,TEMATICA
 "Compromisos con los ganaderos de La Palma con respecto a la fábrica de piensos, dirigida al Sr. Consejero de Agricultura, Ganadería, Pesca y Alimentación.",AGRICULTURA; SILVICULTURA Y PESCA
 "Ayudas a los agricultores y ganaderos afectados por el temporal, dirigida al señor Consejero de Agricultura, Pesca y Alimentación.",AGRICULTURA; SILVICULTURA Y PESCA
 "Acciones que se están realizando para las mejoras en la gestión de los residuos ganaderos, dirigida a la Sra. consejera de Agricultura, Ganadería y Pesca.",AGRICULTURA; SILVICULTURA Y PESCA
+"La competencia desleal que sufren los pescadores, dirigida al Sr. Consejero de Agricultura, Ganadería, Pesca y Aguas.",AGRICULTURA; SILVICULTURA Y PESCA
+"Pescadores profesionales en La Gomera, dirigida al Sr. Consejero de Agricultura, Ganadería, Pesca y Aguas.",AGRICULTURA; SILVICULTURA Y PESCA
+"Agricultores y ganaderos beneficiados del Plan Renove 2000 puesto en marcha por el Ministerio de Agricultura, Pesca y Alimentación, dirigida a la Sra. consejera de Agricultura, Ganadería y Pesca.",AGRICULTURA; SILVICULTURA Y PESCA
+"Situación de los agricultores exportadores después de que se materialice el brexit, dirigida a la Sra. consejera de Agricultura, Ganadería y Pesca.",AGRICULTURA; SILVICULTURA Y PESCA
+"Qué se ha hecho ante los problemas graves que sufren los jóvenes agricultores, dirigida al Sr. consejero de Agricultura, Ganadería y Pesca.",AGRICULTURA; SILVICULTURA Y PESCA
 "De Creación del Colegio Profesional de Logopedas de Canarias.",EDUCACIÓN Y COMUNICACIÓN
 "Enseñanzas de Arte y Diseño en Fuerteventura.",EDUCACIÓN Y COMUNICACIÓN
 "Empatía hacia los animales entre los contenidos educativos en la enseñanza obligatoria.",EDUCACIÓN Y COMUNICACIÓN
@@ -593,12 +593,12 @@ EXTRACTO,TEMATICA
 "Plan educativo llevado a cabo durante el estado de alarma.",EDUCACIÓN Y COMUNICACIÓN
 "Alumnado con necesidades específicas de apoyo educativo.",EDUCACIÓN Y COMUNICACIÓN
 "Profesorado asociado a alumnado con necesidades específicas de apoyo educativo.",EDUCACIÓN Y COMUNICACIÓN
-"",EDUCACIÓN Y COMUNICACIÓN
-"",EDUCACIÓN Y COMUNICACIÓN
-"",EDUCACIÓN Y COMUNICACIÓN
-"",EDUCACIÓN Y COMUNICACIÓN
-"",EDUCACIÓN Y COMUNICACIÓN
 "Número de dispositivos informáticos entregados por centro educativo y criterios para hacer la distribución debido al estado de alarma.",EDUCACIÓN Y COMUNICACIÓN
+"Las asignaturas de Valores Cívicos y Educación para la Ciudadanía, dirigida a la Sra. Consejera de Educación y Universidades.",EDUCACIÓN Y COMUNICACIÓN
+"Alumnos que han aprobado todas las asignaturas en la ESO, curso 2013-2014, dirigida al Sr. Consejero de Educación, Universidades y Sostenibilidad.",EDUCACIÓN Y COMUNICACIÓN
+"Pase de curso con cuatro asignaturas suspendidas, dirigida a la Sra. Consejera de Educación, Universidades, Cultura y Deportes",EDUCACIÓN Y COMUNICACIÓN
+"Ciclos o asignaturas que se imparten en la Escuela de Arte de Fuerteventura, con desglose de los horarios.",EDUCACIÓN Y COMUNICACIÓN
+"Alumnos que les han faltado aprobar tres o más asignaturas en la ESO, curso 2013-2014, dirigida al Sr. Consejero de Educación, Universidades y Sostenibilidad.	",EDUCACIÓN Y COMUNICACIÓN
 "De la Sra. consejera de Economía, Conocimiento y Empleo, sobre el análisis de las empresas de inserción social y los centros especiales de empleo y sus efectos en el mercado laboral.",TRABAJO Y EMPLEO
 "De la Sra. consejera de Economía, Conocimiento y Empleo, sobre las acciones para el reconocimiento de las competencias adquiridas en la experiencia laboral.",TRABAJO Y EMPLEO
 "De la Sra. consejera de Economía, Conocimiento y Empleo, sobre el desempleo de Canarias.",TRABAJO Y EMPLEO
@@ -654,11 +654,11 @@ EXTRACTO,TEMATICA
 "Contratos indefinidos, dirigida al Sr. Consejero de Empleo, Industria y Comercio.",TRABAJO Y EMPLEO
 "Contratos indefinidos de trabajadores discapacitados en 2009, dirigida al Sr. Consejero de Empleo, Industria y Comercio.",TRABAJO Y EMPLEO
 "Trabajos del Observatorio Canario de Empleo en 2012.",TRABAJO Y EMPLEO
-"",TRABAJO Y EMPLEO
-"",TRABAJO Y EMPLEO
-"",TRABAJO Y EMPLEO
-"",TRABAJO Y EMPLEO
-"",TRABAJO Y EMPLEO
+"La contratación laboral de las personas con discapacidad.",TRABAJO Y EMPLEO
+"La Comisión para el seguimiento de la contratación laboral.",TRABAJO Y EMPLEO
+"Despidos laborales en el Instituto Tecnológico de Canarias, dirigida a la Sra. Consejera de Empleo, Industria y Comercio.",TRABAJO Y EMPLEO
+"Despidos en 2009, 2010 y 2011, dirigida a la Sra. Consejera de Empleo, Industria y Comercio.",TRABAJO Y EMPLEO
+"Despidos en la empresa pública Instituto Tecnológico de Canarias, dirigida al Sr. Consejero de Economía, Industria, Comercio y Conocimiento.",TRABAJO Y EMPLEO
 "Administrador o administradora general de partidos, federaciones y coaliciones que concurren a las elecciones al Parlamento de Canarias 2023.",VIDA POLÍTICA
 "Impugnación de celebración de elecciones.",VIDA POLÍTICA
 "Del Cabildo Insular de Tenerife, sobre la orientación general de la política insular.",VIDA POLÍTICA
@@ -714,11 +714,11 @@ EXTRACTO,TEMATICA
 "Solicitud al Gobierno del Estado para la reforma de la Ley Electoral en relación con la democracia paritaria e igualitaria.",VIDA POLÍTICA
 "Creación de un archivo de los ex presidentes del Gobierno de Canarias durante la democracia.",VIDA POLÍTICA
 "Formación política Contigo Somos Democracia.",VIDA POLÍTICA
-"",VIDA POLÍTICA
-"",VIDA POLÍTICA
-"",VIDA POLÍTICA
-"",VIDA POLÍTICA
-"",VIDA POLÍTICA
+"Formación política Unidos por Gran Canaria.",VIDA POLÍTICA
+"Grupo Parlamentario Sí Podemos Canarias.",VIDA POLÍTICA
+"Pacto de coalición electoral Unidas Sí Podemos (USP).",VIDA POLÍTICA
+"Unidas Sí Podemos (USP).",VIDA POLÍTICA
+"Solicitud de la coalición electoral Unidas Sí Podemos (USP) de validación de los dos colores a utilizar en las papeletas.",VIDA POLÍTICA
 "Una línea de subvenciones en apoyo a la comercialización y promoción del sector textil, dirigida a la Sra. consejera de Turismo, Industria y Comercio.",INDUSTRIA
 "La instalación de la Empresa Textil Kiabi, dirigida al Sr. Consejero de Empleo, Industria y Comercio.",INDUSTRIA
 "Impulso e incentivo del tejido industrial de las islas no capitalinas.",INDUSTRIA
@@ -774,8 +774,8 @@ EXTRACTO,TEMATICA
 "-Consejera de Turismo, Cultura y Deportes-, sobre la producción cinematográfica en 2015.",INDUSTRIA
 "Celebración del Día del Cine.",INDUSTRIA
 "Apoyo a los jóvenes canarios para proyectos cinematográficos, dirigida al Sr. Director General de Radiotelevisión Canaria.",INDUSTRIA
-"",INDUSTRIA
-"",INDUSTRIA
-"",INDUSTRIA
-"",INDUSTRIA
-"",INDUSTRIA
+"El programa de televisión El Chef Viajero, dirigida al Sr. Consejero de Agricultura, Ganadería, Pesca y Aguas.",INDUSTRIA
+"La señal de la Televisión Canaria en pueblos de El Hierro, dirigida al Sr. Presidente del Consejo Rector de RTVC.",INDUSTRIA
+"Programas de índole cultural y de debate de asuntos canarios en la Televisión Canaria, dirigida al Sr. Presidente del Consejo Rector de RTVC.",INDUSTRIA
+"Retransmisión de la Lucha Canaria en la Radiotelevisión Canaria.",INDUSTRIA
+"Programas dirigidos a jóvenes en inglés y alemán en Radiotelevisión Canaria.",INDUSTRIA
