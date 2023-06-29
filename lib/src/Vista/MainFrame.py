@@ -52,9 +52,9 @@ class MainFrame(ttk.Frame):
         label_seleccion_algoritmo = ttk.Label(self, text = "Selecciona algoritmo:", font=("Helvetica",11), background = "#FFFFFF")
         self.__combo_algoritmo = ttk.Combobox(
             state = "readonly",
-            values = ["SVC-Lineal SVC", "SVC-SVR", "SVC-Nu SVC", "TR-Decision Tree", "TR-Extra Tree","NB-Multinomial", 
-            "NB-Gaussian", "NB-Bernoulli", "ENS-Random Forest", "ENS-Gradient Boost", "ENS-Ada Boost", "KNN-K-Neighbors", 
-            "NEU-MLP","DIS-Quadratic Discriminant", "DIS-Linear Discriminant", "LM-SGD", "LM-Regresión logística"], 
+            values = ["SVC-Lineal SVC", "SVC-SVR", "TR-Decision Tree", "TR-Extra Tree","NB-Multinomial", "NB-Gaussian", 
+            "NB-Bernoulli", "ENS-Random Forest", "ENS-Gradient Boost", "ENS-Ada Boost", "KNN-K-Neighbors","KNN-Nearest Centroid", 
+            "NEU-MLP","DIS-Quadratic Discriminant", "DIS-Linear Discriminant", "LM-SGD", "LM-Logistic Regression"], 
             font = ("Helvetica", 10), background = "#E5CCFF" )
         self.__combo_algoritmo.set("SVC-SVC Lineal")
 

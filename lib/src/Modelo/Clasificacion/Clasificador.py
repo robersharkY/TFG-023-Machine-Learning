@@ -7,14 +7,14 @@
 from sklearn.svm import SVC
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, f1_score, recall_score, precision_score
 
 class Clasificador:
 
     ## @brief Constructor de Clasificador.
     def __init__(self):
         ## Variable protected[Algoritmo ML], contiene el modelo de algoritmo de Machine Learning. 
-        self._modelo = SVC(kernel = "linear", probability = True)
+        self._modelo = SVC(kernel = "linear", probability = True, decision_function_shape = "ovo")
 
         ## Variable privada[Bag of words], contiene la bolsa de palabras.
         self.__bag_words = TfidfVectorizer(binary = True)
@@ -65,11 +65,11 @@ class Clasificador:
     def set_modelo(self, modelo):
         self._modelo = modelo
     
-    ## @brief Realiza el entrenamiento para preparar y medir la precisión del algoritmo.
-    # @param dataset [Panda Dataset] Dataset del conjunto de entrenamiento
+    ## @brief Realiza el entrenamiento para preparar y obtener los resultados del algoritmo.
+    # @param dataset [Panda Dataset] Dataset del conjunto de entrenamiento.
     # @param columna_extracto [String] Columna de donde se obtienen los extractos.
     # @param columna_tematica [String] Columna de donde se obtienen las temáticas.
-    # @return [String] Cadena que indica la precisión del algoritmo. 
+    # @return [String] Cadena que indica los resultados del algoritmo.
     def entrenar_modelo(self, dataset, columna_extracto, columna_tematica): 
         #Se obtienen las columnas.
         extractos = dataset[columna_extracto].astype(str)
@@ -82,10 +82,19 @@ class Clasificador:
         self.entrenamiento(extractos_train_bag, labels_train)
         predicciones = self.crear_predicciones(extractos_test_bag)
 
-        #Se obtiene la precisión.
-        precision = accuracy_score(labels_test, predicciones)
+        #Se obtiene las variables necesarias para medir el desempeño del algoritmo. 
+        accuracy = accuracy_score(labels_test, predicciones)
+        precision = precision_score(labels_test, predicciones, average = "weighted")
+        recall = recall_score(labels_test, predicciones, average = "weighted")
+        f1 = f1_score(labels_test, predicciones, average = "weighted")
+        reporte = f" Accuracy: {accuracy:.3%}\n Precisión: {precision:.3%}\n Recall: {recall:.3%}\n F1: {f1:.3%}"
+        print("Accuracy: ",accuracy)
+        print("Precisión: ",precision)
+        print("Recall: ",recall)
+        print("F1: ",f1)
 
-        return f"Precisión: {precision:.2%}"
+        
+        return reporte
 
     ## @brief Realiza las clasificaciones del conjunto de pruebas.
     # @param dataset [Panda Dataset] Dataset del conjunto de pruebas.
@@ -119,5 +128,6 @@ class Clasificador:
             tematicas_sentencia.append(conjunto_tematicas)
         
         return tematicas_sentencia
+
 
 

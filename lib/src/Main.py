@@ -5,6 +5,7 @@
 
 from Controlador.Controlador import Controlador
 
+class Main:
 
-controlador = Controlador()
-controlador.iniciar()
+    controlador = Controlador()
+    controlador.iniciar()

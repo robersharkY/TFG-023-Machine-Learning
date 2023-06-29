@@ -10,14 +10,14 @@ from Modelo.Clasificacion.Clasificador import Clasificador
 from Modelo.Clasificacion.ClasificadorML import ClasificadorML
 from Modelo.Clasificacion.ClasificadorAR import ClasificadorAR
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
-from sklearn.tree import DecisionTreeClassifier,ExtraTreeClassifier
-from sklearn.naive_bayes import GaussianNB,MultinomialNB,BernoulliNB
+from sklearn.tree import DecisionTreeClassifier, ExtraTreeClassifier
+from sklearn.naive_bayes import GaussianNB, MultinomialNB, BernoulliNB
 from sklearn.svm import SVC, LinearSVC, NuSVC
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.ensemble import RandomForestClassifier,AdaBoostClassifier,GradientBoostingClassifier
-from sklearn.linear_model import LogisticRegression,LinearRegression,SGDClassifier
+from sklearn.neighbors import KNeighborsClassifier, NearestCentroid
+from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier, GradientBoostingClassifier
+from sklearn.linear_model import LogisticRegression, LinearRegression, SGDClassifier
 from sklearn.neural_network import MLPClassifier
-from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis,LinearDiscriminantAnalysis
+from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis, LinearDiscriminantAnalysis
 from Vista.Vista import Vista
 import re
 
@@ -68,55 +68,55 @@ class Modelo:
     def seleccionar_algoritmo(self, tipo):
         if tipo == "SVC-Lineal SVC":
             self.__clasificador = ClasificadorML()
-            self.__clasificador.set_modelo(SVC(kernel='linear',probability=True))
+            self.__clasificador.set_modelo(SVC(kernel = "linear", probability = True, decision_function_shape = "ovo"))
         elif tipo == "SVC-SVR":
             self.__clasificador = ClasificadorML()
-            self.__clasificador.set_modelo(SVC(kernel='rbf',probability=True))
-        elif tipo == "SVC-Nu SVC":
-            self.__clasificador = ClasificadorML()
-            self.__clasificador.set_modelo(NuSVC(kernel='linear',probability=True))
+            self.__clasificador.set_modelo(SVC(kernel = "rbf", probability = True))
         elif tipo == "TR-Decision Tree":
             self.__clasificador = ClasificadorML()
-            self.__clasificador.set_modelo(DecisionTreeClassifier())
+            self.__clasificador.set_modelo(DecisionTreeClassifier(splitter = "random", class_weight = "balanced"))
         elif tipo == "TR-Extra Tree":
             self.__clasificador = ClasificadorML()
-            self.__clasificador.set_modelo(ExtraTreeClassifier())
+            self.__clasificador.set_modelo(ExtraTreeClassifier(max_features = None))
         elif tipo == "NB-Multinomial":
             self.__clasificador = ClasificadorML()
-            self.__clasificador.set_modelo(MultinomialNB())
+            self.__clasificador.set_modelo(MultinomialNB(alpha = 1.60, force_alpha = True))
         elif tipo == "NB-Gaussian":
             self.__clasificador = ClasificadorAR()
-            self.__clasificador.set_modelo(GaussianNB())
+            self.__clasificador.set_modelo(GaussianNB(var_smoothing = 11))
         elif tipo == "NB-Bernoulli":
             self.__clasificador = ClasificadorML()
-            self.__clasificador.set_modelo(BernoulliNB())
+            self.__clasificador.set_modelo(BernoulliNB(alpha = 0.08, force_alpha = True))
         elif tipo == "ENS-Random Forest":
             self.__clasificador = ClasificadorML()
-            self.__clasificador.set_modelo(RandomForestClassifier())
+            self.__clasificador.set_modelo(RandomForestClassifier(bootstrap = False))
         elif tipo == "ENS-Gradient Boost":
             self.__clasificador = ClasificadorML()
-            self.__clasificador.set_modelo(GradientBoostingClassifier())
+            self.__clasificador.set_modelo(GradientBoostingClassifier(learning_rate = 0.5, max_depth = None, tol = 0.000000001))
         elif tipo == "ENS-Ada Boost":
             self.__clasificador = ClasificadorML()
-            self.__clasificador.set_modelo(AdaBoostClassifier())
+            self.__clasificador.set_modelo(AdaBoostClassifier(estimator = MultinomialNB(alpha = 1.60, force_alpha = True), algorithm = "SAMME.R", n_estimators = 200, learning_rate = 1.45))
         elif tipo == "KNN-K-Neighbors":
             self.__clasificador = ClasificadorML()
-            self.__clasificador.set_modelo(KNeighborsClassifier(n_neighbors = 4))
+            self.__clasificador.set_modelo(KNeighborsClassifier(algorithm = "brute", n_neighbors = 13, weights = "distance"))
+        elif tipo == "KNN-Nearest Centroid":
+            self.__clasificador = ClasificadorAR()
+            self.__clasificador.set_modelo(NearestCentroid())
         elif tipo == "NEU-MLP":
             self.__clasificador = ClasificadorML()
-            self.__clasificador.set_modelo(MLPClassifier())
+            self.__clasificador.set_modelo(MLPClassifier(hidden_layer_sizes = (125,),alpha = 0.0000000001, max_iter = 300))
         elif tipo == "DIS-Quadratic Discriminant":
             self.__clasificador = ClasificadorAR()
-            self.__clasificador.set_modelo(QuadraticDiscriminantAnalysis())
+            self.__clasificador.set_modelo(QuadraticDiscriminantAnalysis(tol = 0.0000001))
         elif tipo == "DIS-Linear Discriminant":
             self.__clasificador = ClasificadorAR()
-            self.__clasificador.set_modelo(LinearDiscriminantAnalysis())
+            self.__clasificador.set_modelo(LinearDiscriminantAnalysis(solver = "lsqr",shrinkage = 0.75))
         elif tipo == "LM-SGD":
             self.__clasificador = ClasificadorML()
-            self.__clasificador.set_modelo(SGDClassifier(loss = 'log_loss'))
+            self.__clasificador.set_modelo(SGDClassifier(loss = "huber"))
         else: # Para Logistic Regression
             self.__clasificador = ClasificadorML()
-            self.__clasificador.set_modelo(LogisticRegression())
+            self.__clasificador.set_modelo(LogisticRegression(class_weight = "balanced", C = 2.25, tol= 0.0000001))
 
 
     ## @brief Devuelve el dataset de entrenamiento.

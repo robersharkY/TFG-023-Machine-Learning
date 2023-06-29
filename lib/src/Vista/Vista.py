@@ -68,3 +68,4 @@ class Vista:
     # @param mensaje [String] Cadena a mostrar en la ventana de aviso.
     def mostrar_ventana_mensaje(self, mensaje):
         showinfo(title = "Ventana de información", message = mensaje)
+        
