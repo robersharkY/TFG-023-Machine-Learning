@@ -19,3 +19,5 @@ El archivo "requirements.txt" está dentro de la carpeta raíz del proyecto, con
 <br>
 Posteriormente, hay que ejecutar el archivo "Main.py" para ejecutar el proyecto con el comando: python <dirección de archivo Main>, la dirección del archivo es la siguiente: lib/src/Main.py.
 
+Testeado en la version 3.10.9 de Python
+
