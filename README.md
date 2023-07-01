@@ -17,7 +17,7 @@ Con el objetivo de clasificar las iniciativas parlamentarias del propio parlamen
 Instalar los requerimientos antes de utilizar el programa mediante el comando: pip install -r requirements.txt. <br>
 El archivo "requirements.txt" está dentro de la carpeta raíz del proyecto, contiene todas las librerías necesarias para ejecutar el proyecto sin problema. <br>
 <br>
-Posteriormente, hay que ejecutar el archivo "Main.py" para ejecutar el proyecto con el comando: python <dirección de archivo Main>, la dirección del archivo es la siguiente: lib/src/Main.py.
+Posteriormente, hay que ejecutar el archivo "Main.py" para iniciar el proyecto con el comando: python <dirección de archivo Main>, la dirección del archivo es la siguiente: lib/src/Main.py.
 
 Testeado en la version 3.10.9 de Python, aconsejable actualizar a la versión más reciente de Python.
 
