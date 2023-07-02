@@ -8,6 +8,7 @@ from tkinter import ttk
 from tkinter import *
 from PIL import ImageTk, Image
 import os
+import sys
 
 
 class MainFrame(ttk.Frame):
@@ -35,8 +36,9 @@ class MainFrame(ttk.Frame):
         self.option_add("*TCombobox*Listbox*Background", '#CCCCFF')
 
         # Adición de imagen en MainFrame.
-        ruta = os.path.dirname(os.path.abspath(__file__))
-        imagen = os.path.join(ruta, "..\\..\\resources", "ull-nuevo-logo.jpg")
+        ruta = os.path.dirname(os.path.abspath(os.getcwd()))
+        #imagen = os.path.join(ruta, "..\\..\\resources", "ull-nuevo-logo.jpg")
+        imagen = self.resource_path("..\\..\\..\\resources\\ull-nuevo-logo.jpg")
         self.__imagen_ull = Image.open(imagen)
         self.__imagen_ull = self.__imagen_ull.resize((200, 100))
         self.__img = ImageTk.PhotoImage(self.__imagen_ull)
@@ -74,3 +76,14 @@ class MainFrame(ttk.Frame):
     # @return [ComboBox] Combo de las bolsas de palabras a elegir.
     def get_combobox_bag(self):
         return self.__combo_bag
+
+    ## @brief Método necesario para que tanto el generador de exe como el programa cargue las imágenes.
+    # @param relative_path [String] ruta relativa del archivo.
+    # @return [Image] Imagen cargada de dicha ruta.
+    def resource_path(self, relative_path):
+        try:
+            base_path = sys._MEIPASS
+        except Exception:
+            base_path = os.path.abspath(__file__)
+
+        return os.path.join(base_path, relative_path)

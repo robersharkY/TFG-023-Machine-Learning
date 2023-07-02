@@ -1,4 +1,4 @@
-.TH "Vista.MainFrame.MainFrame" 3 "Mon Jun 5 2023" "Version 1.0" "TFG-023" \" -*- nroff -*-
+.TH "Vista.MainFrame.MainFrame" 3 "Sun Jul 2 2023" "Version 1.0" "TFG-023" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -23,6 +23,10 @@ Inherits ttk\&.Frame\&.
 .RI "def \fBget_combobox_bag\fP (self)"
 .br
 .RI "Devuelve el combo de las bolsas de palabras\&. "
+.ti -1c
+.RI "def \fBresource_path\fP (self, relative_path)"
+.br
+.RI "Método necesario para que tanto el generador de exe como el programa cargue las imágenes\&. "
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
@@ -58,6 +62,22 @@ Devuelve el combo de las bolsas de palabras\&.
 \fBReturns\fP
 .RS 4
 [ComboBox] Combo de las bolsas de palabras a elegir\&. 
+.RE
+.PP
+
+.SS "def Vista\&.MainFrame\&.MainFrame\&.resource_path ( self,  relative_path)"
+
+.PP
+Método necesario para que tanto el generador de exe como el programa cargue las imágenes\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrelative_path\fP [String] ruta relativa del archivo\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+[Image] Imagen cargada de dicha ruta\&. 
 .RE
 .PP
 

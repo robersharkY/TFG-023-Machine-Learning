@@ -27,7 +27,9 @@ class App(tk.Tk):
 
         # Elementos de iconos.
         ruta = os.path.dirname(os.path.abspath(__file__))
-        imagen = os.path.join(ruta, "..\\..\\resources", "icono_PML.png")
+
+        #imagen = resourceos.path.join(ruta, "..\\..\\resources", "icono_PML.png")
+        imagen = self.__frame.resource_path("..\\..\\..\\resources\\icono_PML.png")
         icono_pequeno = tk.PhotoImage(False, file = imagen)
         self.iconphoto(True, icono_pequeno)
 

@@ -1,4 +1,4 @@
-.TH "Modelo.Clasificacion.Clasificador.Clasificador" 3 "Mon Jun 5 2023" "Version 1.0" "TFG-023" \" -*- nroff -*-
+.TH "Modelo.Clasificacion.Clasificador.Clasificador" 3 "Sun Jul 2 2023" "Version 1.0" "TFG-023" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -50,7 +50,7 @@ Inherited by \fBModelo\&.Clasificacion\&.ClasificadorAR\&.ClasificadorAR\fP, and
 .ti -1c
 .RI "def \fBentrenar_modelo\fP (self, dataset, columna_extracto, columna_tematica)"
 .br
-.RI "Realiza el entrenamiento para preparar y medir la precisión del algoritmo\&. "
+.RI "Realiza el entrenamiento para preparar y obtener los resultados del algoritmo\&. "
 .ti -1c
 .RI "def \fBclasificar_sentencias\fP (self, dataset, columna_extracto)"
 .br
@@ -109,11 +109,11 @@ Crea un array con las temáticas más cercanas a cada iniciativa según el alfa 
 .SS "def Modelo\&.Clasificacion\&.Clasificador\&.Clasificador\&.entrenar_modelo ( self,  dataset,  columna_extracto,  columna_tematica)"
 
 .PP
-Realiza el entrenamiento para preparar y medir la precisión del algoritmo\&. 
+Realiza el entrenamiento para preparar y obtener los resultados del algoritmo\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIdataset\fP [Panda Dataset] Dataset del conjunto de entrenamiento 
+\fIdataset\fP [Panda Dataset] Dataset del conjunto de entrenamiento\&. 
 .br
 \fIcolumna_extracto\fP [String] Columna de donde se obtienen los extractos\&. 
 .br
@@ -122,7 +122,7 @@ Realiza el entrenamiento para preparar y medir la precisión del algoritmo\&.
 .PP
 \fBReturns\fP
 .RS 4
-[String] Cadena que indica la precisión del algoritmo\&. 
+[String] Cadena que indica los resultados del algoritmo\&. 
 .RE
 .PP
 

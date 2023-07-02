@@ -31,7 +31,7 @@ def \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasifi
 def \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_aadb4fca1858e62e5cc0cf32f36c799a0}{set\+\_\+modelo}} (self, modelo)
 \begin{DoxyCompactList}\small\item\em Actualiza el algoritmo actual. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a4953798b9f48aa15d997a17c566ac418}{entrenar\+\_\+modelo}} (self, dataset, columna\+\_\+extracto, columna\+\_\+tematica)
-\begin{DoxyCompactList}\small\item\em Realiza el entrenamiento para preparar y medir la precisión del algoritmo. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Realiza el entrenamiento para preparar y obtener los resultados del algoritmo. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_ac2d29f91d67ae619b37d2a83017bccb8}{clasificar\+\_\+sentencias}} (self, dataset, columna\+\_\+extracto)
 \begin{DoxyCompactList}\small\item\em Realiza las clasificaciones del conjunto de pruebas. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a54874420116c344173c9fc33fd9315e9}{crear\+\_\+array\+\_\+tematicas}} (self, clases, probabilidades)
@@ -104,11 +104,11 @@ Crea un array con las temáticas más cercanas a cada iniciativa según el alfa 
 
 
 
-Realiza el entrenamiento para preparar y medir la precisión del algoritmo. 
+Realiza el entrenamiento para preparar y obtener los resultados del algoritmo. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em dataset} & \mbox{[}Panda Dataset\mbox{]} Dataset del conjunto de entrenamiento \\
+{\em dataset} & \mbox{[}Panda Dataset\mbox{]} Dataset del conjunto de entrenamiento. \\
 \hline
 {\em columna\+\_\+extracto} & \mbox{[}String\mbox{]} Columna de donde se obtienen los extractos. \\
 \hline
@@ -116,7 +116,7 @@ Realiza el entrenamiento para preparar y medir la precisión del algoritmo.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-\mbox{[}String\mbox{]} Cadena que indica la precisión del algoritmo. 
+\mbox{[}String\mbox{]} Cadena que indica los resultados del algoritmo. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a4835a175fa0d871f632b3070a9f57430}\label{class_modelo_1_1_clasificacion_1_1_clasificador_1_1_clasificador_a4835a175fa0d871f632b3070a9f57430}} 
 \index{Modelo.Clasificacion.Clasificador.Clasificador@{Modelo.Clasificacion.Clasificador.Clasificador}!get\_alfa@{get\_alfa}}
