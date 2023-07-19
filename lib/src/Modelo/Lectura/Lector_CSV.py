@@ -18,7 +18,7 @@ class LectorCSV(Lector):
     def leer(self, direccion):
         self.set_contenido(pandas.read_csv(direccion, encoding = "utf-8"))
     
-    ## @brief Método toString de la clase."
+    ## @brief Método toString de la clase.
     # @return [String]
     def __str__(self):
         return "Tipo: CSV"

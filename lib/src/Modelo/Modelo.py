@@ -113,7 +113,7 @@ class Modelo:
             self.__clasificador.set_modelo(LinearDiscriminantAnalysis(solver = "lsqr",shrinkage = 0.75))
         elif tipo == "LM-SGD":
             self.__clasificador = ClasificadorML()
-            self.__clasificador.set_modelo(SGDClassifier(loss = "huber"))
+            self.__clasificador.set_modelo(SGDClassifier(loss = "log_loss"))
         else: # Para Logistic Regression
             self.__clasificador = ClasificadorML()
             self.__clasificador.set_modelo(LogisticRegression(class_weight = "balanced", C = 2.25, tol= 0.0000001))

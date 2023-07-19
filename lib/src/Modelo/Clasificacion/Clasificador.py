@@ -88,11 +88,6 @@ class Clasificador:
         recall = recall_score(labels_test, predicciones, average = "weighted")
         f1 = f1_score(labels_test, predicciones, average = "weighted")
         reporte = f" Accuracy: {accuracy:.3%}\n Precisión: {precision:.3%}\n Recall: {recall:.3%}\n F1: {f1:.3%}"
-        print("Accuracy: ",accuracy)
-        print("Precisión: ",precision)
-        print("Recall: ",recall)
-        print("F1: ",f1)
-
         
         return reporte
 
